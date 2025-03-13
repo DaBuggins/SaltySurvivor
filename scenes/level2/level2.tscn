@@ -1,0 +1,213 @@
+[gd_scene load_steps=49 format=3 uid="uid://b7y4kyxrh6xqm"]
+
+[ext_resource type="Script" path="res://scenes/level2/level_2.gd" id="1_r1ahk"]
+[ext_resource type="PackedScene" uid="uid://b1mmvhbe7s77c" path="res://scenes/manager/arena_time_manager.tscn" id="2_l3u4b"]
+[ext_resource type="PackedScene" uid="uid://wjxi47rkeh3u" path="res://scenes/UI/end_screen.tscn" id="2_q1b85"]
+[ext_resource type="PackedScene" uid="uid://o756ycsqo4yb" path="res://scenes/UI/arena_time_ui.tscn" id="3_p5bj7"]
+[ext_resource type="PackedScene" uid="uid://hd8oc04h4y4y" path="res://scenes/autoload/level_music_player.tscn" id="3_qvqub"]
+[ext_resource type="PackedScene" uid="uid://6jwkytm3uc0i" path="res://scenes/UI/arena_score_ui.tscn" id="4_k48up"]
+[ext_resource type="AudioStream" uid="uid://138bx24rbxe8" path="res://assets/audio/sfx/Driving Concern.mp3" id="4_nut6e"]
+[ext_resource type="PackedScene" uid="uid://ccqk1luj112uq" path="res://scenes/UI/experience_bar.tscn" id="5_rn3wt"]
+[ext_resource type="Script" path="res://scenes/level2/level_2_enemy_manager.gd" id="7_1rpi5"]
+[ext_resource type="PackedScene" uid="uid://w5vvghq6n0su" path="res://scenes/manager/experience_manager.tscn" id="7_rjo6y"]
+[ext_resource type="PackedScene" uid="uid://edusx4mysm0" path="res://scenes/UI/flag_ui.tscn" id="8_2tdaa"]
+[ext_resource type="PackedScene" uid="uid://bxxhmuo20bnjb" path="res://scenes/game_object/enemies/office_enemies/office_chicken_enemy/office_chicken_enemy.tscn" id="8_pgitu"]
+[ext_resource type="PackedScene" uid="uid://qc3exgeakcv8" path="res://scenes/manager/upgrade_manager.tscn" id="8_piqed"]
+[ext_resource type="PackedScene" uid="uid://7q7yl7w17173" path="res://scenes/UI/vignette.tscn" id="9_5mrv8"]
+[ext_resource type="PackedScene" uid="uid://bsqu7l0vceuu2" path="res://scenes/UI/upgrade_ui.tscn" id="9_gn80n"]
+[ext_resource type="PackedScene" uid="uid://mlbyvyu1rnix" path="res://scenes/game_object/enemies/office_enemies/ct_enemy/ct_enemy.tscn" id="9_ktxqh"]
+[ext_resource type="PackedScene" uid="uid://ced4cy1k670nm" path="res://scenes/game_object/game_camera/gamecamera.tscn" id="10_b8kxl"]
+[ext_resource type="PackedScene" uid="uid://bhtnjqbq8yjyt" path="res://scenes/game_object/enemies/office_enemies/terrorist_enemy/terrorist_enemy.tscn" id="10_o614s"]
+[ext_resource type="PackedScene" uid="uid://b5orjjxg3yyju" path="res://scenes/level2/stage2.tscn" id="11_c60v5"]
+[ext_resource type="PackedScene" uid="uid://c2bq58ebr8dvl" path="res://scenes/game_object/enemies/chest_enemy/chest_enemy.tscn" id="11_nbgaf"]
+[ext_resource type="PackedScene" uid="uid://bgoyb8wl2r34a" path="res://scenes/game_object/enemies/office_enemies/office_chicken_enemy/tough_office_chicken_enemy.tscn" id="12_61u0t"]
+[ext_resource type="PackedScene" uid="uid://we0sjok1nfui" path="res://scenes/game_object/player/player.tscn" id="12_lggie"]
+[ext_resource type="PackedScene" uid="uid://h0s8bsd8ukjf" path="res://scenes/game_object/enemies/office_enemies/snowman_enemy/snowman_enemy.tscn" id="12_n051f"]
+[ext_resource type="PackedScene" uid="uid://spsl151hle6q" path="res://scenes/game_object/enemies/office_enemies/snowman_evil_enemy/snowman_evil_enemy.tscn" id="13_c6u23"]
+[ext_resource type="PackedScene" uid="uid://dpxs6r6qmc131" path="res://scenes/game_object/enemies/office_enemies/ct_enemy/tough_ct_enemy.tscn" id="18_vdi5r"]
+[ext_resource type="PackedScene" uid="uid://ddvkuqtwmh1qe" path="res://scenes/game_object/enemies/office_enemies/terrorist_enemy/tough_terrorist_enemy.tscn" id="19_jmdc7"]
+[ext_resource type="PackedScene" uid="uid://bad5p8i3nab06" path="res://scenes/game_object/enemies/office_enemies/snowman_enemy/tough_snowman_enemy.tscn" id="20_h11da"]
+[ext_resource type="PackedScene" uid="uid://my0wac0obhny" path="res://scenes/game_object/enemies/office_enemies/snowman_evil_enemy/tough_snowman_evil_enemy.tscn" id="21_estta"]
+[ext_resource type="PackedScene" uid="uid://c27vjee8r2q6p" path="res://scenes/game_object/health_pickup/pickup_spawner.tscn" id="25_voanb"]
+[ext_resource type="PackedScene" uid="uid://dj27htas0g31h" path="res://scenes/component/enemy_spawner.tscn" id="27_l0soe"]
+[ext_resource type="PackedScene" uid="uid://7gk6c1ek653l" path="res://scenes/game_object/breakable/breakable_quart.tscn" id="28_36d6j"]
+[ext_resource type="PackedScene" uid="uid://hg3u4wr37pf2" path="res://scenes/game_object/enemies/office_enemies/snowman_enemy/horde_office_chicken_enemy.tscn" id="28_do2si"]
+[ext_resource type="PackedScene" uid="uid://x3d6unyfe2bd" path="res://scenes/game_object/enemies/office_enemies/snowman_enemy/horde_terrorist_enemy.tscn" id="29_h3p8f"]
+[ext_resource type="Texture2D" uid="uid://cdk5ms82k4b28" path="res://scenes/game_object/enemies/office_enemies/snowman_enemy/snowman.png" id="29_yei1t"]
+[ext_resource type="PackedScene" uid="uid://cwfuxxtulxgu0" path="res://scenes/game_object/enemies/office_enemies/snowman_enemy/horde_snowmen_enemy.tscn" id="30_coaql"]
+[ext_resource type="PackedScene" uid="uid://dm7le7nfhwys0" path="res://scenes/game_object/breakable/crate.tscn" id="30_xdwys"]
+[ext_resource type="PackedScene" uid="uid://bbrgeqdki220f" path="res://scenes/game_object/enemies/office_enemies/snowman_enemy/horde_tough_office_chicken_enemy.tscn" id="31_0ay06"]
+[ext_resource type="Texture2D" uid="uid://yhuhwsivhq3g" path="res://scenes/game_object/enemies/office_enemies/snowman_evil_enemy/snowmanevil.png" id="31_jpqnl"]
+[ext_resource type="AudioStream" uid="uid://fqrs3v476nqs" path="res://assets/audio/popsfx.mp3" id="32_axfgj"]
+[ext_resource type="PackedScene" uid="uid://cs20k7bow187h" path="res://scenes/game_object/enemies/office_enemies/ct_enemy/boss_ct_enemy.tscn" id="39_hvicn"]
+[ext_resource type="PackedScene" uid="uid://c515ttwo6llmo" path="res://scenes/game_object/enemies/office_enemies/office_chicken_enemy/boss_office_chicken_enemy.tscn" id="40_3vwal"]
+[ext_resource type="Texture2D" uid="uid://dkugdf02cux5q" path="res://assets/environment/tree_Snow.png" id="40_nohul"]
+[ext_resource type="PackedScene" uid="uid://cval614hew47t" path="res://scenes/game_object/enemies/office_enemies/snowman_evil_enemy/boss_snowman_enemy.tscn" id="41_n7edj"]
+[ext_resource type="PackedScene" uid="uid://cy1vxxx0ml0n3" path="res://scenes/game_object/enemies/office_enemies/terrorist_enemy/boss_terrorist_enemy.tscn" id="41_qudjl"]
+[ext_resource type="PackedScene" uid="uid://56p5dyk50lu3" path="res://scenes/game_object/health_pickup/health_pickup.tscn" id="43_up6pb"]
+[ext_resource type="PackedScene" uid="uid://cifyld41n12vp" path="res://scenes/game_object/four_pickup/four_pickup.tscn" id="44_03q6q"]
+[ext_resource type="PackedScene" uid="uid://br4el3m0tk083" path="res://scenes/component/trap_spawner.tscn" id="47_fj3oa"]
+[ext_resource type="PackedScene" uid="uid://c68jsxfcd0clo" path="res://scenes/game_object/enemies/spike_wall/trap_wall_up.tscn" id="48_1mapf"]
+
+[node name="Level2" type="Node"]
+script = ExtResource("1_r1ahk")
+end_screen_scene = ExtResource("2_q1b85")
+level_id = "level2"
+
+[node name="LevelMusicPlayer" parent="." instance=ExtResource("3_qvqub")]
+level_song = ExtResource("4_nut6e")
+
+[node name="UI" type="Node" parent="."]
+
+[node name="ArenaTimeUI" parent="UI" node_paths=PackedStringArray("arena_time_manager") instance=ExtResource("3_p5bj7")]
+arena_time_manager = NodePath("../../ArenaTimeManager")
+
+[node name="ArenaScoreUI" parent="UI" instance=ExtResource("4_k48up")]
+
+[node name="UpgradeUI" parent="UI" instance=ExtResource("9_gn80n")]
+
+[node name="FlagUI" parent="UI" instance=ExtResource("8_2tdaa")]
+
+[node name="ExperienceBar" parent="UI" node_paths=PackedStringArray("experience_manager") instance=ExtResource("5_rn3wt")]
+experience_manager = NodePath("../../ExperienceManager")
+
+[node name="ArenaTimeManager" parent="." instance=ExtResource("2_l3u4b")]
+
+[node name="Level2EnemyManager" type="Node" parent="." node_paths=PackedStringArray("arena_time_manager")]
+script = ExtResource("7_1rpi5")
+chicken_enemy_scene = ExtResource("8_pgitu")
+tough_chicken_enemy_scene = ExtResource("12_61u0t")
+ct_enemy_scene = ExtResource("9_ktxqh")
+terrorist_enemy_scene = ExtResource("10_o614s")
+chest_enemy_scene = ExtResource("11_nbgaf")
+snowman_enemy_scene = ExtResource("12_n051f")
+snowman_evil_enemy_scene = ExtResource("13_c6u23")
+tough_ct_enemy_scene = ExtResource("18_vdi5r")
+tough_terrorist_enemy_scene = ExtResource("19_jmdc7")
+tough_snowman_enemy_scene = ExtResource("20_h11da")
+tough_snowman_evil_enemy_scene = ExtResource("21_estta")
+arena_time_manager = NodePath("../ArenaTimeManager")
+
+[node name="Timer" type="Timer" parent="Level2EnemyManager"]
+one_shot = true
+autostart = true
+
+[node name="ExperienceManager" parent="." instance=ExtResource("7_rjo6y")]
+
+[node name="UpgradeManager" parent="." node_paths=PackedStringArray("experience_manager") instance=ExtResource("8_piqed")]
+experience_manager = NodePath("../ExperienceManager")
+
+[node name="PickupSpawner" parent="." instance=ExtResource("25_voanb")]
+
+[node name="Vignette" parent="." instance=ExtResource("9_5mrv8")]
+
+[node name="GameCamera" parent="." instance=ExtResource("10_b8kxl")]
+
+[node name="Stage2" parent="." instance=ExtResource("11_c60v5")]
+
+[node name="EnemySpawner" parent="." instance=ExtResource("27_l0soe")]
+unique_name_in_owner = true
+horde_1_scene = ExtResource("28_do2si")
+horde_2_scene = ExtResource("29_h3p8f")
+horde_3_scene = ExtResource("30_coaql")
+horde_tough1_scene = ExtResource("31_0ay06")
+
+[node name="Entities" type="Node2D" parent="." groups=["entities_layer"]]
+unique_name_in_owner = true
+y_sort_enabled = true
+
+[node name="Player" parent="Entities" node_paths=PackedStringArray("arena_time_manager") instance=ExtResource("12_lggie")]
+unique_name_in_owner = true
+position = Vector2(7, 22)
+arena_time_manager = NodePath("../../ArenaTimeManager")
+
+[node name="Breakables" type="Node" parent="Entities"]
+
+[node name="CrateQuart" parent="Entities/Breakables" instance=ExtResource("28_36d6j")]
+replacement_sprite = ExtResource("29_yei1t")
+
+[node name="CrateQuart2" parent="Entities/Breakables" instance=ExtResource("28_36d6j")]
+position = Vector2(1484, 200)
+replacement_sprite = ExtResource("29_yei1t")
+replacement_sfx = ExtResource("32_axfgj")
+
+[node name="CrateQuart3" parent="Entities/Breakables" instance=ExtResource("28_36d6j")]
+position = Vector2(-5, -1313)
+replacement_sprite = ExtResource("29_yei1t")
+
+[node name="CrateQuart4" parent="Entities/Breakables" instance=ExtResource("28_36d6j")]
+position = Vector2(1479, -1113)
+replacement_sprite = ExtResource("29_yei1t")
+
+[node name="Crate" parent="Entities/Breakables" instance=ExtResource("30_xdwys")]
+position = Vector2(37, -34)
+replacement_sprite = ExtResource("31_jpqnl")
+replacement_sfx = ExtResource("32_axfgj")
+
+[node name="TreeQuart" parent="Entities/Breakables" instance=ExtResource("28_36d6j")]
+position = Vector2(0, 474)
+replacement_sprite = ExtResource("40_nohul")
+
+[node name="TreeQuart2" parent="Entities/Breakables" instance=ExtResource("28_36d6j")]
+position = Vector2(1547, 474)
+replacement_sprite = ExtResource("40_nohul")
+
+[node name="TreeQuart3" parent="Entities/Breakables" instance=ExtResource("28_36d6j")]
+position = Vector2(1567, -663)
+replacement_sprite = ExtResource("40_nohul")
+
+[node name="TreeQuart4" parent="Entities/Breakables" instance=ExtResource("28_36d6j")]
+position = Vector2(1536, -1545)
+replacement_sprite = ExtResource("40_nohul")
+
+[node name="TreeQuart5" parent="Entities/Breakables" instance=ExtResource("28_36d6j")]
+position = Vector2(-297, -1644)
+replacement_sprite = ExtResource("40_nohul")
+
+[node name="TreeQuart6" parent="Entities/Breakables" instance=ExtResource("28_36d6j")]
+position = Vector2(-34, -631)
+replacement_sprite = ExtResource("40_nohul")
+
+[node name="Bosses" type="Node" parent="Entities"]
+
+[node name="BossCTEnemy" parent="Entities/Bosses" instance=ExtResource("39_hvicn")]
+position = Vector2(-1409, -1177)
+
+[node name="BossOfficeChickenEnemy" parent="Entities/Bosses" instance=ExtResource("40_3vwal")]
+position = Vector2(1380, -1194)
+
+[node name="BossTerroristEnemy" parent="Entities/Bosses" instance=ExtResource("41_qudjl")]
+position = Vector2(1380, 1544)
+
+[node name="BossSnowmanEnemy" parent="Entities/Bosses" instance=ExtResource("41_n7edj")]
+position = Vector2(-1409, 1556)
+
+[node name="SpawnPickups" type="Node" parent="Entities"]
+
+[node name="HealthPickup" parent="Entities/SpawnPickups" instance=ExtResource("43_up6pb")]
+position = Vector2(0, 1434)
+
+[node name="HealthPickup2" parent="Entities/SpawnPickups" instance=ExtResource("43_up6pb")]
+position = Vector2(0, -1413)
+
+[node name="HealthPickup3" parent="Entities/SpawnPickups" instance=ExtResource("43_up6pb")]
+position = Vector2(-1426, -5)
+
+[node name="HealthPickup4" parent="Entities/SpawnPickups" instance=ExtResource("43_up6pb")]
+position = Vector2(1427, -5)
+
+[node name="FourPickup" parent="Entities/SpawnPickups" instance=ExtResource("44_03q6q")]
+position = Vector2(825, 810)
+
+[node name="FourPickup2" parent="Entities/SpawnPickups" instance=ExtResource("44_03q6q")]
+position = Vector2(-1162, -977)
+
+[node name="TrapSpawnerSide" parent="Entities" instance=ExtResource("47_fj3oa")]
+position = Vector2(-1824, 0)
+spawn_time = 30
+
+[node name="TrapSpawnerUp" parent="Entities" instance=ExtResource("47_fj3oa")]
+position = Vector2(12, 2060)
+trap_wall_scene = ExtResource("48_1mapf")
+
+[node name="Foreground" type="Node2D" parent="." groups=["foreground_layer"]]

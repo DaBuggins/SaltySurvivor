@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh2kdl6vpeuop"]
+
+[ext_resource type="Script" path="res://scenes/game_object/enemies/office_enemies/snowman_enemy/horde_enemy.gd" id="1_eg0sv"]
+[ext_resource type="PackedScene" uid="uid://c3a4lch807fgs" path="res://scenes/game_object/enemies/romford_enemies/yob_enemy/yob_enemy.tscn" id="2_xnkvg"]
+
+[node name="HordeYobEnemy" type="Node2D"]
+script = ExtResource("1_eg0sv")
+enemy_scene = ExtResource("2_xnkvg")

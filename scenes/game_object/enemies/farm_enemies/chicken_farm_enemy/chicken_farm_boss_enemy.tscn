@@ -1,0 +1,187 @@
+[gd_scene load_steps=31 format=3 uid="uid://s53flksrowp0"]
+
+[ext_resource type="Script" path="res://scenes/component/boss_enemy.gd" id="1_i4xqn"]
+[ext_resource type="PackedScene" uid="uid://br47oe6cdcp4h" path="res://scenes/component/random_stream_player_2d_component.tscn" id="2_v1jcl"]
+[ext_resource type="AudioStream" uid="uid://dv2j0eoxxdl5l" path="res://assets/audio/sfx/footstep_carpet_000.ogg" id="3_lhiaj"]
+[ext_resource type="AudioStream" uid="uid://b7jevwof7y23c" path="res://assets/audio/sfx/footstep_carpet_001.ogg" id="4_p075c"]
+[ext_resource type="AudioStream" uid="uid://c2tvbvycrcy8v" path="res://assets/audio/sfx/footstep_carpet_002.ogg" id="5_6h15w"]
+[ext_resource type="AudioStream" uid="uid://cfa3vwlwibsog" path="res://assets/audio/sfx/footstep_carpet_003.ogg" id="6_1ybm4"]
+[ext_resource type="AudioStream" uid="uid://cf3t6u6466igk" path="res://assets/audio/sfx/footstep_carpet_004.ogg" id="7_hnl2f"]
+[ext_resource type="PackedScene" uid="uid://bqynfy3wngpy7" path="res://scenes/component/vial_drop_component.tscn" id="8_57pck"]
+[ext_resource type="PackedScene" uid="uid://cpag88vkk2osj" path="res://scenes/component/pickup_drop_component.tscn" id="8_vnk16"]
+[ext_resource type="PackedScene" uid="uid://bwti2l1ir5u6k" path="res://scenes/game_object/experience_vial/big_red_vial.tscn" id="9_pclrk"]
+[ext_resource type="PackedScene" uid="uid://cl21hasx1ekjd" path="res://scenes/component/health_component.tscn" id="9_w2ta7"]
+[ext_resource type="PackedScene" uid="uid://ce38nvx2ilnmi" path="res://scenes/game_object/boss_flag/flag_drop_component.tscn" id="11_486uu"]
+[ext_resource type="PackedScene" uid="uid://dwhwp00bq1je6" path="res://scenes/component/hitflash_component.tscn" id="11_yheqg"]
+[ext_resource type="Shader" path="res://scenes/component/hitflash_component.gdshader" id="12_hawdq"]
+[ext_resource type="PackedScene" uid="uid://cfqv7qt4x3y3i" path="res://scenes/component/death_component.tscn" id="13_daq0l"]
+[ext_resource type="PackedScene" uid="uid://b2jgh7uxwln4s" path="res://scenes/component/midboss_velocity_component.tscn" id="14_5kmgd"]
+[ext_resource type="PackedScene" uid="uid://b3evnp66mpx0j" path="res://scenes/component/death_sfx_stream_player.tscn" id="14_hqdmt"]
+[ext_resource type="AudioStream" uid="uid://cnilnoj6vqle3" path="res://scenes/game_object/enemies/office_enemies/office_chicken_enemy/chicken1.mp3" id="15_1v7am"]
+[ext_resource type="AudioStream" uid="uid://ddm8whyh6y7ox" path="res://scenes/game_object/enemies/farm_enemies/chicken_farm_enemy/chicken2.mp3" id="16_ocjx0"]
+[ext_resource type="PackedScene" uid="uid://sl3i0hvqi3av" path="res://scenes/component/hurtbox_component.tscn" id="17_qku8a"]
+[ext_resource type="Texture2D" uid="uid://ds4m7v1pqfid0" path="res://scenes/game_object/enemies/office_enemies/office_chicken_enemy/chick2.png" id="18_rp6i2"]
+[ext_resource type="PackedScene" uid="uid://dddltswfu2uku" path="res://scenes/component/boss_particles.tscn" id="21_7fd1a"]
+
+[sub_resource type="Animation" id="Animation_ihajb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_fjdpl"]
+resource_name = "walk"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/Sprite2D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1, 0), Vector2(1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/Sprite2D:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.261799, -0.174533, 0.174533, -0.174533]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rqgq1"]
+_data = {
+"RESET": SubResource("Animation_ihajb"),
+"walk": SubResource("Animation_fjdpl")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_11yjx"]
+resource_local_to_scene = true
+shader = ExtResource("12_hawdq")
+shader_parameter/lerp_percent = 0.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ebgnr"]
+playback_mode = 1
+random_pitch = 1.1
+streams_count = 2
+stream_0/stream = ExtResource("15_1v7am")
+stream_0/weight = 0.1
+stream_1/stream = ExtResource("16_ocjx0")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dltyd"]
+radius = 40.0
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_53kt3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6yu18"]
+radius = 20.0
+
+[node name="ChickenFarmBossEnemy" type="CharacterBody2D" groups=["entities_layer"]]
+collision_layer = 8
+collision_mask = 9
+motion_mode = 1
+script = ExtResource("1_i4xqn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rqgq1")
+}
+autoplay = "walk"
+
+[node name="HitRandomAudioPlayer2DComponent" parent="." instance=ExtResource("2_v1jcl")]
+max_distance = 300.0
+streams = Array[AudioStream]([ExtResource("3_lhiaj"), ExtResource("4_p075c"), ExtResource("5_6h15w"), ExtResource("6_1ybm4"), ExtResource("7_hnl2f")])
+
+[node name="HealthPickupDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("8_vnk16")]
+drop_percent = 1.0
+health_component = NodePath("../HealthComponent")
+
+[node name="VialDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("8_57pck")]
+drop_percent = 1.0
+vial_scene = ExtResource("9_pclrk")
+health_component = NodePath("../HealthComponent")
+
+[node name="HealthComponent" parent="." instance=ExtResource("9_w2ta7")]
+max_health = 100.0
+
+[node name="FlagDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("11_486uu")]
+health_component = NodePath("../HealthComponent")
+
+[node name="HitflashComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("11_yheqg")]
+health_component = NodePath("../HealthComponent")
+sprite = NodePath("../Visuals/Sprite2D")
+hit_flash_material = SubResource("ShaderMaterial_11yjx")
+
+[node name="MidbossVelocityComponent" parent="." instance=ExtResource("14_5kmgd")]
+unique_name_in_owner = true
+max_speed = 65
+acceleration = 0.5
+
+[node name="DeathComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("13_daq0l")]
+modulate = Color(1, 1, 0.690196, 1)
+health_component = NodePath("../HealthComponent")
+sprite = NodePath("../Visuals/Sprite2D")
+
+[node name="DeathSFXPlayer" parent="DeathComponent" instance=ExtResource("14_hqdmt")]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_ebgnr")
+
+[node name="HurtboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("17_qku8a")]
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent"]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_dltyd")
+
+[node name="Visuals" type="Node2D" parent="."]
+modulate = Color(0.516996, 0, 0.0867247, 1)
+material = SubResource("CanvasItemMaterial_53kt3")
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals"]
+use_parent_material = true
+scale = Vector2(5, 5)
+texture = ExtResource("18_rp6i2")
+offset = Vector2(0, -6)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Visuals/Sprite2D"]
+self_modulate = Color(0, 0, 0, 0.490196)
+show_behind_parent = true
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("18_rp6i2")
+flip_h = true
+
+[node name="BossParticles" parent="Visuals" instance=ExtResource("21_7fd1a")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_6yu18")

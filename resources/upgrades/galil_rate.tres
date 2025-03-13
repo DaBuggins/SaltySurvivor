@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://dsrbo0d0hfuhw"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_fw03k"]
+[ext_resource type="Texture2D" uid="uid://cxkoct7vixroy" path="res://scenes/ability/galil_ability/galil.png" id="2_23j21"]
+
+[resource]
+script = ExtResource("1_fw03k")
+id = "galil_rate"
+parent_id = "galil"
+bonus_slot = 2
+max_quantity = 2
+name = "Galil Fire Rate"
+sprite = ExtResource("2_23j21")
+is_weapon = false
+color = Color(0.588235, 0.545098, 0.380392, 1)
+description = "Shoot faster!"

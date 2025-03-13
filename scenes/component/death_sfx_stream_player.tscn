@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3evnp66mpx0j"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_471rd"]
+
+[node name="DeathSFXStreamPlayer" type="AudioStreamPlayer2D"]
+process_mode = 3
+stream = SubResource("AudioStreamRandomizer_471rd")
+max_distance = 500.0
+bus = &"deathsfx"

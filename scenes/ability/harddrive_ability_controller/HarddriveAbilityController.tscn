@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://w0h1tfr4uqto"]
+
+[ext_resource type="Script" path="res://scenes/ability/harddrive_ability_controller/harddrive_ability_controller.gd" id="1_2o3rn"]
+[ext_resource type="PackedScene" uid="uid://ggjc8pcd25rh" path="res://scenes/ability/harddrive_ability/harddrive_ability.tscn" id="2_vsw4l"]
+
+[node name="HarddriveAbilityController" type="Node"]
+script = ExtResource("1_2o3rn")
+harddrive_ability_scene = ExtResource("2_vsw4l")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true

@@ -1,0 +1,159 @@
+[gd_scene load_steps=26 format=3 uid="uid://spsl151hle6q"]
+
+[ext_resource type="Script" path="res://scenes/game_object/enemies/office_enemies/snowman_evil_enemy/snowman_evil_enemy.gd" id="1_y6kuu"]
+[ext_resource type="PackedScene" uid="uid://br47oe6cdcp4h" path="res://scenes/component/random_stream_player_2d_component.tscn" id="2_06kwq"]
+[ext_resource type="AudioStream" uid="uid://dv2j0eoxxdl5l" path="res://assets/audio/sfx/footstep_carpet_000.ogg" id="3_q4hsj"]
+[ext_resource type="AudioStream" uid="uid://b7jevwof7y23c" path="res://assets/audio/sfx/footstep_carpet_001.ogg" id="4_yi42x"]
+[ext_resource type="AudioStream" uid="uid://c2tvbvycrcy8v" path="res://assets/audio/sfx/footstep_carpet_002.ogg" id="5_276jl"]
+[ext_resource type="AudioStream" uid="uid://cfa3vwlwibsog" path="res://assets/audio/sfx/footstep_carpet_003.ogg" id="6_7vxjg"]
+[ext_resource type="AudioStream" uid="uid://cf3t6u6466igk" path="res://assets/audio/sfx/footstep_carpet_004.ogg" id="7_q3txa"]
+[ext_resource type="PackedScene" uid="uid://bqynfy3wngpy7" path="res://scenes/component/vial_drop_component.tscn" id="8_j1caa"]
+[ext_resource type="PackedScene" uid="uid://budumifdbcmbv" path="res://scenes/game_object/experience_vial/green_vial.tscn" id="9_oswr6"]
+[ext_resource type="PackedScene" uid="uid://cl21hasx1ekjd" path="res://scenes/component/health_component.tscn" id="9_rmc3p"]
+[ext_resource type="PackedScene" uid="uid://b15860rxkv1a1" path="res://scenes/component/velocity_component.tscn" id="10_ducjw"]
+[ext_resource type="PackedScene" uid="uid://dwhwp00bq1je6" path="res://scenes/component/hitflash_component.tscn" id="11_ecs4l"]
+[ext_resource type="Shader" path="res://scenes/component/hitflash_component.gdshader" id="12_3mepp"]
+[ext_resource type="PackedScene" uid="uid://cfqv7qt4x3y3i" path="res://scenes/component/death_component.tscn" id="13_odckm"]
+[ext_resource type="PackedScene" uid="uid://cn80dr6eyu445" path="res://scenes/component/death_sfx_player.tscn" id="14_7vkoj"]
+[ext_resource type="AudioStream" uid="uid://dgabg63bx5nig" path="res://scenes/game_object/enemies/office_enemies/snowman_enemy/quack.mp3" id="15_eqop1"]
+[ext_resource type="PackedScene" uid="uid://sl3i0hvqi3av" path="res://scenes/component/hurtbox_component.tscn" id="15_g78gn"]
+[ext_resource type="Texture2D" uid="uid://yhuhwsivhq3g" path="res://scenes/game_object/enemies/office_enemies/snowman_evil_enemy/snowmanevil.png" id="16_pagdg"]
+[ext_resource type="PackedScene" uid="uid://ds1jpmcwff24x" path="res://scenes/component/enemy_shadow.tscn" id="19_7v5p6"]
+
+[sub_resource type="Animation" id="Animation_ihajb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_fjdpl"]
+resource_name = "walk"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/Sprite2D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1, 0), Vector2(1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/Sprite2D:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.261799, -0.174533, 0.174533, -0.174533]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rqgq1"]
+_data = {
+"RESET": SubResource("Animation_ihajb"),
+"walk": SubResource("Animation_fjdpl")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_11yjx"]
+resource_local_to_scene = true
+shader = ExtResource("12_3mepp")
+shader_parameter/lerp_percent = 0.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dltyd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6yu18"]
+radius = 5.0
+
+[node name="SnowmanEvilEnemy" type="CharacterBody2D" groups=["enemy", "entities_layer"]]
+collision_layer = 8
+collision_mask = 9
+motion_mode = 1
+script = ExtResource("1_y6kuu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rqgq1")
+}
+autoplay = "walk"
+
+[node name="HitRandomAudioPlayer2DComponent" parent="." instance=ExtResource("2_06kwq")]
+max_distance = 300.0
+streams = Array[AudioStream]([ExtResource("3_q4hsj"), ExtResource("4_yi42x"), ExtResource("5_276jl"), ExtResource("6_7vxjg"), ExtResource("7_q3txa")])
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 60.0
+autostart = true
+
+[node name="VialDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("8_j1caa")]
+drop_percent = 0.5
+vial_scene = ExtResource("9_oswr6")
+health_component = NodePath("../HealthComponent")
+
+[node name="HealthComponent" parent="." instance=ExtResource("9_rmc3p")]
+max_health = 9.0
+
+[node name="VelocityComponent" parent="." instance=ExtResource("10_ducjw")]
+max_speed = 65
+acceleration = 2.5
+
+[node name="HitflashComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("11_ecs4l")]
+health_component = NodePath("../HealthComponent")
+sprite = NodePath("../Visuals/Sprite2D")
+hit_flash_material = SubResource("ShaderMaterial_11yjx")
+
+[node name="DeathComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("13_odckm")]
+health_component = NodePath("../HealthComponent")
+sprite = NodePath("../Visuals/Sprite2D")
+
+[node name="DeathSFXPlayer" parent="DeathComponent" instance=ExtResource("14_7vkoj")]
+unique_name_in_owner = true
+stream = ExtResource("15_eqop1")
+pitch_scale = 0.42
+
+[node name="HurtboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("15_g78gn")]
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent"]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_dltyd")
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals"]
+texture = ExtResource("16_pagdg")
+offset = Vector2(0, -6)
+
+[node name="EnemyShadow" parent="Visuals/Sprite2D" instance=ExtResource("19_7v5p6")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_6yu18")

@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=3 uid="uid://w5vvghq6n0su"]
+
+[ext_resource type="Script" path="res://scenes/manager/experience_manager.gd" id="1_8338g"]
+
+[node name="ExperienceManager" type="Node"]
+script = ExtResource("1_8338g")
+
+[node name="ExpLabel" type="Label" parent="."]
+unique_name_in_owner = true
+z_index = 10
+z_as_relative = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -409.0
+offset_top = -231.0
+offset_right = -303.0
+offset_bottom = -197.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "EXP TEST"
+
+[node name="ExpLabel2" type="Label" parent="."]
+unique_name_in_owner = true
+z_index = 10
+z_as_relative = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -407.0
+offset_top = -198.0
+offset_right = -301.0
+offset_bottom = -164.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "TARGET"
+
+[node name="ExpLabel4" type="Label" parent="."]
+unique_name_in_owner = true
+z_index = 10
+z_as_relative = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -407.0
+offset_top = -123.0
+offset_right = -301.0
+offset_bottom = -89.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "level"

@@ -1,0 +1,16 @@
+[gd_scene load_steps=9 format=3 uid="uid://b2h1cay7c6mgl"]
+
+[ext_resource type="Script" path="res://scenes/component/crate_drop_component.gd" id="1_8xduh"]
+[ext_resource type="PackedScene" uid="uid://56p5dyk50lu3" path="res://scenes/game_object/health_pickup/health_pickup.tscn" id="2_hh48q"]
+[ext_resource type="PackedScene" uid="uid://cor7yaq6ngkqh" path="res://scenes/game_object/experience_vial/experience_vial.tscn" id="2_kk41x"]
+[ext_resource type="PackedScene" uid="uid://budumifdbcmbv" path="res://scenes/game_object/experience_vial/green_vial.tscn" id="3_d3jwp"]
+[ext_resource type="PackedScene" uid="uid://c5hivrhrw868j" path="res://scenes/game_object/experience_vial/big_green_vial.tscn" id="3_uvrqj"]
+[ext_resource type="PackedScene" uid="uid://qq06r8q7hyc4" path="res://scenes/game_object/enemies/farm_enemies/chicken_farm_enemy/chicken_farm_enemy.tscn" id="5_d736w"]
+[ext_resource type="PackedScene" uid="uid://cifyld41n12vp" path="res://scenes/game_object/four_pickup/four_pickup.tscn" id="6_buhoq"]
+[ext_resource type="PackedScene" uid="uid://bwti2l1ir5u6k" path="res://scenes/game_object/experience_vial/big_red_vial.tscn" id="7_m4l6u"]
+
+[node name="CrateDropComponent" type="Node"]
+script = ExtResource("1_8xduh")
+drop_percent = 0.2
+pickup_pool = Array[PackedScene]([ExtResource("2_kk41x"), ExtResource("3_d3jwp"), ExtResource("2_hh48q"), ExtResource("5_d736w")])
+good_pickup_pool = Array[PackedScene]([ExtResource("6_buhoq"), ExtResource("7_m4l6u"), ExtResource("3_uvrqj")])

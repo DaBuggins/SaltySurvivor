@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Character" load_steps=7 format=3 uid="uid://cf1vnyb3ihiew"]
+
+[ext_resource type="Script" path="res://scenes/game_object/enemies/characters/character.gd" id="1_1pglg"]
+[ext_resource type="AudioStream" uid="uid://la7fegmkw57i" path="res://assets/audio/character_sounds/rozpick.mp3" id="1_4g3nq"]
+[ext_resource type="AudioStream" uid="uid://dpn3f20o22kir" path="res://assets/audio/character_sounds/rozlose.mp3" id="1_v5tqd"]
+[ext_resource type="Texture2D" uid="uid://0yoglsj5nqd6" path="res://scenes/game_object/enemies/characters/roz.png" id="2_2eb3p"]
+[ext_resource type="Resource" uid="uid://0dqt5n6jechd" path="res://resources/upgrades/rainbow_six.tres" id="3_s6rwc"]
+[ext_resource type="AudioStream" uid="uid://esvi2aypk6xk" path="res://assets/audio/character_sounds/rozwin.mp3" id="6_hxxat"]
+
+[resource]
+script = ExtResource("1_1pglg")
+id = "roz"
+name = "Roz"
+sprite = ExtResource("2_2eb3p")
+description = "Roz is here"
+speed = 95.0
+accel = 7.0
+health = 6.0
+pickup_area = 24.0
+wins = 0
+unlocked = false
+starter_weapon = ExtResource("3_s6rwc")
+pick_sfx = ExtResource("1_4g3nq")
+lose_sfx = ExtResource("1_v5tqd")
+win_sfx = ExtResource("6_hxxat")

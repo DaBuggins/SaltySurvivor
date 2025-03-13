@@ -1,0 +1,18 @@
+[gd_resource type="ParticleProcessMaterial" format=3 uid="uid://dalqpt737vt02"]
+
+[resource]
+lifetime_randomness = 1.0
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+spread = 23.354
+initial_velocity_max = 182.1
+orbit_velocity_min = -0.373
+orbit_velocity_max = 0.0270001
+gravity = Vector3(0, 500, 0)
+linear_accel_min = 30.0
+linear_accel_max = 50.0
+radial_accel_min = -56.78
+radial_accel_max = 23.46
+scale_min = 0.4
+scale_max = 0.7

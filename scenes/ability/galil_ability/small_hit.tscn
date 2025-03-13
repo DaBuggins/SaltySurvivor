@@ -1,0 +1,115 @@
+[gd_scene load_steps=17 format=3 uid="uid://dm5cm5e6u0ji4"]
+
+[ext_resource type="Texture2D" uid="uid://ckaqxxgaqi6ut" path="res://scenes/ability/galil_ability/Effect_SmallHit_1_532x528.png" id="1_16exh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0tp6y"]
+atlas = ExtResource("1_16exh")
+region = Rect2(0, 0, 530, 530)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvlua"]
+atlas = ExtResource("1_16exh")
+region = Rect2(530, 0, 530, 530)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dh4x0"]
+atlas = ExtResource("1_16exh")
+region = Rect2(1060, 0, 530, 530)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lyjo"]
+atlas = ExtResource("1_16exh")
+region = Rect2(1590, 0, 530, 530)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07flo"]
+atlas = ExtResource("1_16exh")
+region = Rect2(2120, 0, 530, 530)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmyfr"]
+atlas = ExtResource("1_16exh")
+region = Rect2(2650, 0, 530, 530)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvgee"]
+atlas = ExtResource("1_16exh")
+region = Rect2(0, 530, 530, 530)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atyb5"]
+atlas = ExtResource("1_16exh")
+region = Rect2(530, 530, 530, 530)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uw1fr"]
+atlas = ExtResource("1_16exh")
+region = Rect2(1060, 530, 530, 530)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjp3y"]
+atlas = ExtResource("1_16exh")
+region = Rect2(1590, 530, 530, 530)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbt76"]
+atlas = ExtResource("1_16exh")
+region = Rect2(2120, 530, 530, 530)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ai7t4"]
+atlas = ExtResource("1_16exh")
+region = Rect2(2650, 530, 530, 530)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1420f"]
+atlas = ExtResource("1_16exh")
+region = Rect2(0, 1060, 530, 530)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y7dmn"]
+atlas = ExtResource("1_16exh")
+region = Rect2(530, 1060, 530, 530)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_464ak"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0tp6y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pvlua")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dh4x0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1lyjo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_07flo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmyfr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvgee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atyb5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uw1fr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjp3y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbt76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ai7t4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1420f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y7dmn")
+}],
+"loop": false,
+"name": &"default",
+"speed": 30.0
+}]
+
+[node name="SmallHit" type="AnimatedSprite2D"]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_464ak")
+frame = 11
+frame_progress = 0.0565592

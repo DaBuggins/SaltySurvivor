@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhkmshc2qtuhy"]
+
+[ext_resource type="Texture2D" uid="uid://b1s7upcnp8ltl" path="res://assets/ui/saltparticle.png" id="1_2ufgb"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4snnr"]
+lifetime_randomness = 1.0
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 25.0
+angle_min = -212.6
+angle_max = 212.6
+velocity_pivot = Vector3(0, 10, 0)
+radial_velocity_min = 202.07
+radial_velocity_max = 632.11
+gravity = Vector3(0, 200, 0)
+linear_accel_min = 88.6
+linear_accel_max = 100.0
+radial_accel_min = -2.08
+radial_accel_max = 4.13
+tangential_accel_min = -100.0
+tangential_accel_max = -89.12
+damping_min = 70.467
+damping_max = 100.0
+scale_min = 0.1
+scale_max = 0.7
+
+[node name="OtherExplode" type="GPUParticles2D"]
+position = Vector2(369, 222)
+scale = Vector2(0.402, 0.4)
+emitting = false
+amount = 128
+process_material = SubResource("ParticleProcessMaterial_4snnr")
+texture = ExtResource("1_2ufgb")
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0

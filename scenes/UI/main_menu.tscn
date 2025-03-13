@@ -1,0 +1,90 @@
+[gd_scene load_steps=9 format=3 uid="uid://b1vp0kak576xc"]
+
+[ext_resource type="Script" path="res://scenes/UI/main_menu.gd" id="1_1oroj"]
+[ext_resource type="PackedScene" uid="uid://01b7cc5p6cmg" path="res://assets/ui/menu_background.tscn" id="2_bqtkd"]
+[ext_resource type="PackedScene" uid="uid://7q7yl7w17173" path="res://scenes/UI/vignette.tscn" id="2_jbd17"]
+[ext_resource type="PackedScene" uid="uid://drs10r4um6533" path="res://scenes/component/salt_shaker.tscn" id="3_xc1tj"]
+[ext_resource type="PackedScene" uid="uid://chj6k4p6gxmkg" path="res://scenes/UI/play_button.tscn" id="4_eo1mb"]
+[ext_resource type="FontFile" uid="uid://imspwofy4xh6" path="res://resources/theme/Bitmgothic.ttf" id="4_jjtog"]
+[ext_resource type="Theme" uid="uid://ivx8wu3sxxyt" path="res://resources/theme/theme.tres" id="5_2a3ht"]
+[ext_resource type="Script" path="res://scenes/UI/play_button.gd" id="5_yb1vq"]
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_1oroj")
+
+[node name="MenuBackground" parent="." instance=ExtResource("2_bqtkd")]
+
+[node name="SaltShaker" parent="." instance=ExtResource("3_xc1tj")]
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"BlueOutlineLabel"
+theme_override_fonts/font = ExtResource("4_jjtog")
+theme_override_font_sizes/font_size = 32
+text = "Salty Survivors"
+
+[node name="PlayButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_eo1mb")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="UpgradesButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("5_2a3ht")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+text = "Upgrades"
+script = ExtResource("5_yb1vq")
+
+[node name="PlayButton2" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_eo1mb")]
+layout_mode = 2
+text = "Progress"
+
+[node name="OptionsButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("5_2a3ht")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+text = "Options"
+script = ExtResource("5_yb1vq")
+
+[node name="QuitButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("5_2a3ht")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+text = "Quit"
+script = ExtResource("5_yb1vq")
+
+[node name="Vignette" parent="." instance=ExtResource("2_jbd17")]
+layer = 2

@@ -1,0 +1,138 @@
+[gd_scene load_steps=32 format=3 uid="uid://b617b2jwarns0"]
+
+[ext_resource type="Texture2D" uid="uid://dk1xg0lg70m3d" path="res://scenes/effects/boss_aura/Effect_Worm_1_000.png" id="1_xcr6s"]
+[ext_resource type="Texture2D" uid="uid://cfdgx87th4wvt" path="res://scenes/effects/boss_aura/Effect_Worm_1_001.png" id="2_2ihro"]
+[ext_resource type="Texture2D" uid="uid://bl16laqv4q0rl" path="res://scenes/effects/boss_aura/Effect_Worm_1_002.png" id="3_2c8dv"]
+[ext_resource type="Texture2D" uid="uid://8vgatytsf7ht" path="res://scenes/effects/boss_aura/Effect_Worm_1_003.png" id="4_h4jo5"]
+[ext_resource type="Texture2D" uid="uid://q1w33xaot6na" path="res://scenes/effects/boss_aura/Effect_Worm_1_004.png" id="5_wwfpf"]
+[ext_resource type="Texture2D" uid="uid://cp7pmog3fa3o8" path="res://scenes/effects/boss_aura/Effect_Worm_1_005.png" id="6_sfq6w"]
+[ext_resource type="Texture2D" uid="uid://vslq5qp3it4g" path="res://scenes/effects/boss_aura/Effect_Worm_1_006.png" id="7_2kggu"]
+[ext_resource type="Texture2D" uid="uid://bbmkdnqiegsyj" path="res://scenes/effects/boss_aura/Effect_Worm_1_007.png" id="8_tuo1r"]
+[ext_resource type="Texture2D" uid="uid://c8flimbylktle" path="res://scenes/effects/boss_aura/Effect_Worm_1_008.png" id="9_x8umt"]
+[ext_resource type="Texture2D" uid="uid://dmxojbulkdnqj" path="res://scenes/effects/boss_aura/Effect_Worm_1_009.png" id="10_ct6jj"]
+[ext_resource type="Texture2D" uid="uid://cqkdfr78y51gu" path="res://scenes/effects/boss_aura/Effect_Worm_1_010.png" id="11_qitcr"]
+[ext_resource type="Texture2D" uid="uid://dv7lj2031a6mp" path="res://scenes/effects/boss_aura/Effect_Worm_1_011.png" id="12_67kcl"]
+[ext_resource type="Texture2D" uid="uid://b2c73auwlj43a" path="res://scenes/effects/boss_aura/Effect_Worm_1_012.png" id="13_yfg7m"]
+[ext_resource type="Texture2D" uid="uid://cx58idph2aw4w" path="res://scenes/effects/boss_aura/Effect_Worm_1_013.png" id="14_oxwsq"]
+[ext_resource type="Texture2D" uid="uid://b20e12uvstw8y" path="res://scenes/effects/boss_aura/Effect_Worm_1_014.png" id="15_rpqk8"]
+[ext_resource type="Texture2D" uid="uid://5cj6aw0377gc" path="res://scenes/effects/boss_aura/Effect_Worm_1_015.png" id="16_3o4ww"]
+[ext_resource type="Texture2D" uid="uid://br6tyx47gws8e" path="res://scenes/effects/boss_aura/Effect_Worm_1_016.png" id="17_xr7i0"]
+[ext_resource type="Texture2D" uid="uid://bhwjjqwb07wd2" path="res://scenes/effects/boss_aura/Effect_Worm_1_017.png" id="18_shvbf"]
+[ext_resource type="Texture2D" uid="uid://bo8uoisgkjs6l" path="res://scenes/effects/boss_aura/Effect_Worm_1_018.png" id="19_6dj1s"]
+[ext_resource type="Texture2D" uid="uid://d2006afo23qn7" path="res://scenes/effects/boss_aura/Effect_Worm_1_019.png" id="20_akvoj"]
+[ext_resource type="Texture2D" uid="uid://drwib5pim4pa6" path="res://scenes/effects/boss_aura/Effect_Worm_1_020.png" id="21_guf14"]
+[ext_resource type="Texture2D" uid="uid://c5wmtxv4od3qd" path="res://scenes/effects/boss_aura/Effect_Worm_1_021.png" id="22_xxaaa"]
+[ext_resource type="Texture2D" uid="uid://l4g88harytfx" path="res://scenes/effects/boss_aura/Effect_Worm_1_022.png" id="23_xht0h"]
+[ext_resource type="Texture2D" uid="uid://6xtd8ga5movc" path="res://scenes/effects/boss_aura/Effect_Worm_1_023.png" id="24_fgglx"]
+[ext_resource type="Texture2D" uid="uid://c57dvl7eh055v" path="res://scenes/effects/boss_aura/Effect_Worm_1_024.png" id="25_yv6ru"]
+[ext_resource type="Texture2D" uid="uid://bkdkj6w10ipnh" path="res://scenes/effects/boss_aura/Effect_Worm_1_025.png" id="26_2ff2y"]
+[ext_resource type="Texture2D" uid="uid://dtqh0wbqdf8s4" path="res://scenes/effects/boss_aura/Effect_Worm_1_026.png" id="27_ogsfy"]
+[ext_resource type="Texture2D" uid="uid://brcfwpx21sl5y" path="res://scenes/effects/boss_aura/Effect_Worm_1_027.png" id="28_7teb6"]
+[ext_resource type="Texture2D" uid="uid://csvwb3vc4g3fc" path="res://scenes/effects/boss_aura/Effect_Worm_1_028.png" id="29_qoe1p"]
+[ext_resource type="Texture2D" uid="uid://cj200ohlaurtx" path="res://scenes/effects/boss_aura/Effect_Worm_1_029.png" id="30_e2oum"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1qjxk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xcr6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2ihro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2c8dv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_h4jo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wwfpf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_sfq6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2kggu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_tuo1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_x8umt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ct6jj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qitcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_67kcl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yfg7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_oxwsq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_rpqk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3o4ww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_xr7i0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_shvbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_6dj1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_akvoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_guf14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_xxaaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_xht0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_fgglx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_yv6ru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_2ff2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ogsfy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_7teb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_qoe1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_e2oum")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[node name="BossAura" type="AnimatedSprite2D"]
+show_behind_parent = true
+position = Vector2(0, -56)
+scale = Vector2(0.4, 0.5)
+sprite_frames = SubResource("SpriteFrames_1qjxk")
+autoplay = "default"
+frame_progress = 0.164733

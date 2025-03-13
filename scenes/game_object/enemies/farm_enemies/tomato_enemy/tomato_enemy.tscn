@@ -1,0 +1,207 @@
+[gd_scene load_steps=28 format=3 uid="uid://brlgeq2cpe8r6"]
+
+[ext_resource type="Script" path="res://scenes/game_object/enemies/farm_enemies/tomato_enemy/tomato_enemy.gd" id="1_4n3v8"]
+[ext_resource type="PackedScene" uid="uid://br47oe6cdcp4h" path="res://scenes/component/random_stream_player_2d_component.tscn" id="2_2kxph"]
+[ext_resource type="AudioStream" uid="uid://dv2j0eoxxdl5l" path="res://assets/audio/sfx/footstep_carpet_000.ogg" id="3_3s1gx"]
+[ext_resource type="AudioStream" uid="uid://b7jevwof7y23c" path="res://assets/audio/sfx/footstep_carpet_001.ogg" id="4_8vd1k"]
+[ext_resource type="AudioStream" uid="uid://c2tvbvycrcy8v" path="res://assets/audio/sfx/footstep_carpet_002.ogg" id="5_l5r7j"]
+[ext_resource type="AudioStream" uid="uid://cfa3vwlwibsog" path="res://assets/audio/sfx/footstep_carpet_003.ogg" id="6_x4124"]
+[ext_resource type="AudioStream" uid="uid://cf3t6u6466igk" path="res://assets/audio/sfx/footstep_carpet_004.ogg" id="7_010ua"]
+[ext_resource type="PackedScene" uid="uid://bqynfy3wngpy7" path="res://scenes/component/vial_drop_component.tscn" id="8_ss3ca"]
+[ext_resource type="PackedScene" uid="uid://cl21hasx1ekjd" path="res://scenes/component/health_component.tscn" id="9_qjnlf"]
+[ext_resource type="PackedScene" uid="uid://budumifdbcmbv" path="res://scenes/game_object/experience_vial/green_vial.tscn" id="9_vcmxe"]
+[ext_resource type="PackedScene" uid="uid://b15860rxkv1a1" path="res://scenes/component/velocity_component.tscn" id="10_t8n11"]
+[ext_resource type="PackedScene" uid="uid://dwhwp00bq1je6" path="res://scenes/component/hitflash_component.tscn" id="11_1gqss"]
+[ext_resource type="Shader" path="res://scenes/component/hitflash_component.gdshader" id="12_lcldn"]
+[ext_resource type="PackedScene" uid="uid://cfqv7qt4x3y3i" path="res://scenes/component/death_component.tscn" id="13_feksd"]
+[ext_resource type="PackedScene" uid="uid://b3evnp66mpx0j" path="res://scenes/component/death_sfx_stream_player.tscn" id="14_dpxds"]
+[ext_resource type="PackedScene" uid="uid://sl3i0hvqi3av" path="res://scenes/component/hurtbox_component.tscn" id="15_k7db7"]
+[ext_resource type="AudioStream" uid="uid://cfqvbuhre0xv7" path="res://scenes/game_object/enemies/farm_enemies/potato_enemy/crunchwet.mp3" id="15_wbfup"]
+[ext_resource type="Texture2D" uid="uid://df484rttuclt1" path="res://scenes/game_object/enemies/farm_enemies/tomato_enemy/tomato.png" id="16_0i4a1"]
+[ext_resource type="PackedScene" uid="uid://ds1jpmcwff24x" path="res://scenes/component/enemy_shadow.tscn" id="18_eh0f8"]
+
+[sub_resource type="Animation" id="Animation_ihajb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_apdu7"]
+resource_name = "tomato_walk"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/Sprite2D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1, 0), Vector2(1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/Sprite2D:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.261799, -0.0872665, 0.0872665, -0.174533]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Visuals/Sprite2D:scale")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.2, 1.2), Vector2(1.4, 1.4), Vector2(1.2, 1.2)]
+}
+
+[sub_resource type="Animation" id="Animation_fjdpl"]
+resource_name = "walk"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/Sprite2D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1, 0), Vector2(1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/Sprite2D:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.261799, -0.174533, 0.174533, -0.174533]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rqgq1"]
+_data = {
+"RESET": SubResource("Animation_ihajb"),
+"tomato_walk": SubResource("Animation_apdu7"),
+"walk": SubResource("Animation_fjdpl")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_11yjx"]
+resource_local_to_scene = true
+shader = ExtResource("12_lcldn")
+shader_parameter/lerp_percent = 0.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_0cb3t"]
+random_pitch = 1.5
+random_volume_offset_db = 2.0
+streams_count = 1
+stream_0/stream = ExtResource("15_wbfup")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dltyd"]
+radius = 11.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6yu18"]
+radius = 6.0
+
+[node name="TomatoEnemy" type="CharacterBody2D" groups=["enemy", "entities_layer"]]
+collision_layer = 8
+collision_mask = 9
+motion_mode = 1
+script = ExtResource("1_4n3v8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rqgq1")
+}
+autoplay = "tomato_walk"
+
+[node name="HitRandomAudioPlayer2DComponent" parent="." instance=ExtResource("2_2kxph")]
+max_distance = 300.0
+streams = Array[AudioStream]([ExtResource("3_3s1gx"), ExtResource("4_8vd1k"), ExtResource("5_l5r7j"), ExtResource("6_x4124"), ExtResource("7_010ua")])
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 60.0
+autostart = true
+
+[node name="VialDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("8_ss3ca")]
+vial_scene = ExtResource("9_vcmxe")
+health_component = NodePath("../HealthComponent")
+
+[node name="HealthComponent" parent="." instance=ExtResource("9_qjnlf")]
+max_health = 7.0
+
+[node name="VelocityComponent" parent="." instance=ExtResource("10_t8n11")]
+max_speed = 68
+
+[node name="HitflashComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("11_1gqss")]
+health_component = NodePath("../HealthComponent")
+sprite = NodePath("../Visuals/Sprite2D")
+hit_flash_material = SubResource("ShaderMaterial_11yjx")
+
+[node name="DeathComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("13_feksd")]
+health_component = NodePath("../HealthComponent")
+sprite = NodePath("../Visuals/Sprite2D")
+
+[node name="DeathSFXPlayer" parent="DeathComponent" instance=ExtResource("14_dpxds")]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_0cb3t")
+pitch_scale = 0.75
+
+[node name="HurtboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("15_k7db7")]
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent"]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_dltyd")
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals"]
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("16_0i4a1")
+offset = Vector2(0, -4)
+
+[node name="EnemyShadow" parent="Visuals/Sprite2D" instance=ExtResource("18_eh0f8")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_6yu18")

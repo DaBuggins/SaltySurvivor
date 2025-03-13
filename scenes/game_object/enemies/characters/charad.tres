@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Character" load_steps=7 format=3 uid="uid://cbasmt1p57l53"]
+
+[ext_resource type="AudioStream" uid="uid://cag67gisgbmxx" path="res://assets/audio/character_sounds/adlose2.mp3" id="1_bdaco"]
+[ext_resource type="Script" path="res://scenes/game_object/enemies/characters/character.gd" id="1_edvav"]
+[ext_resource type="AudioStream" uid="uid://dgp7xdmfpwpbu" path="res://assets/audio/character_sounds/adpick.mp3" id="1_tfy00"]
+[ext_resource type="Texture2D" uid="uid://dt0lmbgrbttve" path="res://scenes/game_object/enemies/characters/ad.png" id="2_gpn4t"]
+[ext_resource type="Resource" uid="uid://cjacgtismplni" path="res://resources/upgrades/harddrive.tres" id="3_7vrvw"]
+[ext_resource type="AudioStream" uid="uid://qcn1kb6e50r3" path="res://assets/audio/character_sounds/adwin.mp3" id="6_anqi2"]
+
+[resource]
+script = ExtResource("1_edvav")
+id = "ad"
+name = "Ad"
+sprite = ExtResource("2_gpn4t")
+description = "Ad is here"
+speed = 110.0
+accel = 5.0
+health = 5.0
+pickup_area = 24.0
+wins = 0
+unlocked = true
+starter_weapon = ExtResource("3_7vrvw")
+pick_sfx = ExtResource("1_tfy00")
+lose_sfx = ExtResource("1_bdaco")
+win_sfx = ExtResource("6_anqi2")

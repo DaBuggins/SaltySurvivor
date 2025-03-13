@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhp4qex3gvtyl"]
+
+[ext_resource type="Theme" uid="uid://ivx8wu3sxxyt" path="res://resources/theme/theme.tres" id="1_aa1tm"]
+[ext_resource type="Script" path="res://scenes/UI/back_button.gd" id="2_u6tio"]
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_rujry"]
+button_index = 1
+
+[sub_resource type="Shortcut" id="Shortcut_ut0dc"]
+events = [SubResource("InputEventJoypadButton_rujry")]
+
+[node name="BackButton" type="Button"]
+process_mode = 3
+custom_minimum_size = Vector2(50, 0)
+offset_left = 48.0
+offset_top = 435.0
+offset_right = 98.0
+offset_bottom = 458.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("1_aa1tm")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+action_mode = 0
+shortcut = SubResource("Shortcut_ut0dc")
+text = "Back"
+script = ExtResource("2_u6tio")

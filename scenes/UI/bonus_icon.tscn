@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b01yph3i5r5v3"]
+
+[ext_resource type="Texture2D" uid="uid://b1s7upcnp8ltl" path="res://assets/ui/saltparticle.png" id="1_aektb"]
+
+[node name="BonusIcon" type="TextureRect"]
+scale = Vector2(4, 4)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_aektb")

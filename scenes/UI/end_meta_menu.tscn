@@ -1,0 +1,114 @@
+[gd_scene load_steps=19 format=3 uid="uid://orxc4usbbbp7"]
+
+[ext_resource type="Script" path="res://scenes/UI/end_meta_menu.gd" id="1_y5nfr"]
+[ext_resource type="Script" path="res://resources/meta_upgrades/meta_upgrade.gd" id="2_5mh0f"]
+[ext_resource type="Resource" uid="uid://dawrmctx225as" path="res://resources/meta_upgrades/experience_gain.tres" id="3_t6aww"]
+[ext_resource type="Resource" uid="uid://dv57n2vr7mii3" path="res://resources/meta_upgrades/health_regen.tres" id="4_4nkim"]
+[ext_resource type="Resource" uid="uid://dgga0f4inmdqf" path="res://resources/meta_upgrades/perm_pickup_radius.tres" id="4_cbag5"]
+[ext_resource type="Resource" uid="uid://bjyfyjpnfggrh" path="res://resources/meta_upgrades/damage_mult.tres" id="5_fk58b"]
+[ext_resource type="Resource" uid="uid://bl2cbv321a1xg" path="res://resources/meta_upgrades/unlock_roz.tres" id="5_n30wp"]
+[ext_resource type="Resource" uid="uid://ban62m1w8r4xv" path="res://resources/meta_upgrades/unlock_aid.tres" id="6_opatg"]
+[ext_resource type="Resource" uid="uid://dosnbj7iwmpp1" path="res://resources/meta_upgrades/unlock_chon.tres" id="7_v7c3f"]
+[ext_resource type="Resource" uid="uid://d37whrp5ieoek" path="res://resources/meta_upgrades/unlock_mike.tres" id="8_ngrcl"]
+[ext_resource type="PackedScene" uid="uid://01b7cc5p6cmg" path="res://assets/ui/menu_background.tscn" id="9_f6tfp"]
+[ext_resource type="PackedScene" uid="uid://co0op7vsc8xar" path="res://scenes/component/options_shaker.tscn" id="11_avqn0"]
+[ext_resource type="Script" path="res://scenes/UI/scroll_container.gd" id="11_qnkh2"]
+[ext_resource type="PackedScene" uid="uid://dhp4qex3gvtyl" path="res://scenes/UI/back_button.tscn" id="12_157b6"]
+[ext_resource type="Texture2D" uid="uid://di1sxq4vqgbqv" path="res://scenes/game_object/experience_vial/big_red_vial.png" id="12_b3h2n"]
+[ext_resource type="Texture2D" uid="uid://cjcb65nqkgk4a" path="res://scenes/game_object/experience_vial/big_vial.png" id="13_ttwqh"]
+[ext_resource type="Texture2D" uid="uid://c46ykq4pfuh1k" path="res://scenes/game_object/experience_vial/big_green_vial.png" id="14_o6saf"]
+[ext_resource type="PackedScene" uid="uid://7q7yl7w17173" path="res://scenes/UI/vignette.tscn" id="17_kdgb0"]
+
+[node name="EndMetaMenu" type="CanvasLayer"]
+layer = 2
+script = ExtResource("1_y5nfr")
+upgrades = Array[ExtResource("2_5mh0f")]([ExtResource("3_t6aww"), ExtResource("4_cbag5"), ExtResource("4_4nkim"), ExtResource("5_fk58b"), ExtResource("5_n30wp"), ExtResource("6_opatg"), ExtResource("7_v7c3f"), ExtResource("8_ngrcl")])
+
+[node name="MenuBackground" parent="." instance=ExtResource("9_f6tfp")]
+position = Vector2(-54, -3)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+script = ExtResource("11_qnkh2")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 16
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+focus_neighbor_right = NodePath("../BackButton")
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+columns = 3
+
+[node name="BackButton" parent="ScrollContainer/MarginContainer" instance=ExtResource("12_157b6")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -102.0
+offset_top = 57.0
+offset_right = -78.0
+offset_bottom = 72.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(3, 3)
+
+[node name="TotalVialsLabel" type="Label" parent="CenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_shadow_color = Color(0.247059, 0.14902, 0.192157, 1)
+theme_override_colors/font_outline_color = Color(0.247059, 0.14902, 0.192157, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 6
+text = "9999"
+
+[node name="Sprite2D2" type="Sprite2D" parent="CenterContainer/TotalVialsLabel"]
+position = Vector2(-13.6635, 12.1554)
+rotation = -0.634759
+texture = ExtResource("12_b3h2n")
+offset = Vector2(0, -7)
+
+[node name="Sprite2D3" type="Sprite2D" parent="CenterContainer/TotalVialsLabel"]
+position = Vector2(-13.6635, 12.1554)
+rotation = 0.85215
+texture = ExtResource("13_ttwqh")
+offset = Vector2(0, -7)
+
+[node name="Sprite2D4" type="Sprite2D" parent="CenterContainer/TotalVialsLabel"]
+position = Vector2(-13.6635, 12.1554)
+texture = ExtResource("14_o6saf")
+offset = Vector2(0, -7)
+
+[node name="OptionsShaker" parent="." instance=ExtResource("11_avqn0")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 806.0
+alignment = 2
+
+[node name="Vignette" parent="." instance=ExtResource("17_kdgb0")]
+layer = 3

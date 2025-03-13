@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cn80dr6eyu445"]
+
+[ext_resource type="AudioStream" uid="uid://dgabg63bx5nig" path="res://scenes/game_object/enemies/office_enemies/snowman_enemy/quack.mp3" id="1_keoe0"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qe2s1"]
+streams_count = 1
+stream_0/stream = ExtResource("1_keoe0")
+
+[node name="DeathSFXPlayer" type="AudioStreamPlayer2D"]
+process_mode = 3
+stream = SubResource("AudioStreamRandomizer_qe2s1")
+max_distance = 500.0
+bus = &"deathsfx"

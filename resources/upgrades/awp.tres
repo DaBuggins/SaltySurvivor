@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Ability" load_steps=4 format=3 uid="uid://dg50jvbhuhus5"]
+
+[ext_resource type="PackedScene" uid="uid://bp2ejyjh4tph0" path="res://scenes/ability/awp_ability_controller/awp_ability_controller.tscn" id="1_ymie0"]
+[ext_resource type="Script" path="res://resources/upgrades/ability.gd" id="2_lwaya"]
+[ext_resource type="Texture2D" uid="uid://20b8csjrkowo" path="res://scenes/ability/awp_ability/awp.png" id="3_2vpwn"]
+
+[resource]
+script = ExtResource("2_lwaya")
+ability_controller_scene = ExtResource("1_ymie0")
+id = "awp"
+parent_id = "none"
+bonus_slot = 1
+max_quantity = 1
+name = "A.W.P"
+sprite = ExtResource("3_2vpwn")
+is_weapon = true
+color = Color(0, 0.498039, 0.0313726, 1)
+description = "1 Shot, All Skill"

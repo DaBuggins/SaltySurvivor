@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Ability" load_steps=4 format=3 uid="uid://cd7e4183ddvoi"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability.gd" id="1_1rsd5"]
+[ext_resource type="PackedScene" uid="uid://2a2s614yabmm" path="res://scenes/ability/axe_ability_controller/axe_ability_controller.tscn" id="1_j3amx"]
+[ext_resource type="Texture2D" uid="uid://crhlrweoamd2g" path="res://scenes/ability/axe_ability/axe.png" id="3_0601p"]
+
+[resource]
+script = ExtResource("1_1rsd5")
+ability_controller_scene = ExtResource("1_j3amx")
+id = "axe"
+parent_id = "none"
+bonus_slot = 1
+max_quantity = 1
+name = "Axe"
+sprite = ExtResource("3_0601p")
+is_weapon = true
+color = Color(1, 1, 1, 1)
+description = "Spinning axe attack"

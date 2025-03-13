@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MetaUpgrade" load_steps=4 format=3 uid="uid://dosnbj7iwmpp1"]
+
+[ext_resource type="Script" path="res://resources/meta_upgrades/meta_upgrade.gd" id="1_jgqjy"]
+[ext_resource type="Texture2D" uid="uid://yqwj4yl2vmc6" path="res://scenes/game_object/enemies/characters/chon.png" id="2_vnda3"]
+[ext_resource type="AudioStream" uid="uid://d4kp2o30tl3ta" path="res://assets/audio/character_sounds/chonpick.mp3" id="3_xrenq"]
+
+[resource]
+script = ExtResource("1_jgqjy")
+id = "chon"
+max_quantity = 1
+experience_cost = 20
+unlock = true
+title = "Unlock Chon"
+description = "Justin wants some action!"
+upgrade_icon = ExtResource("2_vnda3")
+upgrade_sfx = ExtResource("3_xrenq")

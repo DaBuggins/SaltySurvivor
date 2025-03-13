@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=3 uid="uid://d227bm3ycdn2e"]
+
+[ext_resource type="Texture2D" uid="uid://c0tr3oj0fydx7" path="res://scenes/ability/fane_ability/fane.png" id="1_0vfre"]
+[ext_resource type="Script" path="res://scenes/UI/upgrade_icon.gd" id="2_ywtpr"]
+[ext_resource type="PackedScene" uid="uid://b01yph3i5r5v3" path="res://scenes/UI/bonus_icon.tscn" id="3_duqkd"]
+[ext_resource type="Gradient" uid="uid://d3ytxr3qgdjyi" path="res://scenes/component/rainbow_gradient.tres" id="4_wl1cq"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_3j83t"]
+gradient = ExtResource("4_wl1cq")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1dnm4"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+angle_min = -435.8
+angle_max = 273.9
+radial_velocity_min = -107.7
+radial_velocity_max = 46.15
+gravity = Vector3(0, -30, 0)
+linear_accel_min = 4.62
+linear_accel_max = 65.94
+radial_accel_min = -20.0
+radial_accel_max = 11.42
+scale_min = 3.0
+scale_max = 6.0
+color_ramp = SubResource("GradientTexture1D_3j83t")
+
+[node name="UpgradeIcon" type="TextureRect"]
+custom_minimum_size = Vector2(20, 25)
+offset_right = 20.0
+offset_bottom = 25.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("1_0vfre")
+expand_mode = 1
+stretch_mode = 4
+script = ExtResource("2_ywtpr")
+bonus_icon = ExtResource("3_duqkd")
+
+[node name="Bonus1" type="GridContainer" parent="."]
+modulate = Color(1, 0.167018, 0, 1)
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 83.0
+offset_bottom = 18.0
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(35, 0)
+theme_override_constants/h_separation = 16
+columns = 3
+
+[node name="Bonus2" type="GridContainer" parent="."]
+modulate = Color(1, 0.905882, 0.180392, 1)
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 83.0
+offset_bottom = 20.0
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(35, 10)
+theme_override_constants/h_separation = 16
+columns = 3
+
+[node name="FullUpgradeParticles" type="GPUParticles2D" parent="."]
+unique_name_in_owner = true
+show_behind_parent = true
+position = Vector2(9, 11)
+emitting = false
+amount = 18
+process_material = SubResource("ParticleProcessMaterial_1dnm4")
+speed_scale = 0.75
+randomness = 1.0

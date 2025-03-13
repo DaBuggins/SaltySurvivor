@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://c81uqow2ck20h"]
+
+[ext_resource type="Script" path="res://scenes/game_object/enemies/office_enemies/snowman_enemy/horde_enemy.gd" id="1_5etun"]
+[ext_resource type="PackedScene" uid="uid://h0s8bsd8ukjf" path="res://scenes/game_object/enemies/office_enemies/snowman_enemy/snowman_enemy.tscn" id="3_spor7"]
+
+[node name="HordeEnemy" type="Node2D"]
+script = ExtResource("1_5etun")
+
+[node name="SnowmanEnemy" parent="." instance=ExtResource("3_spor7")]
+
+[node name="SnowmanEnemy2" parent="." instance=ExtResource("3_spor7")]
+position = Vector2(26, 6)
+
+[node name="SnowmanEnemy3" parent="." instance=ExtResource("3_spor7")]
+position = Vector2(-23, 10)
+
+[node name="SnowmanEnemy4" parent="." instance=ExtResource("3_spor7")]
+position = Vector2(2, 23)
+
+[node name="SnowmanEnemy5" parent="." instance=ExtResource("3_spor7")]
+position = Vector2(-20, -15)
+
+[node name="SnowmanEnemy6" parent="." instance=ExtResource("3_spor7")]
+position = Vector2(-1, -28)
+
+[node name="SnowmanEnemy7" parent="." instance=ExtResource("3_spor7")]
+position = Vector2(24, -19)
+
+[node name="SnowmanEnemy8" parent="." instance=ExtResource("3_spor7")]
+position = Vector2(51, -4)
+
+[node name="SnowmanEnemy9" parent="." instance=ExtResource("3_spor7")]
+position = Vector2(41, 33)
+
+[node name="SnowmanEnemy10" parent="." instance=ExtResource("3_spor7")]
+position = Vector2(-28, 37)

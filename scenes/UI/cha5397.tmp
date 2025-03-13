@@ -1,0 +1,120 @@
+[gd_scene load_steps=16 format=3 uid="uid://cyanysgtf2p28"]
+
+[ext_resource type="Script" path="res://scenes/UI/char_select.gd" id="1_dmcrt"]
+[ext_resource type="PackedScene" uid="uid://cul0bt22djwrj" path="res://scenes/UI/char_select_card.tscn" id="2_4avjx"]
+[ext_resource type="Script" path="res://scenes/game_object/characters/character.gd" id="3_s2xgl"]
+[ext_resource type="Resource" uid="uid://cbasmt1p57l53" path="res://scenes/game_object/characters/charad.tres" id="4_80xs7"]
+[ext_resource type="Resource" uid="uid://bnbfpbevn6eux" path="res://scenes/game_object/characters/charaid.tres" id="5_wor68"]
+[ext_resource type="Resource" uid="uid://2mqgmdamxs0t" path="res://scenes/game_object/characters/charbug.tres" id="6_ig0bt"]
+[ext_resource type="Resource" uid="uid://dhxm7o2fw8wb0" path="res://scenes/game_object/characters/charchon.tres" id="7_d55h6"]
+[ext_resource type="Resource" uid="uid://bd36u6eb4cnrl" path="res://scenes/game_object/characters/charcraig.tres" id="8_ifeq3"]
+[ext_resource type="Resource" uid="uid://ccahwx04u0e25" path="res://scenes/game_object/characters/charhaz.tres" id="9_y8jy5"]
+[ext_resource type="Resource" uid="uid://dyby6ju7byt83" path="res://scenes/game_object/characters/charmike.tres" id="10_8ete1"]
+[ext_resource type="Resource" uid="uid://cf1vnyb3ihiew" path="res://scenes/game_object/characters/charroz.tres" id="11_mnoub"]
+
+[sub_resource type="Animation" id="Animation_vffjv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_xxc11"]
+resource_name = "in"
+length = 0.15
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4vfk2"]
+resource_name = "out"
+length = 0.15
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_37p1v"]
+_data = {
+"RESET": SubResource("Animation_vffjv"),
+"in": SubResource("Animation_xxc11"),
+"out": SubResource("Animation_4vfk2")
+}
+
+[node name="CharSelect" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_dmcrt")
+char_card_scene = ExtResource("2_4avjx")
+chars = Array[ExtResource("3_s2xgl")]([ExtResource("4_80xs7"), ExtResource("5_wor68"), ExtResource("6_ig0bt"), ExtResource("7_d55h6"), ExtResource("8_ifeq3"), ExtResource("9_y8jy5"), ExtResource("10_8ete1"), ExtResource("11_mnoub")])
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+process_mode = 3
+libraries = {
+"": SubResource("AnimationLibrary_37p1v")
+}
+autoplay = "in"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.247059, 0.14902, 0.192157, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(320, 180)
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 4
+
+[node name="CardContainer" type="HBoxContainer" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 8
+alignment = 1

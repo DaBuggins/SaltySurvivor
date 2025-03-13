@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Character" load_steps=6 format=3 uid="uid://dyby6ju7byt83"]
+
+[ext_resource type="AudioStream" uid="uid://dnldtajwqmk5j" path="res://assets/audio/character_sounds/mikepick.mp3" id="1_7qpvv"]
+[ext_resource type="Script" path="res://scenes/game_object/enemies/characters/character.gd" id="1_b2al3"]
+[ext_resource type="AudioStream" uid="uid://dgej2ymfjoago" path="res://assets/audio/character_sounds/mikelose.mp3" id="1_xvyf3"]
+[ext_resource type="Texture2D" uid="uid://budjqcqyq1rur" path="res://scenes/game_object/enemies/characters/mike.png" id="2_0kgh3"]
+[ext_resource type="Resource" uid="uid://dg50jvbhuhus5" path="res://resources/upgrades/awp.tres" id="3_qftu1"]
+
+[resource]
+script = ExtResource("1_b2al3")
+id = "mike"
+name = "Mike"
+sprite = ExtResource("2_0kgh3")
+description = "Mike is here"
+speed = 100.0
+accel = 7.0
+health = 4.0
+pickup_area = 24.0
+wins = 0
+unlocked = false
+starter_weapon = ExtResource("3_qftu1")
+pick_sfx = ExtResource("1_7qpvv")
+lose_sfx = ExtResource("1_xvyf3")

@@ -1,0 +1,49 @@
+[gd_scene load_steps=9 format=3 uid="uid://dm7le7nfhwys0"]
+
+[ext_resource type="Script" path="res://scenes/game_object/breakable/crate.gd" id="1_nhlau"]
+[ext_resource type="Script" path="res://scenes/game_object/breakable/crate_health_component.gd" id="2_1mx0x"]
+[ext_resource type="PackedScene" uid="uid://b2h1cay7c6mgl" path="res://scenes/component/crate_drop_component.tscn" id="2_g7qie"]
+[ext_resource type="PackedScene" uid="uid://c160tghm814hx" path="res://scenes/game_object/breakable/crate_break_component.tscn" id="4_n0mod"]
+[ext_resource type="Texture2D" uid="uid://bllltbby1iwq5" path="res://scenes/game_object/breakable/crate.png" id="6_wifqy"]
+[ext_resource type="PackedScene" uid="uid://sl3i0hvqi3av" path="res://scenes/component/hurtbox_component.tscn" id="17_atrb2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w6sdh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aysgw"]
+size = Vector2(18, 21)
+
+[node name="Crate" type="CharacterBody2D" groups=["entities_layer"]]
+physics_interpolation_mode = 1
+modulate = Color(0.690082, 0.690082, 0.690082, 1)
+collision_layer = 5
+script = ExtResource("1_nhlau")
+
+[node name="CrateHealthComponent" type="Node" parent="."]
+script = ExtResource("2_1mx0x")
+max_health = 0.0
+
+[node name="CrateDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("2_g7qie")]
+health_component = NodePath("../CrateHealthComponent")
+
+[node name="CrateBreakComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("4_n0mod")]
+unique_name_in_owner = true
+health_component = NodePath("../CrateHealthComponent")
+sprite = NodePath("../Visuals/Sprite2D")
+
+[node name="HurtboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("17_atrb2")]
+health_component = NodePath("../CrateHealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent"]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_w6sdh")
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals"]
+unique_name_in_owner = true
+texture = ExtResource("6_wifqy")
+offset = Vector2(0, -5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_aysgw")

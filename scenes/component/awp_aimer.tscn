@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://d21ptjavkhtxy"]
+
+[ext_resource type="Texture2D" uid="uid://20b8csjrkowo" path="res://scenes/ability/awp_ability/awp.png" id="1_67fea"]
+[ext_resource type="Script" path="res://scenes/component/reticule.gd" id="2_nxokd"]
+
+[node name="AWPAimer" type="Sprite2D"]
+texture = ExtResource("1_67fea")
+offset = Vector2(10, 0)
+script = ExtResource("2_nxokd")

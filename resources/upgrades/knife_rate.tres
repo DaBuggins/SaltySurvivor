@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://oi88u6u21r0n"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_8xfxb"]
+[ext_resource type="Texture2D" uid="uid://cgcvr2s8nihju" path="res://scenes/ability/knife_ability/sword.png" id="2_cnlw7"]
+
+[resource]
+script = ExtResource("1_8xfxb")
+id = "knife_rate"
+parent_id = "knife"
+bonus_slot = 2
+max_quantity = 2
+name = "Knife Rate"
+sprite = ExtResource("2_cnlw7")
+is_weapon = false
+color = Color(1, 1, 1, 1)
+description = "Slash faster!"

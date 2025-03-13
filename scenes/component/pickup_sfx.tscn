@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://o1t1syg3v4sd"]
+
+[ext_resource type="AudioStream" uid="uid://fqrs3v476nqs" path="res://assets/audio/popsfx.mp3" id="1_2lvp6"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_8u6ad"]
+random_pitch = 1.5
+streams_count = 1
+stream_0/stream = ExtResource("1_2lvp6")
+
+[node name="PickupSFX" type="AudioStreamPlayer2D"]
+stream = SubResource("AudioStreamRandomizer_8u6ad")
+volume_db = -7.0
+pitch_scale = 0.8
+max_distance = 600.0
+bus = &"sfx"

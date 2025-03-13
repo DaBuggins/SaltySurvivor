@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://gjx74bfnhdsr"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_wqlug"]
+[ext_resource type="Texture2D" uid="uid://c0tr3oj0fydx7" path="res://scenes/ability/fane_ability/fane.png" id="2_32mje"]
+
+[resource]
+script = ExtResource("1_wqlug")
+id = "upgrade_fane_speed"
+parent_id = "fane"
+bonus_slot = 2
+max_quantity = 2
+name = "F4N-E Speed Update"
+sprite = ExtResource("2_32mje")
+is_weapon = false
+color = Color(1, 0.184314, 0.898039, 1)
+description = "Faster processing"

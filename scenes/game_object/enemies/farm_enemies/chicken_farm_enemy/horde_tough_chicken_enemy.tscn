@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4rov5rhg8rem"]
+
+[ext_resource type="PackedScene" uid="uid://co0mmxjfr6oig" path="res://scenes/game_object/enemies/farm_enemies/chicken_farm_enemy/tough_chicken_enemy.tscn" id="1_xh0nc"]
+
+[node name="HordeToughChicken" type="Node2D"]
+
+[node name="ToughChickenEnemy" parent="." instance=ExtResource("1_xh0nc")]
+
+[node name="ToughChickenEnemy2" parent="." instance=ExtResource("1_xh0nc")]
+position = Vector2(24, 2)
+
+[node name="ToughChickenEnemy3" parent="." instance=ExtResource("1_xh0nc")]
+position = Vector2(11, 24)
+
+[node name="ToughChickenEnemy4" parent="." instance=ExtResource("1_xh0nc")]
+position = Vector2(-23, 22)
+
+[node name="ToughChickenEnemy5" parent="." instance=ExtResource("1_xh0nc")]
+position = Vector2(-34, -12)
+
+[node name="ToughChickenEnemy6" parent="." instance=ExtResource("1_xh0nc")]
+position = Vector2(-14, -48)
+
+[node name="ToughChickenEnemy7" parent="." instance=ExtResource("1_xh0nc")]
+position = Vector2(29, -49)
+
+[node name="ToughChickenEnemy8" parent="." instance=ExtResource("1_xh0nc")]
+position = Vector2(49, -23)
+
+[node name="ToughChickenEnemy9" parent="." instance=ExtResource("1_xh0nc")]
+position = Vector2(14, -29)
+
+[node name="ToughChickenEnemy10" parent="." instance=ExtResource("1_xh0nc")]
+position = Vector2(-12, -25)
+
+[node name="ToughChickenEnemy11" parent="." instance=ExtResource("1_xh0nc")]
+position = Vector2(-48, 12)

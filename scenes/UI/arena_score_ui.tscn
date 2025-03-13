@@ -1,0 +1,119 @@
+[gd_scene load_steps=8 format=3 uid="uid://6jwkytm3uc0i"]
+
+[ext_resource type="Script" path="res://scenes/UI/arena_score_ui.gd" id="1_3rjiy"]
+[ext_resource type="Texture2D" uid="uid://cjcb65nqkgk4a" path="res://scenes/game_object/experience_vial/big_vial.png" id="2_83lq3"]
+[ext_resource type="Texture2D" uid="uid://hpwrie41r4k4" path="res://scenes/game_object/experience_vial/experience_vial.png" id="2_shans"]
+[ext_resource type="Texture2D" uid="uid://dt0lmbgrbttve" path="res://scenes/game_object/enemies/characters/ad.png" id="3_iqx0u"]
+
+[sub_resource type="Animation" id="Animation_8nc0o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_trbha"]
+resource_name = "kill"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.434587, 0.0, -0.507891, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sp7am"]
+_data = {
+"RESET": SubResource("Animation_8nc0o"),
+"kill": SubResource("Animation_trbha")
+}
+
+[node name="ArenaScoreUI" type="CanvasLayer"]
+script = ExtResource("1_3rjiy")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -43.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="TotalVialsLabel" type="Label" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_shadow_color = Color(0.247059, 0.14902, 0.192157, 1)
+theme_override_colors/font_outline_color = Color(0.247059, 0.14902, 0.192157, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 32
+text = "9999"
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/TotalVialsLabel"]
+position = Vector2(-3, 7)
+texture = ExtResource("2_83lq3")
+offset = Vector2(-4, 0)
+
+[node name="CurrentVialsLabel" type="Label" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_shadow_color = Color(0.247059, 0.14902, 0.192157, 1)
+theme_override_colors/font_outline_color = Color(0.247059, 0.14902, 0.192157, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 32
+text = "9999"
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/CurrentVialsLabel"]
+position = Vector2(0, 6)
+texture = ExtResource("2_shans")
+offset = Vector2(-4, 0)
+
+[node name="KillsLabel" type="Label" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_shadow_color = Color(0.247059, 0.14902, 0.192157, 1)
+theme_override_colors/font_outline_color = Color(0.247059, 0.14902, 0.192157, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 32
+text = "KILLS"
+
+[node name="KillSprite" type="Sprite2D" parent="MarginContainer/KillsLabel"]
+unique_name_in_owner = true
+position = Vector2(-9, 10)
+texture = ExtResource("3_iqx0u")
+offset = Vector2(0, -5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MarginContainer/KillsLabel/KillSprite"]
+libraries = {
+"": SubResource("AnimationLibrary_sp7am")
+}

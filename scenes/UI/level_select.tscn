@@ -1,0 +1,143 @@
+[gd_scene load_steps=14 format=3 uid="uid://nuowbrh4gfy8"]
+
+[ext_resource type="Script" path="res://scenes/UI/level_select.gd" id="1_fnqsu"]
+[ext_resource type="PackedScene" uid="uid://di6wb10q555r8" path="res://scenes/UI/level_select_card.tscn" id="2_uus2k"]
+[ext_resource type="Script" path="res://resources/levels/level.gd" id="3_de6ta"]
+[ext_resource type="Resource" uid="uid://bm41krjo3gqh4" path="res://resources/levels/level1.tres" id="4_487kd"]
+[ext_resource type="Resource" uid="uid://d4hvig0gms0y0" path="res://resources/levels/level2.tres" id="5_8671j"]
+[ext_resource type="Resource" uid="uid://cqmwpqxmbvi0t" path="res://resources/levels/level3.tres" id="6_vvbia"]
+[ext_resource type="Theme" uid="uid://ivx8wu3sxxyt" path="res://resources/theme/theme.tres" id="7_hih4v"]
+[ext_resource type="PackedScene" uid="uid://bfij07ij2mibg" path="res://scenes/component/char_shaker.tscn" id="7_xpvlt"]
+[ext_resource type="PackedScene" uid="uid://dhp4qex3gvtyl" path="res://scenes/UI/back_button.tscn" id="9_1qhlw"]
+
+[sub_resource type="Animation" id="Animation_vffjv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_xxc11"]
+resource_name = "in"
+length = 0.15
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4vfk2"]
+resource_name = "out"
+length = 0.15
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_37p1v"]
+_data = {
+"RESET": SubResource("Animation_vffjv"),
+"in": SubResource("Animation_xxc11"),
+"out": SubResource("Animation_4vfk2")
+}
+
+[node name="LevelSelect" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_fnqsu")
+level_card_scene = ExtResource("2_uus2k")
+levels = Array[ExtResource("3_de6ta")]([ExtResource("4_487kd"), ExtResource("5_8671j"), ExtResource("6_vvbia")])
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+process_mode = 3
+libraries = {
+"": SubResource("AnimationLibrary_37p1v")
+}
+autoplay = "in"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.247059, 0.14902, 0.192157, 1)
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(0, 45)
+layout_direction = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -22.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+mouse_filter = 2
+theme = ExtResource("7_hih4v")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 16
+
+[node name="CharShaker" parent="." instance=ExtResource("7_xpvlt")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 834.0
+offset_bottom = 460.0
+grow_horizontal = 1
+grow_vertical = 1
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+process_mode = 3
+layout_direction = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(320, 180)
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="BackButton" parent="MarginContainer" instance=ExtResource("9_1qhlw")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+columns = 4

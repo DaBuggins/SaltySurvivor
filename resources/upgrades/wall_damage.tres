@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://dvbuyd1lj4roc"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_twkhg"]
+[ext_resource type="Texture2D" uid="uid://m6jnejvjew5s" path="res://scenes/ability/wall_ability/wall.png" id="2_c75x7"]
+
+[resource]
+script = ExtResource("1_twkhg")
+id = "wall_damage"
+parent_id = "wall"
+bonus_slot = 1
+max_quantity = 2
+name = "Wall Damage"
+sprite = ExtResource("2_c75x7")
+is_weapon = false
+color = Color(0.8, 0.372549, 0.278431, 1)
+description = "Harder bricks"

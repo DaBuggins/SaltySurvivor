@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba7gifxbcxq2n"]
+
+[ext_resource type="Script" path="res://scenes/ability/grenade_ability_controller/grenade_ability_controller.gd" id="1_a6xni"]
+[ext_resource type="PackedScene" uid="uid://ccw4csv8pp1ip" path="res://scenes/ability/grenade_ability/grenade_ability.tscn" id="2_nn2nn"]
+
+[node name="GrenadeAbilityController" type="Node"]
+script = ExtResource("1_a6xni")
+grenade_ability_scene = ExtResource("2_nn2nn")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true

@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bksyk3ls1625y"]
+
+[ext_resource type="Script" path="res://scenes/ability/wall_ability_controller/wall_ability_controller.gd" id="1_cghju"]
+[ext_resource type="PackedScene" uid="uid://1l235med7ul" path="res://scenes/ability/wall_ability/wall_ability.tscn" id="2_k204o"]
+[ext_resource type="PackedScene" uid="uid://caeiijuibgo26" path="res://scenes/component/reticule.tscn" id="3_738y4"]
+
+[node name="WallAbilityController" type="Node"]
+script = ExtResource("1_cghju")
+wall_ability_scene = ExtResource("2_k204o")
+reticule_scene = ExtResource("3_738y4")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true

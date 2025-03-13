@@ -1,0 +1,541 @@
+[gd_scene load_steps=40 format=3 uid="uid://cul0bt22djwrj"]
+
+[ext_resource type="Script" path="res://scenes/UI/char_select_card.gd" id="1_g3hhb"]
+[ext_resource type="AudioStream" uid="uid://ch3i4ef4byuyn" path="res://assets/audio/saltselectsfx.wav" id="2_38f6g"]
+[ext_resource type="PackedScene" uid="uid://dv54y4v25i82x" path="res://scenes/component/random_stream_player_component.tscn" id="2_hwca4"]
+[ext_resource type="AudioStream" uid="uid://cqmtle8yjoapg" path="res://assets/audio/sfx/switch1.ogg" id="3_tmfuq"]
+[ext_resource type="AudioStream" uid="uid://b0ot7rrp0rh3o" path="res://assets/audio/sfx/switch2.ogg" id="4_kggmt"]
+[ext_resource type="AudioStream" uid="uid://dxipoqs3b7mv6" path="res://assets/audio/sfx/switch3.ogg" id="5_jsd14"]
+[ext_resource type="AudioStream" uid="uid://8n2tlc1rifta" path="res://assets/audio/sfx/switch4.ogg" id="6_7b7vi"]
+[ext_resource type="AudioStream" uid="uid://dggagepu1ie2" path="res://assets/audio/sfx/switch5.ogg" id="7_fr84k"]
+[ext_resource type="AudioStream" uid="uid://bfaaaodkr6x3f" path="res://assets/audio/sfx/switch6.ogg" id="8_su2es"]
+[ext_resource type="AudioStream" uid="uid://c66avioa74kix" path="res://assets/audio/sfx/switch7.ogg" id="9_av55w"]
+[ext_resource type="AudioStream" uid="uid://lwxy13lw45h7" path="res://assets/audio/sfx/switch8.ogg" id="10_v7fnq"]
+[ext_resource type="AudioStream" uid="uid://bwj1ga8wv756h" path="res://assets/audio/sfx/switch9.ogg" id="11_l6yeb"]
+[ext_resource type="AudioStream" uid="uid://dk60ddh103bwg" path="res://assets/audio/sfx/switch10.ogg" id="12_u1cl3"]
+[ext_resource type="Texture2D" uid="uid://dt0lmbgrbttve" path="res://scenes/game_object/enemies/characters/ad.png" id="13_8xdko"]
+[ext_resource type="Theme" uid="uid://ivx8wu3sxxyt" path="res://resources/theme/theme.tres" id="14_swncm"]
+[ext_resource type="Script" path="res://scenes/UI/focus_button.gd" id="15_amo41"]
+[ext_resource type="PackedScene" uid="uid://8speg66ih1ny" path="res://scenes/component/disabled_overlay.tscn" id="15_wd5xf"]
+[ext_resource type="PackedScene" uid="uid://cdnhsly5xea23" path="res://scenes/component/salt_select_effect.tscn" id="16_sxr6i"]
+[ext_resource type="Texture2D" uid="uid://dk1qtr2aat7lx" path="res://scenes/game_object/health_pickup/heart.png" id="17_42fpc"]
+[ext_resource type="Texture2D" uid="uid://bwoexospukhaq" path="res://resources/UI_Flat_ButtonArrow01a.png" id="18_bx1ro"]
+[ext_resource type="Texture2D" uid="uid://d3ehtxoafldcq" path="res://assets/speedup.png" id="19_tr6rs"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_l330c"]
+random_pitch = 1.4
+streams_count = 1
+stream_0/stream = ExtResource("2_38f6g")
+
+[sub_resource type="Animation" id="Animation_wsajo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer/VBoxContainer/PanelContainer/Sprite2D:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_kqy3a"]
+resource_name = "char_look"
+length = 1.5
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/PanelContainer/Sprite2D:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.533333, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_e8s16"]
+resource_name = "discard"
+length = 0.1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hu6jh"]
+resource_name = "in"
+length = 0.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.2, 1.3), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_cxtt2"]
+resource_name = "selected"
+length = 0.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.4),
+"transitions": PackedFloat32Array(1, 2.14355, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.174533, 0.0872665, 0.0]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ClickPlayerComponent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.05),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_random"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_macc1"]
+_data = {
+"RESET": SubResource("Animation_wsajo"),
+"char_look": SubResource("Animation_kqy3a"),
+"discard": SubResource("Animation_e8s16"),
+"in": SubResource("Animation_hu6jh"),
+"selected": SubResource("Animation_cxtt2")
+}
+
+[sub_resource type="Animation" id="Animation_c3pub"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HoverPlayerComponent:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_uqdi6"]
+resource_name = "discard"
+length = 0.1
+step = 0.05
+
+[sub_resource type="Animation" id="Animation_l3fqj"]
+resource_name = "hover"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0872665, 0.0872665, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HoverPlayerComponent:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_rtxib"]
+resource_name = "selected"
+length = 0.4
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xwlku"]
+_data = {
+"RESET": SubResource("Animation_c3pub"),
+"discard": SubResource("Animation_uqdi6"),
+"hover": SubResource("Animation_l3fqj"),
+"selected": SubResource("Animation_rtxib")
+}
+
+[sub_resource type="Animation" id="Animation_5v0ua"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%Sprite2D:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_4s1y3"]
+resource_name = "new_look"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%Sprite2D:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.566667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o3xua"]
+_data = {
+"RESET": SubResource("Animation_5v0ua"),
+"new_look": SubResource("Animation_4s1y3")
+}
+
+[sub_resource type="Gradient" id="Gradient_02ngf"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wdqkv"]
+gradient = SubResource("Gradient_02ngf")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_h54ms"]
+lifetime_randomness = 1.0
+particle_flag_disable_z = true
+angle_min = -336.1
+angle_max = 373.6
+gravity = Vector3(0, -30, 0)
+linear_accel_min = -54.4
+linear_accel_max = 30.67
+radial_accel_min = -9.82
+radial_accel_max = 78.52
+scale_min = 3.0
+scale_max = 12.0
+color_ramp = SubResource("GradientTexture1D_wdqkv")
+
+[node name="CharSelectCard" type="PanelContainer" groups=["char_card"]]
+custom_minimum_size = Vector2(120, 120)
+offset_right = 137.0
+offset_bottom = 147.0
+pivot_offset = Vector2(75, 75)
+script = ExtResource("1_g3hhb")
+
+[node name="HoverPlayerComponent" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_l330c")
+volume_db = -17.0
+pitch_scale = 1.2
+bus = &"sfx"
+
+[node name="ClickPlayerComponent" parent="." instance=ExtResource("2_hwca4")]
+streams = Array[AudioStream]([ExtResource("3_tmfuq"), ExtResource("4_kggmt"), ExtResource("5_jsd14"), ExtResource("6_7b7vi"), ExtResource("7_fr84k"), ExtResource("8_su2es"), ExtResource("9_av55w"), ExtResource("10_v7fnq"), ExtResource("11_l6yeb"), ExtResource("12_u1cl3")])
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_macc1")
+}
+
+[node name="HoverAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xwlku")
+}
+
+[node name="FocusButton" type="Button" parent="."]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.501961)
+layout_mode = 2
+theme = ExtResource("14_swncm")
+script = ExtResource("15_amo41")
+
+[node name="SaltSelectEffect" parent="." instance=ExtResource("16_sxr6i")]
+position = Vector2(81, 50)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(0, 125)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 10
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_type_variation = &"BlueOutlineLabel"
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 4
+theme_override_font_sizes/font_size = 32
+text = "Char"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MarginContainer/VBoxContainer/PanelContainer"]
+libraries = {
+"": SubResource("AnimationLibrary_o3xua")
+}
+autoplay = "new_look"
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/PanelContainer"]
+unique_name_in_owner = true
+position = Vector2(100, 18)
+scale = Vector2(3, 3)
+texture = ExtResource("13_8xdko")
+
+[node name="Level1Particles" type="GPUParticles2D" parent="MarginContainer/VBoxContainer/PanelContainer/Sprite2D"]
+unique_name_in_owner = true
+modulate = Color(0, 1, 0, 1)
+show_behind_parent = true
+position = Vector2(-5.66667, 0)
+emitting = false
+amount = 24
+process_material = SubResource("ParticleProcessMaterial_h54ms")
+lifetime = 1.5
+randomness = 1.0
+
+[node name="Level2Particles" type="GPUParticles2D" parent="MarginContainer/VBoxContainer/PanelContainer/Sprite2D"]
+unique_name_in_owner = true
+modulate = Color(0, 0, 1, 1)
+show_behind_parent = true
+position = Vector2(5.66667, 1.66667)
+emitting = false
+amount = 24
+process_material = SubResource("ParticleProcessMaterial_h54ms")
+lifetime = 1.5
+randomness = 1.0
+
+[node name="Level3Particles" type="GPUParticles2D" parent="MarginContainer/VBoxContainer/PanelContainer/Sprite2D"]
+unique_name_in_owner = true
+modulate = Color(1, 0, 0, 1)
+show_behind_parent = true
+emitting = false
+amount = 24
+process_material = SubResource("ParticleProcessMaterial_h54ms")
+lifetime = 1.5
+randomness = 1.0
+
+[node name="XBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="Panel" type="PanelContainer" parent="MarginContainer/VBoxContainer/XBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/XBoxContainer/Panel"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 4
+
+[node name="HealthIcon" type="TextureRect" parent="MarginContainer/VBoxContainer/XBoxContainer/Panel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+mouse_filter = 2
+texture = ExtResource("17_42fpc")
+stretch_mode = 4
+
+[node name="SpeedIcon" type="TextureRect" parent="MarginContainer/VBoxContainer/XBoxContainer/Panel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("18_bx1ro")
+stretch_mode = 4
+
+[node name="AccelIcon" type="TextureRect" parent="MarginContainer/VBoxContainer/XBoxContainer/Panel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+mouse_filter = 2
+texture = ExtResource("19_tr6rs")
+stretch_mode = 2
+
+[node name="Panel2" type="PanelContainer" parent="MarginContainer/VBoxContainer/XBoxContainer"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/XBoxContainer/Panel2"]
+custom_minimum_size = Vector2(20, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HealthIconLabel" type="Label" parent="MarginContainer/VBoxContainer/XBoxContainer/Panel2/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+theme_type_variation = &"BlueOutlineLabel"
+text = "0"
+horizontal_alignment = 1
+clip_text = true
+
+[node name="SpeedIconLabel" type="Label" parent="MarginContainer/VBoxContainer/XBoxContainer/Panel2/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"BlueOutlineLabel"
+text = "0"
+horizontal_alignment = 1
+
+[node name="AccelIconLabel" type="Label" parent="MarginContainer/VBoxContainer/XBoxContainer/Panel2/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"BlueOutlineLabel"
+text = "0"
+horizontal_alignment = 1
+
+[node name="Panel3" type="PanelContainer" parent="MarginContainer/VBoxContainer/XBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/XBoxContainer/Panel3"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_bottom = -2
+
+[node name="StarterIcon" type="TextureRect" parent="MarginContainer/VBoxContainer/XBoxContainer/Panel3/MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("17_42fpc")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/XBoxContainer/Panel3"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_type_variation = &"BlueOutlineLabel"
+text = "Starter"
+
+[node name="DisabledOverlay" parent="." instance=ExtResource("15_wd5xf")]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2

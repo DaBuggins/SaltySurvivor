@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Character" load_steps=7 format=3 uid="uid://ccahwx04u0e25"]
+
+[ext_resource type="Script" path="res://scenes/game_object/enemies/characters/character.gd" id="1_myu6k"]
+[ext_resource type="AudioStream" uid="uid://d31hmjoxbcw0n" path="res://assets/audio/character_sounds/hazlose.mp3" id="1_ntucv"]
+[ext_resource type="AudioStream" uid="uid://bex3agexge4gu" path="res://assets/audio/character_sounds/hazpick.mp3" id="1_tbud3"]
+[ext_resource type="Texture2D" uid="uid://wapjtaw3k5s4" path="res://scenes/game_object/enemies/characters/haz.png" id="2_2gjxg"]
+[ext_resource type="Resource" uid="uid://wew26vaot0k4" path="res://resources/upgrades/chicken.tres" id="3_ajobs"]
+[ext_resource type="AudioStream" uid="uid://bqobvpgbsc131" path="res://assets/audio/character_sounds/hazwin.mp3" id="6_ixhvj"]
+
+[resource]
+script = ExtResource("1_myu6k")
+id = "haz"
+name = "Harry"
+sprite = ExtResource("2_2gjxg")
+description = "Harry is here"
+speed = 110.0
+accel = 4.0
+health = 4.0
+pickup_area = 24.0
+wins = 0
+unlocked = true
+starter_weapon = ExtResource("3_ajobs")
+pick_sfx = ExtResource("1_tbud3")
+lose_sfx = ExtResource("1_ntucv")
+win_sfx = ExtResource("6_ixhvj")

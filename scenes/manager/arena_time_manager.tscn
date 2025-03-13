@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1mmvhbe7s77c"]
+
+[ext_resource type="Script" path="res://scenes/manager/arena_time_manager.gd" id="1_kpv4u"]
+[ext_resource type="PackedScene" uid="uid://wjxi47rkeh3u" path="res://scenes/UI/end_screen.tscn" id="2_wvt5f"]
+[ext_resource type="PackedScene" uid="uid://d4jplsnyxuvsj" path="res://scenes/UI/boss_kill_end_screen.tscn" id="3_vlraj"]
+[ext_resource type="PackedScene" uid="uid://cp3elhj8q8doy" path="res://scenes/game_object/enemies/farm_enemies/chicken_farm_enemy/chicken_farm_end_boss_enemy.tscn" id="4_uyrkq"]
+
+[node name="ArenaTimeManager" type="Node"]
+script = ExtResource("1_kpv4u")
+end_screen_scene = ExtResource("2_wvt5f")
+end_boss_kill_screen = ExtResource("3_vlraj")
+end_boss_scene = ExtResource("4_uyrkq")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 240.0
+one_shot = true
+autostart = true

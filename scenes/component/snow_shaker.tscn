@@ -1,0 +1,102 @@
+[gd_scene load_steps=6 format=3 uid="uid://ey37xso6c2kn"]
+
+[ext_resource type="Texture2D" uid="uid://b1s7upcnp8ltl" path="res://assets/ui/saltparticle.png" id="2_pb1ex"]
+
+[sub_resource type="Animation" id="Animation_wvji1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rc7wv"]
+resource_name = "shake"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.466667, 0.6, 0.766667, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(30, -50), Vector2(0, 0), Vector2(30, -50), Vector2(0, 0), Vector2(10, -10)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k5bup"]
+_data = {
+"RESET": SubResource("Animation_wvji1"),
+"shake": SubResource("Animation_rc7wv")
+}
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_l707t"]
+lifetime_randomness = 0.91
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(2, 2, 2)
+emission_shape = 2
+emission_sphere_radius = 100.0
+direction = Vector3(-37, 0, 0)
+initial_velocity_max = 55.56
+angular_velocity_min = -533.33
+angular_velocity_max = -208.89
+orbit_velocity_min = -0.373
+orbit_velocity_max = 0.0270001
+radial_velocity_min = 18.52
+radial_velocity_max = 506.17
+gravity = Vector3(0, 750, 0)
+linear_accel_min = 30.0
+linear_accel_max = 50.0
+radial_accel_min = -18.52
+radial_accel_max = 40.74
+scale_min = 0.2
+scale_max = 0.5
+
+[node name="SnowShaker" type="Control"]
+top_level = true
+custom_minimum_size = Vector2(854, 480)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_k5bup")
+}
+autoplay = "shake"
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+top_level = true
+custom_minimum_size = Vector2(854, 480)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="CenterContainer"]
+process_mode = 3
+top_level = true
+texture_filter = 2
+position = Vector2(421, 92)
+scale = Vector2(0.5, 0.5)
+amount = 40
+process_material = SubResource("ParticleProcessMaterial_l707t")
+texture = ExtResource("2_pb1ex")
+lifetime = 2.0
+speed_scale = 0.7
+randomness = 1.0

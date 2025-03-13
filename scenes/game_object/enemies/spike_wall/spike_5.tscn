@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfmqd0ohl1mpw"]
+
+[ext_resource type="Texture2D" uid="uid://cfrwntkw1cmlf" path="res://scenes/game_object/enemies/spike_wall/spike.png" id="1_qx736"]
+
+[node name="Spike5" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(277, -3.57628e-06)
+texture = ExtResource("1_qx736")
+offset = Vector2(-277, 3.61999e-06)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(254.114, 8.02279e-05)
+texture = ExtResource("1_qx736")
+offset = Vector2(-277, 3.61999e-06)
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(233.114, 0.000157237)
+texture = ExtResource("1_qx736")
+offset = Vector2(-277, 3.61999e-06)
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(298.114, -8.09431e-05)
+texture = ExtResource("1_qx736")
+offset = Vector2(-277, 3.61999e-06)
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(319.114, -0.000157952)
+texture = ExtResource("1_qx736")
+offset = Vector2(-277, 3.61999e-06)

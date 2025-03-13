@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://lwi8ve305ytn"]
+
+[ext_resource type="PackedScene" uid="uid://qq06r8q7hyc4" path="res://scenes/game_object/enemies/farm_enemies/chicken_farm_enemy/chicken_farm_enemy.tscn" id="1_pr5sp"]
+
+[node name="HordeFarmChickenEnemy" type="Node2D"]
+
+[node name="ChickenFarmEnemy" parent="." instance=ExtResource("1_pr5sp")]
+position = Vector2(22, 4)
+
+[node name="ChickenFarmEnemy2" parent="." instance=ExtResource("1_pr5sp")]
+position = Vector2(56, -10)
+
+[node name="ChickenFarmEnemy3" parent="." instance=ExtResource("1_pr5sp")]
+position = Vector2(-31, 2)
+
+[node name="ChickenFarmEnemy4" parent="." instance=ExtResource("1_pr5sp")]
+position = Vector2(7, -29)
+
+[node name="ChickenFarmEnemy5" parent="." instance=ExtResource("1_pr5sp")]
+position = Vector2(45, -35)
+
+[node name="ChickenFarmEnemy6" parent="." instance=ExtResource("1_pr5sp")]
+position = Vector2(-31, -28)
+
+[node name="ChickenFarmEnemy7" parent="." instance=ExtResource("1_pr5sp")]
+position = Vector2(-8, 25)
+
+[node name="ChickenFarmEnemy8" parent="." instance=ExtResource("1_pr5sp")]
+position = Vector2(56, 21)
+
+[node name="ChickenFarmEnemy9" parent="." instance=ExtResource("1_pr5sp")]
+position = Vector2(-44, 32)
+
+[node name="ChickenFarmEnemy10" parent="." instance=ExtResource("1_pr5sp")]
+position = Vector2(7, 65)
+
+[node name="ChickenFarmEnemy11" parent="." instance=ExtResource("1_pr5sp")]
+position = Vector2(42, 55)
+
+[node name="ChickenFarmEnemy12" parent="." instance=ExtResource("1_pr5sp")]
+position = Vector2(-27, 63)
+
+[node name="ChickenFarmEnemy13" parent="." instance=ExtResource("1_pr5sp")]
+position = Vector2(0, -65)
+
+[node name="ChickenFarmEnemy14" parent="." instance=ExtResource("1_pr5sp")]
+position = Vector2(33, -64)
+
+[node name="ChickenFarmEnemy15" parent="." instance=ExtResource("1_pr5sp")]
+position = Vector2(-34, -59)

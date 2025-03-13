@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://8speg66ih1ny"]
+
+[ext_resource type="Texture2D" uid="uid://bphmre0d0x4hy" path="res://assets/lock.png" id="1_7r8d2"]
+
+[node name="DisabledOverlay" type="ColorRect"]
+color = Color(0.486275, 0.486275, 0.486275, 0.882353)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(135, 135)
+layout_mode = 1
+offset_right = 16.0
+offset_bottom = 16.0
+mouse_filter = 0
+texture = ExtResource("1_7r8d2")
+expand_mode = 1
+stretch_mode = 4

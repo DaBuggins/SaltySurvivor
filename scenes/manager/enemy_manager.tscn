@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://xfsbdlpbkcxx"]
+
+[ext_resource type="Script" path="res://scenes/manager/enemy_manager.gd" id="1_nik0p"]
+[ext_resource type="PackedScene" uid="uid://c2bq58ebr8dvl" path="res://scenes/game_object/enemies/chest_enemy/chest_enemy.tscn" id="6_x1lh3"]
+
+[node name="EnemyManager" type="Node"]
+script = ExtResource("1_nik0p")
+chest_enemy_scene = ExtResource("6_x1lh3")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true

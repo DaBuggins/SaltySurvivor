@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds1jpmcwff24x"]
+
+[ext_resource type="Script" path="res://scenes/component/enemy_shadow.gd" id="2_7xgig"]
+
+[node name="EnemyShadow" type="Sprite2D"]
+self_modulate = Color(0, 0, 0, 0.490196)
+show_behind_parent = true
+scale = Vector2(0.666667, 0.666667)
+flip_h = true
+script = ExtResource("2_7xgig")

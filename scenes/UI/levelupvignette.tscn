@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b58e3w3iy4wf5"]
+
+[ext_resource type="Script" path="res://scenes/UI/levelupvignette.gd" id="1_5vfy3"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_s80w8"]
+
+[node name="LevelUpVignette" type="CanvasLayer"]
+script = ExtResource("1_5vfy3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+unique_name_in_owner = true
+material = SubResource("CanvasItemMaterial_s80w8")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0, 0, 0)

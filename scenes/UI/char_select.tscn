@@ -1,0 +1,266 @@
+[gd_scene load_steps=35 format=3 uid="uid://cyanysgtf2p28"]
+
+[ext_resource type="Script" path="res://scenes/UI/char_select.gd" id="1_dmcrt"]
+[ext_resource type="PackedScene" uid="uid://cul0bt22djwrj" path="res://scenes/UI/char_select_card.tscn" id="2_4avjx"]
+[ext_resource type="Script" path="res://scenes/game_object/enemies/characters/character.gd" id="3_s2xgl"]
+[ext_resource type="Resource" uid="uid://cbasmt1p57l53" path="res://scenes/game_object/enemies/characters/charad.tres" id="4_80xs7"]
+[ext_resource type="Resource" uid="uid://bnbfpbevn6eux" path="res://scenes/game_object/enemies/characters/charaid.tres" id="5_wor68"]
+[ext_resource type="Resource" uid="uid://2mqgmdamxs0t" path="res://scenes/game_object/enemies/characters/charbug.tres" id="6_ig0bt"]
+[ext_resource type="Resource" uid="uid://dhxm7o2fw8wb0" path="res://scenes/game_object/enemies/characters/charchon.tres" id="7_d55h6"]
+[ext_resource type="Resource" uid="uid://bd36u6eb4cnrl" path="res://scenes/game_object/enemies/characters/charcraig.tres" id="8_ifeq3"]
+[ext_resource type="Resource" uid="uid://ccahwx04u0e25" path="res://scenes/game_object/enemies/characters/charhaz.tres" id="9_y8jy5"]
+[ext_resource type="Resource" uid="uid://dyby6ju7byt83" path="res://scenes/game_object/enemies/characters/charmike.tres" id="10_8ete1"]
+[ext_resource type="Resource" uid="uid://cf1vnyb3ihiew" path="res://scenes/game_object/enemies/characters/charroz.tres" id="11_mnoub"]
+[ext_resource type="PackedScene" uid="uid://bccwlsxqvdtho" path="res://assets/audio/character_sounds/char_sounds.tscn" id="12_y6gj7"]
+[ext_resource type="PackedScene" uid="uid://bgw0xaw1ndtc1" path="res://scenes/component/char_select_shaker.tscn" id="13_ch5kg"]
+[ext_resource type="PackedScene" uid="uid://dhp4qex3gvtyl" path="res://scenes/UI/back_button.tscn" id="14_gh5wf"]
+[ext_resource type="Script" path="res://scenes/component/char_select_shaker.gd" id="14_u3nfo"]
+[ext_resource type="Theme" uid="uid://ivx8wu3sxxyt" path="res://resources/theme/theme.tres" id="14_w4kxi"]
+[ext_resource type="Texture2D" uid="uid://dt0lmbgrbttve" path="res://scenes/game_object/enemies/characters/ad.png" id="15_msjfq"]
+[ext_resource type="Texture2D" uid="uid://cloa1bs57u8og" path="res://scenes/game_object/enemies/characters/aid.png" id="16_562tm"]
+[ext_resource type="Texture2D" uid="uid://sg3s2k1ydc8b" path="res://scenes/game_object/enemies/characters/bug.png" id="17_p1qwm"]
+[ext_resource type="Texture2D" uid="uid://yqwj4yl2vmc6" path="res://scenes/game_object/enemies/characters/chon.png" id="18_s4rfp"]
+[ext_resource type="Texture2D" uid="uid://b48yfax1sioj8" path="res://scenes/game_object/enemies/characters/craig.png" id="19_npdkr"]
+[ext_resource type="Texture2D" uid="uid://wapjtaw3k5s4" path="res://scenes/game_object/enemies/characters/haz.png" id="20_qy8rs"]
+[ext_resource type="Texture2D" uid="uid://budjqcqyq1rur" path="res://scenes/game_object/enemies/characters/mike.png" id="21_qw440"]
+[ext_resource type="Texture2D" uid="uid://0yoglsj5nqd6" path="res://scenes/game_object/enemies/characters/roz.png" id="22_n5ou1"]
+[ext_resource type="Texture2D" uid="uid://bhsmvf2ckf3ew" path="res://assets/ui/saltshaker.png" id="23_s4pmb"]
+
+[sub_resource type="Animation" id="Animation_vffjv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_xxc11"]
+resource_name = "in"
+length = 0.15
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4vfk2"]
+resource_name = "out"
+length = 0.15
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_37p1v"]
+_data = {
+"RESET": SubResource("Animation_vffjv"),
+"in": SubResource("Animation_xxc11"),
+"out": SubResource("Animation_4vfk2")
+}
+
+[sub_resource type="Animation" id="Animation_wvji1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rc7wv"]
+resource_name = "shake"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.466667, 0.6, 0.766667, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(30, -50), Vector2(0, 0), Vector2(30, -50), Vector2(0, 0), Vector2(10, -10)]
+}
+
+[sub_resource type="Animation" id="Animation_o3k6c"]
+resource_name = "shake_2"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.466667, 0.6, 0.766667, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(30, 50), Vector2(0, 0), Vector2(30, 50), Vector2(0, 0), Vector2(10, 10)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k5bup"]
+_data = {
+"RESET": SubResource("Animation_wvji1"),
+"shake": SubResource("Animation_rc7wv"),
+"shake_2": SubResource("Animation_o3k6c")
+}
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_l707t"]
+lifetime_randomness = 0.55
+particle_flag_align_y = true
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(2, 2, 2)
+emission_shape = 1
+emission_sphere_radius = 10.0
+angle_min = -720.0
+angle_max = -720.0
+direction = Vector3(-100, 0, 0)
+initial_velocity_max = 182.1
+orbit_velocity_min = -0.373
+orbit_velocity_max = 0.0270001
+gravity = Vector3(0, 1000, 0)
+linear_accel_min = 30.0
+linear_accel_max = 50.0
+radial_accel_min = -13.58
+radial_accel_max = 61.11
+scale_min = 0.8
+scale_max = 2.0
+
+[node name="CharSelect" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_dmcrt")
+char_card_scene = ExtResource("2_4avjx")
+chars = Array[ExtResource("3_s2xgl")]([ExtResource("6_ig0bt"), ExtResource("4_80xs7"), ExtResource("9_y8jy5"), ExtResource("8_ifeq3"), ExtResource("5_wor68"), ExtResource("7_d55h6"), ExtResource("10_8ete1"), ExtResource("11_mnoub")])
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+process_mode = 3
+libraries = {
+"": SubResource("AnimationLibrary_37p1v")
+}
+autoplay = "in"
+
+[node name="CharSoundsController" parent="." instance=ExtResource("12_y6gj7")]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.247059, 0.14902, 0.192157, 1)
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(70, 45)
+layout_direction = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -6.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+mouse_filter = 2
+theme = ExtResource("14_w4kxi")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(320, 180)
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="BackButton" parent="MarginContainer/MarginContainer" instance=ExtResource("14_gh5wf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CharSelectShaker" parent="." instance=ExtResource("13_ch5kg")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_bottom = 0.0
+offset_left = -854.0
+offset_right = -854.0
+grow_horizontal = 0
+grow_vertical = 1
+
+[node name="CharSelectShaker2" type="VBoxContainer" parent="."]
+mouse_filter = 2
+script = ExtResource("14_u3nfo")
+char_sprites = Array[Texture]([ExtResource("15_msjfq"), ExtResource("16_562tm"), ExtResource("17_p1qwm"), ExtResource("18_s4rfp"), ExtResource("19_npdkr"), ExtResource("20_qy8rs"), ExtResource("21_qw440"), ExtResource("22_n5ou1")])
+
+[node name="Timer" type="Timer" parent="CharSelectShaker2"]
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharSelectShaker2"]
+libraries = {
+"": SubResource("AnimationLibrary_k5bup")
+}
+autoplay = "shake_2"
+
+[node name="Sprite2D" type="Sprite2D" parent="CharSelectShaker2"]
+position = Vector2(109, 111)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("23_s4pmb")
+offset = Vector2(-50, 0)
+flip_h = true
+
+[node name="CharParticles" type="GPUParticles2D" parent="CharSelectShaker2/Sprite2D"]
+unique_name_in_owner = true
+position = Vector2(54, 166)
+rotation = -0.822839
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_l707t")
+texture = ExtResource("15_msjfq")
+speed_scale = 0.9
+explosiveness = 0.2
+randomness = 1.0

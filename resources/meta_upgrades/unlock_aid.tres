@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MetaUpgrade" load_steps=4 format=3 uid="uid://ban62m1w8r4xv"]
+
+[ext_resource type="Script" path="res://resources/meta_upgrades/meta_upgrade.gd" id="1_wlndh"]
+[ext_resource type="Texture2D" uid="uid://cloa1bs57u8og" path="res://scenes/game_object/enemies/characters/aid.png" id="2_siii1"]
+[ext_resource type="AudioStream" uid="uid://clahl4ww6e48q" path="res://assets/audio/character_sounds/aidjuicy.mp3" id="3_rhj6t"]
+
+[resource]
+script = ExtResource("1_wlndh")
+id = "aid"
+max_quantity = 1
+experience_cost = 20
+unlock = true
+title = "Unlock Aidy"
+description = "Aidy wants to have a few words.."
+upgrade_icon = ExtResource("2_siii1")
+upgrade_sfx = ExtResource("3_rhj6t")

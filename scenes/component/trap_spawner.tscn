@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://br4el3m0tk083"]
+
+[ext_resource type="Script" path="res://scenes/component/trap_spawner.gd" id="1_txs0k"]
+[ext_resource type="PackedScene" uid="uid://dynm0brmymdnh" path="res://scenes/game_object/enemies/spike_wall/trap_wall_right.tscn" id="2_c0fuy"]
+
+[node name="TrapSpawner" type="Node2D" groups=["spawner"]]
+script = ExtResource("1_txs0k")
+trap_wall_scene = ExtResource("2_c0fuy")
+
+[node name="SpawnTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 20.0

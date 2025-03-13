@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Level" load_steps=4 format=3 uid="uid://bm41krjo3gqh4"]
+
+[ext_resource type="PackedScene" uid="uid://beac7rptw1mag" path="res://scenes/main/main.tscn" id="1_4uosq"]
+[ext_resource type="Texture2D" uid="uid://dxat00b7ul2to" path="res://scenes/main/farm.png" id="2_lbayw"]
+[ext_resource type="Script" path="res://resources/levels/level.gd" id="2_pskye"]
+
+[resource]
+script = ExtResource("2_pskye")
+id = "level1"
+name = "The Farm"
+preview_image = ExtResource("2_lbayw")
+level_scene = ExtResource("1_4uosq")
+description = "Restart the farm"

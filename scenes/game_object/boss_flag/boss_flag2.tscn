@@ -1,0 +1,38 @@
+[gd_scene load_steps=10 format=3 uid="uid://cy5uh63ky435j"]
+
+[ext_resource type="Script" path="res://scenes/game_object/boss_flag/boss_flag.gd" id="1_npub2"]
+[ext_resource type="Texture2D" uid="uid://ee6vs37x4c1j" path="res://scenes/game_object/boss_flag/flag0.png" id="2_hsoce"]
+[ext_resource type="Texture2D" uid="uid://cmi3uobfrqeci" path="res://scenes/game_object/boss_flag/flag1.png" id="3_otsbl"]
+[ext_resource type="Texture2D" uid="uid://byrakg88yoihm" path="res://scenes/game_object/boss_flag/flag2.png" id="4_63ht7"]
+[ext_resource type="Texture2D" uid="uid://brp3rsfdn2v3b" path="res://scenes/game_object/boss_flag/flag3.png" id="5_rkiaw"]
+[ext_resource type="AudioStream" uid="uid://c7y3grhiycxpt" path="res://scenes/game_object/health_pickup/pickup1.mp3" id="6_tc6kg"]
+[ext_resource type="Texture2D" uid="uid://mrkjavvs2ipa" path="res://scenes/game_object/boss_flag/flag_grey.png" id="7_sgd0n"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_53gyh"]
+playback_mode = 1
+streams_count = 1
+stream_0/stream = ExtResource("6_tc6kg")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ycy6n"]
+radius = 12.0
+
+[node name="BossFlag2" type="Node2D"]
+script = ExtResource("1_npub2")
+boss_flag_no = 2
+flags = Array[Texture]([ExtResource("2_hsoce"), ExtResource("3_otsbl"), ExtResource("4_63ht7"), ExtResource("5_rkiaw")])
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_53gyh")
+pitch_scale = 2.0
+bus = &"weaponsfx"
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ycy6n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("7_sgd0n")

@@ -1,0 +1,167 @@
+[gd_scene load_steps=10 format=3 uid="uid://edusx4mysm0"]
+
+[ext_resource type="Script" path="res://scenes/UI/flag_ui.gd" id="1_tjara"]
+[ext_resource type="Texture2D" uid="uid://ee6vs37x4c1j" path="res://scenes/game_object/boss_flag/flag0.png" id="2_7ra2k"]
+[ext_resource type="Texture2D" uid="uid://cmi3uobfrqeci" path="res://scenes/game_object/boss_flag/flag1.png" id="3_ft3hv"]
+[ext_resource type="Texture2D" uid="uid://byrakg88yoihm" path="res://scenes/game_object/boss_flag/flag2.png" id="4_dyofu"]
+[ext_resource type="Texture2D" uid="uid://brp3rsfdn2v3b" path="res://scenes/game_object/boss_flag/flag3.png" id="5_1hk7t"]
+[ext_resource type="PackedScene" uid="uid://dhkmshc2qtuhy" path="res://scenes/component/other_explode.tscn" id="6_5fpj7"]
+
+[sub_resource type="Animation" id="Animation_3yr6h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NotifLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NotifLabel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NotifLabel:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1o07y"]
+resource_name = "expand_and_fade"
+length = 2.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NotifLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.55, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NotifLabel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.15, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NotifLabel:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.85),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(1.4, 1.4)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vdmal"]
+_data = {
+"RESET": SubResource("Animation_3yr6h"),
+"expand_and_fade": SubResource("Animation_1o07y")
+}
+
+[node name="FlagUI" type="CanvasLayer"]
+script = ExtResource("1_tjara")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -137.0
+offset_right = 26.0
+offset_bottom = -61.0
+grow_vertical = 2
+scale = Vector2(2, 2)
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Flag0" type="TextureRect" parent="MarginContainer/VBox"]
+visible = false
+layout_mode = 2
+texture = ExtResource("2_7ra2k")
+
+[node name="Flag1" type="TextureRect" parent="MarginContainer/VBox"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("3_ft3hv")
+
+[node name="Flag2" type="TextureRect" parent="MarginContainer/VBox"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("4_dyofu")
+
+[node name="Flag3" type="TextureRect" parent="MarginContainer/VBox"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("5_1hk7t")
+
+[node name="SaltExplode" parent="." instance=ExtResource("6_5fpj7")]
+unique_name_in_owner = true
+position = Vector2(43, 217)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vdmal")
+}
+
+[node name="NotifLabel" type="Label" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.0
+offset_top = -82.0
+offset_right = 196.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(192, 110)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 64
+text = "THE BOSS
+IS WAITING..."
+horizontal_alignment = 1
+vertical_alignment = 1

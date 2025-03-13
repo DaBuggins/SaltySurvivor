@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://if1buidxx8ln"]
+
+[ext_resource type="Script" path="res://scenes/game_object/experience_vial/big_vial.gd" id="1_6lukt"]
+[ext_resource type="PackedScene" uid="uid://o1t1syg3v4sd" path="res://scenes/component/pickup_sfx.tscn" id="2_cx7xd"]
+[ext_resource type="Texture2D" uid="uid://dngm6232pc0x0" path="res://scenes/game_object/experience_vial/green_vial.png" id="8_ljtyl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ycy6n"]
+radius = 12.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_m0g2a"]
+particle_flag_disable_z = true
+gravity = Vector3(0, -25, 0)
+scale_min = 0.5
+scale_max = 2.5
+
+[node name="RedVial" type="Node2D"]
+script = ExtResource("1_6lukt")
+experience_quantity_per_vial = 10.0
+
+[node name="PickupSFX" parent="." instance=ExtResource("2_cx7xd")]
+unique_name_in_owner = true
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ycy6n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("8_ljtyl")
+
+[node name="ExpParticles" type="GPUParticles2D" parent="."]
+modulate = Color(1, 0.167018, 0, 1)
+amount = 4
+process_material = SubResource("ParticleProcessMaterial_m0g2a")
+lifetime = 1.5
+randomness = 1.0
+fixed_fps = 15

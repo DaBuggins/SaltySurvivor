@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://daodgf0gr7ig"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_n5y3c"]
+[ext_resource type="Texture2D" uid="uid://c4u3cwk0mj6f6" path="res://scenes/ability/harddrive_ability/harddrive.png" id="2_8e7ui"]
+
+[resource]
+script = ExtResource("1_n5y3c")
+id = "harddrive_count"
+parent_id = "harddrive"
+bonus_slot = 2
+max_quantity = 2
+name = "Harddrive Count"
+sprite = ExtResource("2_8e7ui")
+is_weapon = false
+color = Color(0.384314, 0.447059, 0.545098, 1)
+description = "Increases number of HDD droppped"

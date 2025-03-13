@@ -1,0 +1,80 @@
+[gd_scene load_steps=11 format=3 uid="uid://d2vwgv81f7j2"]
+
+[ext_resource type="Script" path="res://scenes/ability/axe_ability/axe_ability.gd" id="1_ejdh2"]
+[ext_resource type="Texture2D" uid="uid://crhlrweoamd2g" path="res://scenes/ability/axe_ability/axe.png" id="1_ueboe"]
+[ext_resource type="AudioStream" uid="uid://dy46nhyho2ums" path="res://scenes/ability/knife_ability/sword1.mp3" id="2_u17e8"]
+[ext_resource type="PackedScene" uid="uid://cx0rxtf8pmjf0" path="res://scenes/component/hitbox_component.tscn" id="3_2wfu8"]
+[ext_resource type="AudioStream" uid="uid://diw8glggdswhc" path="res://scenes/ability/knife_ability/sword2.mp3" id="3_sdbl8"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ckooj"]
+random_pitch = 1.2
+streams_count = 2
+stream_0/stream = ExtResource("2_u17e8")
+stream_0/weight = 0.5
+stream_1/stream = ExtResource("3_sdbl8")
+stream_1/weight = 0.5
+
+[sub_resource type="Animation" id="Animation_0ari8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ajvk5"]
+resource_name = "default"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sdo4n"]
+_data = {
+"RESET": SubResource("Animation_0ari8"),
+"default": SubResource("Animation_ajvk5")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jv40k"]
+
+[node name="AxeAbility" type="Node2D"]
+script = ExtResource("1_ejdh2")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_ckooj")
+volume_db = -15.0
+pitch_scale = 0.75
+max_distance = 500.0
+bus = &"weaponsfx"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_sdo4n")
+}
+autoplay = "default"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ueboe")
+
+[node name="HitboxComponent" parent="." instance=ExtResource("3_2wfu8")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+shape = SubResource("CircleShape2D_jv40k")

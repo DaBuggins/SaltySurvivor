@@ -1,0 +1,146 @@
+[gd_scene load_steps=4 format=3 uid="uid://c03emino2p5xe"]
+
+[ext_resource type="Script" path="res://scenes/game_object/enemies/spike_wall/trap_wall.gd" id="1_re12s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8surp"]
+size = Vector2(100, 20)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_i363p"]
+size = Vector2(100, 20)
+
+[node name="TrapWall" type="CharacterBody2D"]
+collision_layer = 32
+collision_mask = 0
+script = ExtResource("1_re12s")
+spawn_time = 20
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-276, 0)
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-276, 0)
+texture = SubResource("PlaceholderTexture2D_i363p")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-451, 0)
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(-451, 0)
+texture = SubResource("PlaceholderTexture2D_i363p")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(250, 0)
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(250, 0)
+texture = SubResource("PlaceholderTexture2D_i363p")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(425, 0)
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(425, 0)
+texture = SubResource("PlaceholderTexture2D_i363p")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2(75, 0)
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(75, 0)
+texture = SubResource("PlaceholderTexture2D_i363p")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="."]
+position = Vector2(1060, 0)
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Sprite2D12" type="Sprite2D" parent="."]
+position = Vector2(1060, 0)
+texture = SubResource("PlaceholderTexture2D_i363p")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="."]
+position = Vector2(1235, 0)
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Sprite2D13" type="Sprite2D" parent="."]
+position = Vector2(1235, 0)
+texture = SubResource("PlaceholderTexture2D_i363p")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="."]
+position = Vector2(885, 0)
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Sprite2D14" type="Sprite2D" parent="."]
+position = Vector2(885, 0)
+texture = SubResource("PlaceholderTexture2D_i363p")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="."]
+position = Vector2(1555, 0)
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Sprite2D15" type="Sprite2D" parent="."]
+position = Vector2(1555, 0)
+texture = SubResource("PlaceholderTexture2D_i363p")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="."]
+position = Vector2(1730, 0)
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Sprite2D16" type="Sprite2D" parent="."]
+position = Vector2(1730, 0)
+texture = SubResource("PlaceholderTexture2D_i363p")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="."]
+position = Vector2(1380, 0)
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Sprite2D17" type="Sprite2D" parent="."]
+position = Vector2(1380, 0)
+texture = SubResource("PlaceholderTexture2D_i363p")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="."]
+position = Vector2(-821, 0)
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(-821, 0)
+texture = SubResource("PlaceholderTexture2D_i363p")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="."]
+position = Vector2(-646, 0)
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(-646, 0)
+texture = SubResource("PlaceholderTexture2D_i363p")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="."]
+position = Vector2(-1561, 0)
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Sprite2D10" type="Sprite2D" parent="."]
+position = Vector2(-1561, 0)
+texture = SubResource("PlaceholderTexture2D_i363p")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="."]
+position = Vector2(-1386, 0)
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Sprite2D11" type="Sprite2D" parent="."]
+position = Vector2(-1386, 0)
+texture = SubResource("PlaceholderTexture2D_i363p")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="."]
+position = Vector2(-996, 0)
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+position = Vector2(-996, 0)
+texture = SubResource("PlaceholderTexture2D_i363p")

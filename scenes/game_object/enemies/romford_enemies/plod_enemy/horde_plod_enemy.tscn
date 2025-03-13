@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5lp8uf06td66"]
+
+[ext_resource type="Script" path="res://scenes/game_object/enemies/office_enemies/snowman_enemy/horde_enemy.gd" id="1_hsbfh"]
+[ext_resource type="PackedScene" uid="uid://dpy4yoqiw0o26" path="res://scenes/game_object/enemies/romford_enemies/plod_enemy/plod_enemy.tscn" id="2_gtjs1"]
+
+[node name="HordePlodEnemy" type="Node2D"]
+script = ExtResource("1_hsbfh")
+enemy_scene = ExtResource("2_gtjs1")

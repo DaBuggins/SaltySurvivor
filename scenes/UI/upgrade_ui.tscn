@@ -1,0 +1,216 @@
+[gd_scene load_steps=11 format=3 uid="uid://bsqu7l0vceuu2"]
+
+[ext_resource type="Script" path="res://scenes/UI/upgrade_ui.gd" id="1_avmht"]
+[ext_resource type="PackedScene" uid="uid://d227bm3ycdn2e" path="res://scenes/UI/upgrade_icon.tscn" id="2_5ycbv"]
+[ext_resource type="Texture2D" uid="uid://bwoexospukhaq" path="res://resources/UI_Flat_ButtonArrow01a.png" id="3_0x1gd"]
+[ext_resource type="Texture2D" uid="uid://c0tr3oj0fydx7" path="res://scenes/ability/fane_ability/fane.png" id="4_hq0qm"]
+[ext_resource type="AudioStream" uid="uid://djkgfioktick1" path="res://assets/audio/ooohmahgawd.mp3" id="4_o3e61"]
+[ext_resource type="Texture2D" uid="uid://d3j8ipom46poc" path="res://assets/crosshair.png" id="4_qnm3e"]
+[ext_resource type="PackedScene" uid="uid://dhkmshc2qtuhy" path="res://scenes/component/other_explode.tscn" id="5_151uu"]
+
+[sub_resource type="Animation" id="Animation_3yr6h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NotifLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NotifLabel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NotifLabel:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("NotifLabel/OtherExplode:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_1o07y"]
+resource_name = "expand_and_fade"
+length = 2.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NotifLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.55, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NotifLabel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.15, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NotifLabel:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.85),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(1.4, 1.4)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.05),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("NotifLabel/OtherExplode:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vdmal"]
+_data = {
+"RESET": SubResource("Animation_3yr6h"),
+"expand_and_fade": SubResource("Animation_1o07y")
+}
+
+[node name="UpgradeUI" type="CanvasLayer"]
+script = ExtResource("1_avmht")
+upgrade_icon = ExtResource("2_5ycbv")
+speed_icon = ExtResource("3_0x1gd")
+pickup_icon = ExtResource("4_qnm3e")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -90.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+
+[node name="IconContainer" type="GridContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(70, 300)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="VFlowContainer" type="VFlowContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="SpeedBonusContainer" type="HBoxContainer" parent="MarginContainer/VFlowContainer"]
+layout_mode = 2
+
+[node name="PickupBonusContainer" type="HBoxContainer" parent="MarginContainer/VFlowContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_o3e61")
+volume_db = -5.0
+pitch_scale = 1.18
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vdmal")
+}
+
+[node name="NotifLabel" type="Label" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.0
+offset_top = -82.0
+offset_right = 196.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(192, 110)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 64
+text = "FULL UPGRADE"
+horizontal_alignment = 1
+
+[node name="FullUpgradeSprite" type="Sprite2D" parent="NotifLabel"]
+position = Vector2(202, 88)
+scale = Vector2(5, 5)
+texture = ExtResource("4_hq0qm")
+
+[node name="OtherExplode" parent="NotifLabel" instance=ExtResource("5_151uu")]
+position = Vector2(200, 89)

@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://bccwlsxqvdtho"]
+
+[ext_resource type="Script" path="res://assets/audio/character_sounds/char_sounds.gd" id="1_th6ud"]
+[ext_resource type="AudioStream" uid="uid://c5q1g67lintb5" path="res://assets/audio/sfx/jingles_victory.ogg" id="2_jo06i"]
+[ext_resource type="AudioStream" uid="uid://cabi6o4yb0fya" path="res://assets/audio/sfx/jingles_defeat.ogg" id="3_amga7"]
+[ext_resource type="AudioStream" uid="uid://fqrs3v476nqs" path="res://assets/audio/popsfx.mp3" id="4_sf60t"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_p83dn"]
+random_pitch = 1.5
+streams_count = 1
+stream_0/stream = ExtResource("4_sf60t")
+
+[node name="CharSounds" type="Node"]
+script = ExtResource("1_th6ud")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+bus = &"deathsfx"
+
+[node name="VictoryJingle" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_jo06i")
+volume_db = -15.0
+pitch_scale = 0.9
+bus = &"sfx"
+
+[node name="DefeatJingle" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_amga7")
+volume_db = -15.0
+pitch_scale = 0.75
+bus = &"sfx"
+
+[node name="ConfirmSFX" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_p83dn")
+volume_db = -13.0
+pitch_scale = 0.8
+bus = &"sfx"

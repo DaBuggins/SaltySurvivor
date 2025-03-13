@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://dmpw5dejr2f2y"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_mevss"]
+[ext_resource type="Texture2D" uid="uid://crhlrweoamd2g" path="res://scenes/ability/axe_ability/axe.png" id="2_3q4pp"]
+
+[resource]
+script = ExtResource("1_mevss")
+id = "axe_rate"
+parent_id = "axe"
+bonus_slot = 2
+max_quantity = 2
+name = "Axe Reload"
+sprite = ExtResource("2_3q4pp")
+is_weapon = false
+color = Color(1, 1, 1, 1)
+description = "Lob 'em faster"

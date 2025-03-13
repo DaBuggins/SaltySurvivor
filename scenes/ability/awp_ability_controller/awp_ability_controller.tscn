@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bp2ejyjh4tph0"]
+
+[ext_resource type="Script" path="res://scenes/ability/awp_ability_controller/awp_ability_controller.gd" id="1_7xr53"]
+[ext_resource type="PackedScene" uid="uid://crlc14avdwu2" path="res://scenes/ability/awp_ability/awp_ability.tscn" id="2_4dn0c"]
+[ext_resource type="PackedScene" uid="uid://d21ptjavkhtxy" path="res://scenes/component/awp_aimer.tscn" id="3_hno63"]
+
+[node name="AwpAbilityController" type="Node"]
+script = ExtResource("1_7xr53")
+awp_ability_scene = ExtResource("2_4dn0c")
+reticule_scene = ExtResource("3_hno63")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true

@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bksyk3ls1625y"]
+
+[ext_resource type="Script" path="res://scenes/ability/wall_ability_controller/wall_ability_controller.gd" id="1_cghju"]
+[ext_resource type="PackedScene" uid="uid://1l235med7ul" path="res://scenes/ability/wall_ability/wall_ability.tscn" id="2_k204o"]
+[ext_resource type="Script" path="res://scenes/ability/wall_ability_controller/wall_cursor.gd" id="4_uw1vk"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jlayu"]
+load_path = "res://.godot/imported/wall.png-a72f2abb024130139975e229bdf360c1.ctex"
+
+[node name="WallAbilityController" type="Node"]
+script = ExtResource("1_cghju")
+wall_ability_scene = ExtResource("2_k204o")
+
+[node name="WallCursor" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = SubResource("CompressedTexture2D_jlayu")
+script = ExtResource("4_uw1vk")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true

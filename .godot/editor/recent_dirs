@@ -1,0 +1,23 @@
+res://scenes/component
+res://scenes/game_object/enemies/spike_wall
+res://scenes/UI
+res://scenes/game_object/boss_flag
+res://scenes/ability/galil_ability
+res://scenes/ability/fane_ability
+res://scenes/game_object/health_pickup
+res://scenes/ability/chicken_ability
+res://scenes/game_object/breakable
+res://scenes/autoload
+C:/Users/Will/Desktop/Salty Survivors
+C:/Users/Will/Documents/Godot Games/SaltySurvivor
+res://assets/ui
+res://resources/theme
+res://assets/audio/character_sounds
+res://resources/levels
+res://assets/environment
+res://scenes/level2
+res://resources
+res://scenes/game_object/player
+C:/Users/Will/Desktop/2D Survivor
+res://resources/upgrades
+C:/Tools

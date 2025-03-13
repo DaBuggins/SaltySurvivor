@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdebek42dg6dm"]
+
+[ext_resource type="PackedScene" uid="uid://fd5ljy6u7ycg" path="res://scenes/game_object/enemies/farm_enemies/potato_enemy/potato_enemy.tscn" id="1_cjvvd"]
+
+[node name="HordePotato" type="Node2D"]
+
+[node name="PotatoEnemy" parent="." instance=ExtResource("1_cjvvd")]
+
+[node name="PotatoEnemy2" parent="." instance=ExtResource("1_cjvvd")]
+position = Vector2(34, 1)
+
+[node name="PotatoEnemy3" parent="." instance=ExtResource("1_cjvvd")]
+position = Vector2(-37, 2)
+
+[node name="PotatoEnemy4" parent="." instance=ExtResource("1_cjvvd")]
+position = Vector2(-20, 32)
+
+[node name="PotatoEnemy5" parent="." instance=ExtResource("1_cjvvd")]
+position = Vector2(22, 38)
+
+[node name="PotatoEnemy6" parent="." instance=ExtResource("1_cjvvd")]
+position = Vector2(-29, -34)
+
+[node name="PotatoEnemy7" parent="." instance=ExtResource("1_cjvvd")]
+position = Vector2(13, -36)
+
+[node name="PotatoEnemy8" parent="." instance=ExtResource("1_cjvvd")]
+position = Vector2(67, -41)
+
+[node name="PotatoEnemy9" parent="." instance=ExtResource("1_cjvvd")]
+position = Vector2(-46, 59)
+
+[node name="PotatoEnemy10" parent="." instance=ExtResource("1_cjvvd")]
+position = Vector2(11, 82)

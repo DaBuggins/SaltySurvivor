@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MetaUpgrade" load_steps=4 format=3 uid="uid://dgga0f4inmdqf"]
+
+[ext_resource type="Script" path="res://resources/meta_upgrades/meta_upgrade.gd" id="1_qu2ej"]
+[ext_resource type="Texture2D" uid="uid://d3j8ipom46poc" path="res://assets/crosshair.png" id="2_vtrxr"]
+[ext_resource type="AudioStream" uid="uid://c7y3grhiycxpt" path="res://scenes/game_object/health_pickup/pickup1.mp3" id="3_empf5"]
+
+[resource]
+script = ExtResource("1_qu2ej")
+id = "perm_pickup_radius"
+max_quantity = 3
+experience_cost = 200
+unlock = false
+title = "Pickup Range"
+description = "Permanently increases pickup radius"
+upgrade_icon = ExtResource("2_vtrxr")
+upgrade_sfx = ExtResource("3_empf5")

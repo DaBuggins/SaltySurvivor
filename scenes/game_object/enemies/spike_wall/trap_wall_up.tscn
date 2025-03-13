@@ -1,0 +1,126 @@
+[gd_scene load_steps=4 format=3 uid="uid://c68jsxfcd0clo"]
+
+[ext_resource type="Script" path="res://scenes/game_object/enemies/spike_wall/trap_wall_right.gd" id="1_7wfwr"]
+[ext_resource type="PackedScene" uid="uid://bfmqd0ohl1mpw" path="res://scenes/game_object/enemies/spike_wall/spike_5.tscn" id="2_qpghw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8surp"]
+size = Vector2(100, 20)
+
+[node name="TrapWallUp" type="CharacterBody2D"]
+rotation = 1.5708
+collision_layer = 32
+collision_mask = 0
+script = ExtResource("1_7wfwr")
+MOVE_DIRECTION = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.60266, -276.114)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Spike5" parent="CollisionShape2D" instance=ExtResource("2_qpghw")]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-1.60266, -451.114)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Spike5" parent="CollisionShape2D3" instance=ExtResource("2_qpghw")]
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(-1.60269, 249.886)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Spike5" parent="CollisionShape2D4" instance=ExtResource("2_qpghw")]
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(-1.6027, 424.886)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Spike5" parent="CollisionShape2D5" instance=ExtResource("2_qpghw")]
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2(-1.60268, 74.8856)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Spike5" parent="CollisionShape2D6" instance=ExtResource("2_qpghw")]
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="."]
+position = Vector2(-1.60272, 1059.89)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Spike5" parent="CollisionShape2D12" instance=ExtResource("2_qpghw")]
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="."]
+position = Vector2(-1.60273, 1234.89)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Spike5" parent="CollisionShape2D13" instance=ExtResource("2_qpghw")]
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="."]
+position = Vector2(-1.60272, 884.886)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Spike5" parent="CollisionShape2D14" instance=ExtResource("2_qpghw")]
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="."]
+position = Vector2(-1.60274, 1554.89)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Spike5" parent="CollisionShape2D15" instance=ExtResource("2_qpghw")]
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="."]
+position = Vector2(-1.60275, 1729.89)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Spike5" parent="CollisionShape2D16" instance=ExtResource("2_qpghw")]
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="."]
+position = Vector2(-1.60274, 1379.89)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Spike5" parent="CollisionShape2D17" instance=ExtResource("2_qpghw")]
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="."]
+position = Vector2(-1.60264, -821.114)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Spike5" parent="CollisionShape2D7" instance=ExtResource("2_qpghw")]
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="."]
+position = Vector2(-1.60265, -646.114)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Spike5" parent="CollisionShape2D8" instance=ExtResource("2_qpghw")]
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="."]
+position = Vector2(-1.60261, -1561.11)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Spike5" parent="CollisionShape2D10" instance=ExtResource("2_qpghw")]
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="."]
+position = Vector2(-1.60262, -1386.11)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Spike5" parent="CollisionShape2D11" instance=ExtResource("2_qpghw")]
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="."]
+position = Vector2(-1.60263, -996.114)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_8surp")
+
+[node name="Spike5" parent="CollisionShape2D9" instance=ExtResource("2_qpghw")]

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://6oix63f0w37g"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_psiqm"]
+[ext_resource type="Texture2D" uid="uid://cdg46jap4k3kh" path="res://scenes/ability/chicken_ability/chick1.png" id="2_k51q2"]
+
+[resource]
+script = ExtResource("1_psiqm")
+id = "chicken_damage"
+parent_id = "chicken"
+bonus_slot = 2
+max_quantity = 2
+name = "Stronger Chickens"
+sprite = ExtResource("2_k51q2")
+is_weapon = false
+color = Color(1, 1, 1, 1)
+description = "Increases chicken damage"

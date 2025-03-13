@@ -1,0 +1,156 @@
+[gd_scene load_steps=23 format=3 uid="uid://cbxsov3qwklml"]
+
+[ext_resource type="Texture2D" uid="uid://f58l5ovh82qq" path="res://scenes/ability/fane_ability/Effect_ElectricShield_1_265x265.png" id="1_t1sbh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dysn"]
+atlas = ExtResource("1_t1sbh")
+region = Rect2(0, 0, 265, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kghms"]
+atlas = ExtResource("1_t1sbh")
+region = Rect2(265, 0, 265, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1exd"]
+atlas = ExtResource("1_t1sbh")
+region = Rect2(530, 0, 265, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aoi1e"]
+atlas = ExtResource("1_t1sbh")
+region = Rect2(795, 0, 265, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epcah"]
+atlas = ExtResource("1_t1sbh")
+region = Rect2(0, 264, 265, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dbt5"]
+atlas = ExtResource("1_t1sbh")
+region = Rect2(265, 264, 265, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nscqf"]
+atlas = ExtResource("1_t1sbh")
+region = Rect2(530, 264, 265, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ug1ui"]
+atlas = ExtResource("1_t1sbh")
+region = Rect2(795, 264, 265, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4mvel"]
+atlas = ExtResource("1_t1sbh")
+region = Rect2(0, 528, 265, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vviat"]
+atlas = ExtResource("1_t1sbh")
+region = Rect2(265, 528, 265, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ot4vq"]
+atlas = ExtResource("1_t1sbh")
+region = Rect2(530, 528, 265, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxlmq"]
+atlas = ExtResource("1_t1sbh")
+region = Rect2(795, 528, 265, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3kjik"]
+atlas = ExtResource("1_t1sbh")
+region = Rect2(0, 792, 265, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8u1i"]
+atlas = ExtResource("1_t1sbh")
+region = Rect2(265, 792, 265, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c22dx"]
+atlas = ExtResource("1_t1sbh")
+region = Rect2(530, 792, 265, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7fhg"]
+atlas = ExtResource("1_t1sbh")
+region = Rect2(795, 792, 265, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5hep"]
+atlas = ExtResource("1_t1sbh")
+region = Rect2(0, 1056, 265, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfuv4"]
+atlas = ExtResource("1_t1sbh")
+region = Rect2(265, 1056, 265, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_riuyr"]
+atlas = ExtResource("1_t1sbh")
+region = Rect2(530, 1056, 265, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_260sg"]
+atlas = ExtResource("1_t1sbh")
+region = Rect2(795, 1056, 265, 264)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6xr20"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5dysn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kghms")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e1exd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aoi1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epcah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dbt5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nscqf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ug1ui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4mvel")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vviat")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ot4vq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxlmq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3kjik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8u1i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c22dx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p7fhg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k5hep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wfuv4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_riuyr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_260sg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[node name="ElectricShield" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_6xr20")
+autoplay = "default"
+frame_progress = 0.179673

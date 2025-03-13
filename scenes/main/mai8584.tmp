@@ -1,0 +1,123 @@
+[gd_scene load_steps=29 format=3 uid="uid://beac7rptw1mag"]
+
+[ext_resource type="PackedScene" uid="uid://o756ycsqo4yb" path="res://scenes/UI/arena_time_ui.tscn" id="1_0qi27"]
+[ext_resource type="PackedScene" uid="uid://ced4cy1k670nm" path="res://scenes/game_object/game_camera/gamecamera.tscn" id="1_ev7jn"]
+[ext_resource type="Script" path="res://scenes/main/main.gd" id="1_jg067"]
+[ext_resource type="PackedScene" uid="uid://we0sjok1nfui" path="res://scenes/game_object/player/player.tscn" id="1_khl32"]
+[ext_resource type="PackedScene" uid="uid://wjxi47rkeh3u" path="res://scenes/UI/end_screen.tscn" id="2_d0ak8"]
+[ext_resource type="PackedScene" uid="uid://b1mmvhbe7s77c" path="res://scenes/manager/arena_time_manager.tscn" id="2_kkvbg"]
+[ext_resource type="PackedScene" uid="uid://ccqk1luj112uq" path="res://scenes/UI/experience_bar.tscn" id="2_ld244"]
+[ext_resource type="PackedScene" uid="uid://7q7yl7w17173" path="res://scenes/UI/vignette.tscn" id="3_for50"]
+[ext_resource type="PackedScene" uid="uid://w5vvghq6n0su" path="res://scenes/manager/experience_manager.tscn" id="4_gp7g4"]
+[ext_resource type="PackedScene" uid="uid://6jwkytm3uc0i" path="res://scenes/UI/arena_score_ui.tscn" id="5_1r0wl"]
+[ext_resource type="PackedScene" uid="uid://qc3exgeakcv8" path="res://scenes/manager/upgrade_manager.tscn" id="6_ptrif"]
+[ext_resource type="Script" path="res://scenes/main/main_enemy_manager.gd" id="7_u7m4w"]
+[ext_resource type="PackedScene" uid="uid://qq06r8q7hyc4" path="res://scenes/game_object/enemies/farm_enemies/chicken_farm_enemy/chicken_farm_enemy.tscn" id="8_jp4w7"]
+[ext_resource type="PackedScene" uid="uid://brlgeq2cpe8r6" path="res://scenes/game_object/enemies/farm_enemies/tomato_enemy/tomato_enemy.tscn" id="9_smw7g"]
+[ext_resource type="PackedScene" uid="uid://fd5ljy6u7ycg" path="res://scenes/game_object/enemies/farm_enemies/potato_enemy/potato_enemy.tscn" id="10_e6kky"]
+[ext_resource type="PackedScene" uid="uid://c2bq58ebr8dvl" path="res://scenes/game_object/enemies/chest_enemy/chest_enemy.tscn" id="11_vlp6y"]
+[ext_resource type="PackedScene" uid="uid://bew61ke6tb6d8" path="res://scenes/game_object/enemies/farm_enemies/ghost_enemy/ghost_enemy.tscn" id="12_onrdo"]
+[ext_resource type="PackedScene" uid="uid://w8811py20wny" path="res://scenes/main/basic_stage.tscn" id="12_pqssg"]
+[ext_resource type="PackedScene" uid="uid://bjy3gjxskbfi2" path="res://scenes/game_object/enemies/farm_enemies/truck_enemy/truck_enemy.tscn" id="13_714ju"]
+[ext_resource type="PackedScene" uid="uid://co0mmxjfr6oig" path="res://scenes/game_object/enemies/chicken_enemy/tough_chicken_enemy.tscn" id="14_4j6i8"]
+[ext_resource type="PackedScene" uid="uid://bq71abmjwa22m" path="res://scenes/game_object/enemies/farm_enemies/tomato_enemy/tough_tomato_enemy.tscn" id="15_qlutl"]
+[ext_resource type="PackedScene" uid="uid://unyy8s4ttxcw" path="res://scenes/game_object/enemies/farm_enemies/potato_enemy/tough_potato_enemy.tscn" id="16_i0pxn"]
+[ext_resource type="PackedScene" uid="uid://xxj5sebdfi1l" path="res://scenes/game_object/enemies/farm_enemies/ghost_enemy/tough_ghost_enemy.tscn" id="17_kl6e2"]
+[ext_resource type="PackedScene" uid="uid://d1rvr7m57cjgx" path="res://scenes/game_object/enemies/farm_enemies/truck_enemy/tough_truck_enemy.tscn" id="18_aflpj"]
+[ext_resource type="PackedScene" uid="uid://bw5qnhfsmkrvu" path="res://scenes/game_object/enemies/farm_enemies/truck_enemy/boss_truck_enemy.tscn" id="26_gtm8y"]
+[ext_resource type="PackedScene" uid="uid://bwti2l1ir5u6k" path="res://scenes/game_object/experience_vial/big_red_vial.tscn" id="26_tmsmx"]
+[ext_resource type="PackedScene" uid="uid://cor7yaq6ngkqh" path="res://scenes/game_object/experience_vial/experience_vial.tscn" id="27_vwjal"]
+[ext_resource type="PackedScene" uid="uid://budumifdbcmbv" path="res://scenes/game_object/experience_vial/green_vial.tscn" id="28_mblcu"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_jg067")
+end_screen_scene = ExtResource("2_d0ak8")
+
+[node name="ArenaTimeManager" parent="." instance=ExtResource("2_kkvbg")]
+
+[node name="ArenaTimeUI" parent="." node_paths=PackedStringArray("arena_time_manager") instance=ExtResource("1_0qi27")]
+arena_time_manager = NodePath("../ArenaTimeManager")
+
+[node name="ArenaScoreUI" parent="." instance=ExtResource("5_1r0wl")]
+
+[node name="ExperienceBar" parent="." node_paths=PackedStringArray("experience_manager") instance=ExtResource("2_ld244")]
+experience_manager = NodePath("../ExperienceManager")
+
+[node name="MainEnemyManager" type="Node" parent="." node_paths=PackedStringArray("arena_time_manager")]
+script = ExtResource("7_u7m4w")
+chicken_enemy_scene = ExtResource("8_jp4w7")
+tomato_enemy_scene = ExtResource("9_smw7g")
+potato_enemy_scene = ExtResource("10_e6kky")
+chest_enemy_scene = ExtResource("11_vlp6y")
+ghost_enemy_scene = ExtResource("12_onrdo")
+truck_enemy_scene = ExtResource("13_714ju")
+tough_chicken_enemy_scene = ExtResource("14_4j6i8")
+tough_tomato_enemy_scene = ExtResource("15_qlutl")
+tough_potato_enemy_scene = ExtResource("16_i0pxn")
+tough_ghost_enemy_scene = ExtResource("17_kl6e2")
+tough_truck_enemy_scene = ExtResource("18_aflpj")
+arena_time_manager = NodePath("../ArenaTimeManager")
+
+[node name="Timer" type="Timer" parent="MainEnemyManager"]
+one_shot = true
+autostart = true
+
+[node name="ExperienceManager" parent="." instance=ExtResource("4_gp7g4")]
+
+[node name="UpgradeManager" parent="." node_paths=PackedStringArray("experience_manager") instance=ExtResource("6_ptrif")]
+experience_manager = NodePath("../ExperienceManager")
+
+[node name="Vignette" parent="." instance=ExtResource("3_for50")]
+
+[node name="GameCamera" parent="." instance=ExtResource("1_ev7jn")]
+
+[node name="BasicStage" parent="." instance=ExtResource("12_pqssg")]
+
+[node name="Entities" type="Node2D" parent="." groups=["entities_layer"]]
+y_sort_enabled = true
+
+[node name="Player" parent="Entities" node_paths=PackedStringArray("arena_time_manager") instance=ExtResource("1_khl32")]
+unique_name_in_owner = true
+position = Vector2(7, 22)
+arena_time_manager = NodePath("../../ArenaTimeManager")
+
+[node name="BossTruckEnemy" parent="Entities" instance=ExtResource("26_gtm8y")]
+position = Vector2(-263, -15)
+
+[node name="BigVial" parent="Entities" instance=ExtResource("26_tmsmx")]
+position = Vector2(108, -135)
+
+[node name="ExperienceVial" parent="Entities" instance=ExtResource("27_vwjal")]
+position = Vector2(151, 61)
+
+[node name="ExperienceVial2" parent="Entities" instance=ExtResource("27_vwjal")]
+position = Vector2(49, 31)
+
+[node name="ExperienceVial3" parent="Entities" instance=ExtResource("27_vwjal")]
+position = Vector2(-41, -95)
+
+[node name="ExperienceVial4" parent="Entities" instance=ExtResource("27_vwjal")]
+position = Vector2(-18, -95)
+
+[node name="ExperienceVial5" parent="Entities" instance=ExtResource("27_vwjal")]
+position = Vector2(7, -95)
+
+[node name="ExperienceVial6" parent="Entities" instance=ExtResource("27_vwjal")]
+position = Vector2(-38, -63)
+
+[node name="GreenVial" parent="Entities" instance=ExtResource("28_mblcu")]
+position = Vector2(74, -59)
+
+[node name="GreenVial2" parent="Entities" instance=ExtResource("28_mblcu")]
+position = Vector2(-82, 36)
+
+[node name="GreenVial3" parent="Entities" instance=ExtResource("28_mblcu")]
+position = Vector2(-43, 87)
+
+[node name="GreenVial4" parent="Entities" instance=ExtResource("28_mblcu")]
+position = Vector2(19, 109)
+
+[node name="GreenVial5" parent="Entities" instance=ExtResource("28_mblcu")]
+position = Vector2(90, 123)
+
+[node name="Foreground" type="Node2D" parent="." groups=["foreground_layer"]]

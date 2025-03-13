@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://c3gw7twwl6eid"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_fmpe7"]
+[ext_resource type="Texture2D" uid="uid://20b8csjrkowo" path="res://scenes/ability/awp_ability/awp.png" id="3_unuvo"]
+
+[resource]
+script = ExtResource("1_fmpe7")
+id = "awp_damage"
+parent_id = "awp"
+bonus_slot = 1
+max_quantity = 2
+name = "A.W.P Damage"
+sprite = ExtResource("3_unuvo")
+is_weapon = false
+color = Color(0, 0.498039, 0.0313726, 1)
+description = "Stronger bullets"

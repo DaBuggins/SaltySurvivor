@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://d08w5aq5ry4gt"]
+
+[ext_resource type="AudioStream" uid="uid://dtgh5pjp6ncej" path="res://assets/audio/atrain8bit.mp3" id="1_pbcgd"]
+[ext_resource type="Script" path="res://scenes/autoload/music_player.gd" id="2_85bcx"]
+[ext_resource type="AudioStream" uid="uid://q1du6e6ajybx" path="res://assets/audio/charselectsong.mp3" id="3_2ytj2"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer"]
+process_mode = 3
+stream = ExtResource("1_pbcgd")
+volume_db = -14.0
+bus = &"music"
+parameters/looping = true
+script = ExtResource("2_85bcx")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true
+
+[node name="CharSelectPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_2ytj2")
+volume_db = -5.0
+bus = &"music"
+parameters/looping = true

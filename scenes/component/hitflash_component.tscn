@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwhwp00bq1je6"]
+
+[ext_resource type="Script" path="res://scenes/component/hitflash_component.gd" id="1_ma37n"]
+[ext_resource type="Material" uid="uid://ctt6h8rcrd2fs" path="res://scenes/component/hitflash_component_material.tres" id="2_alryx"]
+
+[node name="HitflashComponent" type="Node"]
+script = ExtResource("1_ma37n")
+hit_flash_material = ExtResource("2_alryx")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Character" load_steps=7 format=3 uid="uid://bnbfpbevn6eux"]
+
+[ext_resource type="AudioStream" uid="uid://clahl4ww6e48q" path="res://assets/audio/character_sounds/aidjuicy.mp3" id="1_0drw3"]
+[ext_resource type="Script" path="res://scenes/game_object/enemies/characters/character.gd" id="1_7u8lw"]
+[ext_resource type="AudioStream" uid="uid://d36dd1frjghyt" path="res://assets/audio/character_sounds/aidlose.mp3" id="1_j8lub"]
+[ext_resource type="Texture2D" uid="uid://cloa1bs57u8og" path="res://scenes/game_object/enemies/characters/aid.png" id="2_2aebm"]
+[ext_resource type="Resource" uid="uid://cyu6cneygf4fc" path="res://resources/upgrades/fane.tres" id="3_odu3n"]
+[ext_resource type="AudioStream" uid="uid://dkuy6fpbo2gwa" path="res://assets/audio/character_sounds/aidwin.mp3" id="6_dskvx"]
+
+[resource]
+script = ExtResource("1_7u8lw")
+id = "aid"
+name = "Aid"
+sprite = ExtResource("2_2aebm")
+description = "Aidy is here"
+speed = 95.0
+accel = 7.0
+health = 12.0
+pickup_area = 24.0
+wins = 0
+unlocked = false
+starter_weapon = ExtResource("3_odu3n")
+pick_sfx = ExtResource("1_0drw3")
+lose_sfx = ExtResource("1_j8lub")
+win_sfx = ExtResource("6_dskvx")

@@ -1,0 +1,104 @@
+[gd_scene load_steps=15 format=3 uid="uid://bgw0xaw1ndtc1"]
+
+[ext_resource type="Script" path="res://scenes/component/char_select_shaker.gd" id="1_hei43"]
+[ext_resource type="Texture2D" uid="uid://bhsmvf2ckf3ew" path="res://assets/ui/saltshaker.png" id="2_to7kn"]
+[ext_resource type="Texture2D" uid="uid://cloa1bs57u8og" path="res://scenes/game_object/enemies/characters/aid.png" id="3_5foaf"]
+[ext_resource type="Texture2D" uid="uid://dt0lmbgrbttve" path="res://scenes/game_object/enemies/characters/ad.png" id="3_bdqvw"]
+[ext_resource type="Texture2D" uid="uid://sg3s2k1ydc8b" path="res://scenes/game_object/enemies/characters/bug.png" id="4_sji7e"]
+[ext_resource type="Texture2D" uid="uid://yqwj4yl2vmc6" path="res://scenes/game_object/enemies/characters/chon.png" id="5_b81cn"]
+[ext_resource type="Texture2D" uid="uid://b48yfax1sioj8" path="res://scenes/game_object/enemies/characters/craig.png" id="6_u8xki"]
+[ext_resource type="Texture2D" uid="uid://wapjtaw3k5s4" path="res://scenes/game_object/enemies/characters/haz.png" id="7_5qwha"]
+[ext_resource type="Texture2D" uid="uid://budjqcqyq1rur" path="res://scenes/game_object/enemies/characters/mike.png" id="8_ja8pp"]
+[ext_resource type="Texture2D" uid="uid://0yoglsj5nqd6" path="res://scenes/game_object/enemies/characters/roz.png" id="9_pgx0e"]
+
+[sub_resource type="Animation" id="Animation_wvji1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rc7wv"]
+resource_name = "shake"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.466667, 0.6, 0.766667, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(30, -50), Vector2(0, 0), Vector2(30, -50), Vector2(0, 0), Vector2(10, -10)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k5bup"]
+_data = {
+"RESET": SubResource("Animation_wvji1"),
+"shake": SubResource("Animation_rc7wv")
+}
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_l707t"]
+lifetime_randomness = 0.55
+particle_flag_align_y = true
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(2, 2, 2)
+emission_shape = 1
+emission_sphere_radius = 10.0
+angle_min = -720.0
+angle_max = -720.0
+direction = Vector3(-100, 0, 0)
+initial_velocity_max = 182.1
+orbit_velocity_min = -0.373
+orbit_velocity_max = 0.0270001
+gravity = Vector3(0, 1000, 0)
+linear_accel_min = 30.0
+linear_accel_max = 50.0
+radial_accel_min = -13.58
+radial_accel_max = 61.11
+scale_min = 0.8
+scale_max = 2.0
+
+[node name="CharSelectShaker" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_hei43")
+char_sprites = Array[Texture]([ExtResource("3_bdqvw"), ExtResource("3_5foaf"), ExtResource("4_sji7e"), ExtResource("5_b81cn"), ExtResource("6_u8xki"), ExtResource("7_5qwha"), ExtResource("8_ja8pp"), ExtResource("9_pgx0e")])
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_k5bup")
+}
+autoplay = "shake"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(762, 127)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_to7kn")
+
+[node name="CharParticles" type="GPUParticles2D" parent="Sprite2D"]
+unique_name_in_owner = true
+position = Vector2(-76, 204)
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_l707t")
+texture = ExtResource("3_bdqvw")
+speed_scale = 0.9
+explosiveness = 0.2
+randomness = 1.0

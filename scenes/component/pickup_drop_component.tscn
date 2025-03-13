@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpag88vkk2osj"]
+
+[ext_resource type="Script" path="res://scenes/component/pickup_drop_component.gd" id="1_ucwt5"]
+[ext_resource type="PackedScene" uid="uid://56p5dyk50lu3" path="res://scenes/game_object/health_pickup/health_pickup.tscn" id="2_pt6om"]
+
+[node name="PickupDropComponent" type="Node"]
+script = ExtResource("1_ucwt5")
+drop_percent = 0.005
+pickup_scene = ExtResource("2_pt6om")

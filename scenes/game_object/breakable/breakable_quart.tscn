@@ -1,0 +1,69 @@
+[gd_scene load_steps=4 format=3 uid="uid://7gk6c1ek653l"]
+
+[ext_resource type="Script" path="res://scenes/game_object/breakable/breakable_quart.gd" id="1_6t2j0"]
+[ext_resource type="Texture2D" uid="uid://bllltbby1iwq5" path="res://scenes/game_object/breakable/crate.png" id="2_ouytd"]
+[ext_resource type="PackedScene" uid="uid://dm7le7nfhwys0" path="res://scenes/game_object/breakable/crate.tscn" id="3_httmx"]
+
+[node name="BreakableQuart" type="Node2D"]
+script = ExtResource("1_6t2j0")
+replacement_sprite = ExtResource("2_ouytd")
+
+[node name="Crate" parent="." instance=ExtResource("3_httmx")]
+position = Vector2(-1432, 34)
+
+[node name="Crate2" parent="." instance=ExtResource("3_httmx")]
+position = Vector2(-1324, 61)
+
+[node name="Crate3" parent="." instance=ExtResource("3_httmx")]
+position = Vector2(-1167, 193)
+
+[node name="Crate4" parent="." instance=ExtResource("3_httmx")]
+position = Vector2(-1286, 249)
+
+[node name="Crate5" parent="." instance=ExtResource("3_httmx")]
+position = Vector2(-1282, 451)
+
+[node name="Crate6" parent="." instance=ExtResource("3_httmx")]
+position = Vector2(-1426, 815)
+
+[node name="Crate7" parent="." instance=ExtResource("3_httmx")]
+position = Vector2(-1312, 853)
+
+[node name="Crate8" parent="." instance=ExtResource("3_httmx")]
+position = Vector2(-1139, 689)
+
+[node name="Crate9" parent="." instance=ExtResource("3_httmx")]
+position = Vector2(-1155, 482)
+
+[node name="Crate10" parent="." instance=ExtResource("3_httmx")]
+position = Vector2(-1007, 619)
+
+[node name="Crate11" parent="." instance=ExtResource("3_httmx")]
+position = Vector2(-830, 246)
+
+[node name="Crate12" parent="." instance=ExtResource("3_httmx")]
+position = Vector2(-716, 273)
+
+[node name="Crate13" parent="." instance=ExtResource("3_httmx")]
+position = Vector2(-682, 464)
+
+[node name="Crate14" parent="." instance=ExtResource("3_httmx")]
+position = Vector2(-559, 406)
+
+[node name="Crate15" parent="." instance=ExtResource("3_httmx")]
+position = Vector2(-305, 812)
+
+[node name="Crate16" parent="." instance=ExtResource("3_httmx")]
+position = Vector2(-193, 852)
+
+[node name="Crate17" parent="." instance=ExtResource("3_httmx")]
+position = Vector2(-159, 259)
+
+[node name="Crate18" parent="." instance=ExtResource("3_httmx")]
+position = Vector2(-51, 194)
+
+[node name="Crate19" parent="." instance=ExtResource("3_httmx")]
+position = Vector2(-201, 64)
+
+[node name="Crate20" parent="." instance=ExtResource("3_httmx")]
+position = Vector2(-302, 37)

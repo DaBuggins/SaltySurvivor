@@ -1,0 +1,202 @@
+[gd_scene load_steps=46 format=3 uid="uid://tovdr0kqq1sx"]
+
+[ext_resource type="Script" path="res://scenes/level3/level_3.gd" id="1_dylks"]
+[ext_resource type="PackedScene" uid="uid://wjxi47rkeh3u" path="res://scenes/UI/end_screen.tscn" id="2_qygqt"]
+[ext_resource type="PackedScene" uid="uid://b1mmvhbe7s77c" path="res://scenes/manager/arena_time_manager.tscn" id="3_8innu"]
+[ext_resource type="PackedScene" uid="uid://hd8oc04h4y4y" path="res://scenes/autoload/level_music_player.tscn" id="3_gdmas"]
+[ext_resource type="PackedScene" uid="uid://o756ycsqo4yb" path="res://scenes/UI/arena_time_ui.tscn" id="4_1ry4p"]
+[ext_resource type="AudioStream" uid="uid://m1mih3icrmbb" path="res://assets/audio/sfx/Patron Saint of Heists.mp3" id="4_uov5i"]
+[ext_resource type="PackedScene" uid="uid://6jwkytm3uc0i" path="res://scenes/UI/arena_score_ui.tscn" id="5_n7goi"]
+[ext_resource type="Script" path="res://scenes/level3/level_3_enemy_manager.gd" id="6_cdpci"]
+[ext_resource type="PackedScene" uid="uid://ccqk1luj112uq" path="res://scenes/UI/experience_bar.tscn" id="6_iwtky"]
+[ext_resource type="PackedScene" uid="uid://bsqu7l0vceuu2" path="res://scenes/UI/upgrade_ui.tscn" id="6_r4ks0"]
+[ext_resource type="PackedScene" uid="uid://c2bq58ebr8dvl" path="res://scenes/game_object/enemies/chest_enemy/chest_enemy.tscn" id="8_iwiky"]
+[ext_resource type="PackedScene" uid="uid://edusx4mysm0" path="res://scenes/UI/flag_ui.tscn" id="8_vkxpf"]
+[ext_resource type="PackedScene" uid="uid://ctb8r4awo5q5b" path="res://scenes/game_object/enemies/romford_enemies/plod_van_enemy/plod_van_end_boss_enemy.tscn" id="9_05kdd"]
+[ext_resource type="PackedScene" uid="uid://dpy4yoqiw0o26" path="res://scenes/game_object/enemies/romford_enemies/plod_enemy/plod_enemy.tscn" id="9_n2dug"]
+[ext_resource type="PackedScene" uid="uid://bvfyskm7iadi7" path="res://scenes/game_object/enemies/romford_enemies/romford_chicken_enemy/romford_chicken_enemy.tscn" id="9_rvcsb"]
+[ext_resource type="PackedScene" uid="uid://c64p35q1cyf6w" path="res://scenes/game_object/enemies/romford_enemies/plod_van_enemy/plod_van_enemy.tscn" id="10_dwxlp"]
+[ext_resource type="PackedScene" uid="uid://c3a4lch807fgs" path="res://scenes/game_object/enemies/romford_enemies/yob_enemy/yob_enemy.tscn" id="11_6o40n"]
+[ext_resource type="PackedScene" uid="uid://w5vvghq6n0su" path="res://scenes/manager/experience_manager.tscn" id="12_26r05"]
+[ext_resource type="PackedScene" uid="uid://bj363gajes3l0" path="res://scenes/game_object/enemies/romford_enemies/yob2_enemy/yob2_enemy.tscn" id="12_e2kjm"]
+[ext_resource type="PackedScene" uid="uid://qc3exgeakcv8" path="res://scenes/manager/upgrade_manager.tscn" id="13_liick"]
+[ext_resource type="PackedScene" uid="uid://7q7yl7w17173" path="res://scenes/UI/vignette.tscn" id="14_mym15"]
+[ext_resource type="PackedScene" uid="uid://dns123eljkoiu" path="res://scenes/game_object/enemies/romford_enemies/romford_chicken_enemy/tough_romford_chicken_enemy.tscn" id="14_qertm"]
+[ext_resource type="PackedScene" uid="uid://ced4cy1k670nm" path="res://scenes/game_object/game_camera/gamecamera.tscn" id="15_5jdes"]
+[ext_resource type="PackedScene" uid="uid://cij6hnq8nnhuj" path="res://scenes/level3/stage3.tscn" id="15_c2kwf"]
+[ext_resource type="PackedScene" uid="uid://dk643wf3n8vm0" path="res://scenes/game_object/enemies/romford_enemies/plod_enemy/tough_plod_enemy.tscn" id="15_u6uxg"]
+[ext_resource type="PackedScene" uid="uid://dfh6idqslqo7s" path="res://scenes/game_object/enemies/romford_enemies/plod_van_enemy/tough_plod_van_enemy.tscn" id="16_52ss5"]
+[ext_resource type="PackedScene" uid="uid://b85swv6f5rcdo" path="res://scenes/game_object/enemies/romford_enemies/yob_enemy/tough_yob_enemy.tscn" id="17_j1s04"]
+[ext_resource type="PackedScene" uid="uid://we0sjok1nfui" path="res://scenes/game_object/player/player.tscn" id="17_m7cay"]
+[ext_resource type="PackedScene" uid="uid://dd532woyt6cjw" path="res://scenes/game_object/enemies/romford_enemies/yob2_enemy/tough_yob2_enemy.tscn" id="18_jyelf"]
+[ext_resource type="PackedScene" uid="uid://c27vjee8r2q6p" path="res://scenes/game_object/health_pickup/pickup_spawner.tscn" id="22_yojlk"]
+[ext_resource type="PackedScene" uid="uid://dj27htas0g31h" path="res://scenes/component/enemy_spawner.tscn" id="24_qx230"]
+[ext_resource type="PackedScene" uid="uid://bhx4fp8a5erxm" path="res://scenes/game_object/enemies/romford_enemies/romford_chicken_enemy/boss_romford_chicken_enemy.tscn" id="25_6crul"]
+[ext_resource type="PackedScene" uid="uid://bn3sliw5ijgnl" path="res://scenes/game_object/enemies/romford_enemies/plod_enemy/horde_romford_chicken_enemy.tscn" id="25_81mh3"]
+[ext_resource type="PackedScene" uid="uid://58rhp3s5p78w" path="res://scenes/game_object/enemies/romford_enemies/yob_enemy/boss_yob_enemy.tscn" id="26_kyhvw"]
+[ext_resource type="PackedScene" uid="uid://dh2kdl6vpeuop" path="res://scenes/game_object/enemies/romford_enemies/plod_enemy/horde_yob_enemy.tscn" id="26_qin74"]
+[ext_resource type="PackedScene" uid="uid://c5lp8uf06td66" path="res://scenes/game_object/enemies/romford_enemies/plod_enemy/horde_plod_enemy.tscn" id="27_12a8p"]
+[ext_resource type="PackedScene" uid="uid://d1psy5g6qowew" path="res://scenes/game_object/enemies/romford_enemies/plod_enemy/boss_plod_enemy.tscn" id="27_xiom4"]
+[ext_resource type="PackedScene" uid="uid://qqdnfeyjdqeg" path="res://scenes/game_object/enemies/romford_enemies/plod_enemy/horde_tough_plod_enemy.tscn" id="28_15eck"]
+[ext_resource type="PackedScene" uid="uid://j4jbvk4anfu2" path="res://scenes/game_object/enemies/romford_enemies/plod_van_enemy/boss_plod_van_enemy.tscn" id="28_mw6y2"]
+[ext_resource type="PackedScene" uid="uid://7gk6c1ek653l" path="res://scenes/game_object/breakable/breakable_quart.tscn" id="29_4r0tc"]
+[ext_resource type="PackedScene" uid="uid://56p5dyk50lu3" path="res://scenes/game_object/health_pickup/health_pickup.tscn" id="32_uoad3"]
+[ext_resource type="Texture2D" uid="uid://ciojbbyfdhqlj" path="res://assets/environment/tree.png" id="33_f01nc"]
+[ext_resource type="PackedScene" uid="uid://cifyld41n12vp" path="res://scenes/game_object/four_pickup/four_pickup.tscn" id="33_kjnad"]
+[ext_resource type="PackedScene" uid="uid://br4el3m0tk083" path="res://scenes/component/trap_spawner.tscn" id="44_hp288"]
+[ext_resource type="PackedScene" uid="uid://c68jsxfcd0clo" path="res://scenes/game_object/enemies/spike_wall/trap_wall_up.tscn" id="45_yb6sr"]
+
+[node name="Level3" type="Node"]
+script = ExtResource("1_dylks")
+end_screen_scene = ExtResource("2_qygqt")
+level_id = "level3"
+
+[node name="LevelMusicPlayer" parent="." instance=ExtResource("3_gdmas")]
+volume_db = -12.0
+level_song = ExtResource("4_uov5i")
+
+[node name="UI" type="Node" parent="."]
+
+[node name="ArenaTimeUI" parent="UI" node_paths=PackedStringArray("arena_time_manager") instance=ExtResource("4_1ry4p")]
+arena_time_manager = NodePath("../../ArenaTimeManager")
+
+[node name="ArenaScoreUI" parent="UI" instance=ExtResource("5_n7goi")]
+
+[node name="UpgradeUI" parent="UI" instance=ExtResource("6_r4ks0")]
+
+[node name="FlagUI" parent="UI" instance=ExtResource("8_vkxpf")]
+
+[node name="ExperienceBar" parent="UI" node_paths=PackedStringArray("experience_manager") instance=ExtResource("6_iwtky")]
+experience_manager = NodePath("../../ExperienceManager")
+
+[node name="ArenaTimeManager" parent="." instance=ExtResource("3_8innu")]
+end_boss_scene = ExtResource("9_05kdd")
+
+[node name="Level3EnemyManager" type="Node" parent="." node_paths=PackedStringArray("arena_time_manager")]
+script = ExtResource("6_cdpci")
+chest_enemy_scene = ExtResource("8_iwiky")
+chicken_enemy_scene = ExtResource("9_rvcsb")
+plod_enemy_scene = ExtResource("9_n2dug")
+plod_van_enemy_scene = ExtResource("10_dwxlp")
+yob_enemy_scene = ExtResource("11_6o40n")
+yob2_enemy_scene = ExtResource("12_e2kjm")
+tough_chicken_enemy_scene = ExtResource("14_qertm")
+tough_plod_enemy_scene = ExtResource("15_u6uxg")
+tough_plod_van_enemy_scene = ExtResource("16_52ss5")
+tough_yob_enemy_scene = ExtResource("17_j1s04")
+tough_yob2_enemy_scene = ExtResource("18_jyelf")
+arena_time_manager = NodePath("../ArenaTimeManager")
+
+[node name="Timer" type="Timer" parent="Level3EnemyManager"]
+one_shot = true
+autostart = true
+
+[node name="ExperienceManager" parent="." instance=ExtResource("12_26r05")]
+
+[node name="UpgradeManager" parent="." node_paths=PackedStringArray("experience_manager") instance=ExtResource("13_liick")]
+experience_manager = NodePath("../ExperienceManager")
+
+[node name="PickupSpawner" parent="." instance=ExtResource("22_yojlk")]
+
+[node name="Vignette" parent="." instance=ExtResource("14_mym15")]
+
+[node name="GameCamera" parent="." instance=ExtResource("15_5jdes")]
+
+[node name="Stage3" parent="." instance=ExtResource("15_c2kwf")]
+
+[node name="EnemySpawner" parent="." instance=ExtResource("24_qx230")]
+unique_name_in_owner = true
+horde_1_scene = ExtResource("25_81mh3")
+horde_2_scene = ExtResource("26_qin74")
+horde_3_scene = ExtResource("27_12a8p")
+horde_tough1_scene = ExtResource("28_15eck")
+
+[node name="Entities" type="Node2D" parent="." groups=["entities_layer"]]
+unique_name_in_owner = true
+y_sort_enabled = true
+
+[node name="Player" parent="Entities" node_paths=PackedStringArray("arena_time_manager") instance=ExtResource("17_m7cay")]
+unique_name_in_owner = true
+position = Vector2(7, 22)
+arena_time_manager = NodePath("../../ArenaTimeManager")
+
+[node name="Breakables" type="Node" parent="Entities"]
+
+[node name="CrateQuart" parent="Entities/Breakables" instance=ExtResource("29_4r0tc")]
+
+[node name="CrateQuart2" parent="Entities/Breakables" instance=ExtResource("29_4r0tc")]
+position = Vector2(1484, 200)
+
+[node name="CrateQuart3" parent="Entities/Breakables" instance=ExtResource("29_4r0tc")]
+position = Vector2(-5, -1313)
+
+[node name="CrateQuart4" parent="Entities/Breakables" instance=ExtResource("29_4r0tc")]
+position = Vector2(1479, -1113)
+
+[node name="TreeQuart" parent="Entities/Breakables" instance=ExtResource("29_4r0tc")]
+position = Vector2(47, 474)
+replacement_sprite = ExtResource("33_f01nc")
+
+[node name="TreeQuart2" parent="Entities/Breakables" instance=ExtResource("29_4r0tc")]
+position = Vector2(1547, 474)
+replacement_sprite = ExtResource("33_f01nc")
+
+[node name="TreeQuart3" parent="Entities/Breakables" instance=ExtResource("29_4r0tc")]
+position = Vector2(1567, -663)
+replacement_sprite = ExtResource("33_f01nc")
+
+[node name="TreeQuart4" parent="Entities/Breakables" instance=ExtResource("29_4r0tc")]
+position = Vector2(1536, -1545)
+replacement_sprite = ExtResource("33_f01nc")
+
+[node name="TreeQuart5" parent="Entities/Breakables" instance=ExtResource("29_4r0tc")]
+position = Vector2(-297, -1644)
+replacement_sprite = ExtResource("33_f01nc")
+
+[node name="TreeQuart6" parent="Entities/Breakables" instance=ExtResource("29_4r0tc")]
+position = Vector2(116, -707)
+replacement_sprite = ExtResource("33_f01nc")
+
+[node name="SpawnPickups" type="Node" parent="Entities"]
+
+[node name="HealthPickup" parent="Entities/SpawnPickups" instance=ExtResource("32_uoad3")]
+position = Vector2(0, 1434)
+
+[node name="HealthPickup2" parent="Entities/SpawnPickups" instance=ExtResource("32_uoad3")]
+position = Vector2(0, -1413)
+
+[node name="HealthPickup3" parent="Entities/SpawnPickups" instance=ExtResource("32_uoad3")]
+position = Vector2(-1426, -5)
+
+[node name="HealthPickup4" parent="Entities/SpawnPickups" instance=ExtResource("32_uoad3")]
+position = Vector2(1427, -5)
+
+[node name="FourPickup" parent="Entities/SpawnPickups" instance=ExtResource("33_kjnad")]
+position = Vector2(825, 810)
+
+[node name="FourPickup2" parent="Entities/SpawnPickups" instance=ExtResource("33_kjnad")]
+position = Vector2(-1162, -977)
+
+[node name="Bosses" type="Node" parent="Entities"]
+
+[node name="BossRomfordChickenEnemy" parent="Entities/Bosses" instance=ExtResource("25_6crul")]
+position = Vector2(1397, -1227)
+
+[node name="BossYobEnemy" parent="Entities/Bosses" instance=ExtResource("26_kyhvw")]
+position = Vector2(-1393, 1574)
+
+[node name="BossPlodEnemy" parent="Entities/Bosses" instance=ExtResource("27_xiom4")]
+position = Vector2(-1420, -1235)
+
+[node name="BossPlodVanEnemy" parent="Entities/Bosses" instance=ExtResource("28_mw6y2")]
+position = Vector2(1363, 1533)
+
+[node name="TrapSpawnerSide" parent="Entities" instance=ExtResource("44_hp288")]
+position = Vector2(-1824, 0)
+spawn_time = 30
+
+[node name="TrapSpawnerUp" parent="Entities" instance=ExtResource("44_hp288")]
+position = Vector2(12, 2060)
+trap_wall_scene = ExtResource("45_yb6sr")
+
+[node name="Foreground" type="Node2D" parent="." groups=["foreground_layer"]]

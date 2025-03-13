@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://p55pcf4qsw0c"]
+
+[ext_resource type="PackedScene" uid="uid://bew61ke6tb6d8" path="res://scenes/game_object/enemies/farm_enemies/ghost_enemy/ghost_enemy.tscn" id="1_v6jkl"]
+
+[node name="HordeGhost" type="Node2D"]
+
+[node name="GhostEnemy" parent="." instance=ExtResource("1_v6jkl")]
+
+[node name="GhostEnemy2" parent="." instance=ExtResource("1_v6jkl")]
+position = Vector2(34, 1)
+
+[node name="GhostEnemy3" parent="." instance=ExtResource("1_v6jkl")]
+position = Vector2(-37, 2)
+
+[node name="GhostEnemy4" parent="." instance=ExtResource("1_v6jkl")]
+position = Vector2(-20, 32)
+
+[node name="GhostEnemy5" parent="." instance=ExtResource("1_v6jkl")]
+position = Vector2(22, 38)
+
+[node name="GhostEnemy6" parent="." instance=ExtResource("1_v6jkl")]
+position = Vector2(16, -25)
+
+[node name="GhostEnemy7" parent="." instance=ExtResource("1_v6jkl")]
+position = Vector2(-22, -34)
+
+[node name="GhostEnemy8" parent="." instance=ExtResource("1_v6jkl")]
+position = Vector2(50, -26)
+
+[node name="GhostEnemy9" parent="." instance=ExtResource("1_v6jkl")]
+position = Vector2(-4, -57)

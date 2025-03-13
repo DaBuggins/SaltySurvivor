@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Character" load_steps=7 format=3 uid="uid://bd36u6eb4cnrl"]
+
+[ext_resource type="AudioStream" uid="uid://dikvvxaadbsn8" path="res://assets/audio/character_sounds/craigpick.mp3" id="1_2lt78"]
+[ext_resource type="AudioStream" uid="uid://3u3ab0fxo5lu" path="res://assets/audio/character_sounds/craiglose.mp3" id="1_gd5st"]
+[ext_resource type="Script" path="res://scenes/game_object/enemies/characters/character.gd" id="1_jg8fo"]
+[ext_resource type="Texture2D" uid="uid://b48yfax1sioj8" path="res://scenes/game_object/enemies/characters/craig.png" id="2_ufry2"]
+[ext_resource type="Resource" uid="uid://c2a77qwu68f23" path="res://resources/upgrades/wall.tres" id="3_gll5e"]
+[ext_resource type="AudioStream" uid="uid://bfvh3p4loxcer" path="res://assets/audio/character_sounds/craigwin.mp3" id="6_tod2q"]
+
+[resource]
+script = ExtResource("1_jg8fo")
+id = "craig"
+name = "Craig"
+sprite = ExtResource("2_ufry2")
+description = "Craig is here"
+speed = 95.0
+accel = 6.0
+health = 6.0
+pickup_area = 24.0
+wins = 0
+unlocked = true
+starter_weapon = ExtResource("3_gll5e")
+pick_sfx = ExtResource("1_2lt78")
+lose_sfx = ExtResource("1_gd5st")
+win_sfx = ExtResource("6_tod2q")

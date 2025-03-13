@@ -1,0 +1,17 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://cn3oxvjdvvts8"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sgv2w"]
+load_path = "res://.godot/imported/Spritesheet_UI_Flat.png-4fd56f4769d8be489120015a5f413603.ctex"
+
+[resource]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+texture = SubResource("CompressedTexture2D_sgv2w")
+texture_margin_left = 6.0
+texture_margin_top = 4.0
+texture_margin_right = 6.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(418, 66, 28, 28)
+modulate_color = Color(1, 1, 1, 0.541176)

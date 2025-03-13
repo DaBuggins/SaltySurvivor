@@ -1,0 +1,246 @@
+[gd_scene load_steps=3 format=3 uid="uid://jw6wk8ys18yt"]
+
+[ext_resource type="PackedScene" uid="uid://c5hivrhrw868j" path="res://scenes/game_object/experience_vial/big_green_vial.tscn" id="1_ch7bb"]
+[ext_resource type="PackedScene" uid="uid://bwti2l1ir5u6k" path="res://scenes/game_object/experience_vial/big_red_vial.tscn" id="2_svym4"]
+
+[node name="ManyVials" type="Node2D"]
+
+[node name="BigGreenVial" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(-71, -33)
+
+[node name="BigGreenVial2" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(-101, 5)
+
+[node name="BigGreenVial3" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(-114, 83)
+
+[node name="BigGreenVial4" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(-51, 147)
+
+[node name="BigGreenVial5" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(65, 160)
+
+[node name="BigGreenVial6" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(122, 109)
+
+[node name="BigGreenVial7" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(160, 56)
+
+[node name="BigGreenVial8" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(126, -13)
+
+[node name="BigGreenVial9" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(42, -49)
+
+[node name="BigGreenVial10" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(-27, -69)
+
+[node name="BigGreenVial11" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(-56, 11)
+
+[node name="BigGreenVial12" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(-86, 49)
+
+[node name="BigGreenVial13" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(-99, 127)
+
+[node name="BigGreenVial14" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(-36, 191)
+
+[node name="BigGreenVial15" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(80, 204)
+
+[node name="BigGreenVial16" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(137, 153)
+
+[node name="BigGreenVial17" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(175, 100)
+
+[node name="BigGreenVial18" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(141, 31)
+
+[node name="BigGreenVial19" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(57, -5)
+
+[node name="BigGreenVial20" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(-12, -25)
+
+[node name="BigGreenVial21" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(-211, 42)
+
+[node name="BigGreenVial22" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(-241, 80)
+
+[node name="BigGreenVial23" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(-254, 158)
+
+[node name="BigGreenVial24" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(-191, 222)
+
+[node name="BigGreenVial25" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(-75, 235)
+
+[node name="BigGreenVial26" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(-18, 184)
+
+[node name="BigGreenVial27" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(20, 131)
+
+[node name="BigGreenVial28" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(-14, 62)
+
+[node name="BigGreenVial29" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(-98, 26)
+
+[node name="BigGreenVial30" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(-167, 6)
+
+[node name="BigGreenVial31" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(432, -158)
+
+[node name="BigGreenVial32" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(233, -91)
+
+[node name="BigGreenVial33" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(203, -53)
+
+[node name="BigGreenVial34" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(190, 25)
+
+[node name="BigGreenVial35" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(253, 89)
+
+[node name="BigGreenVial36" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(369, 102)
+
+[node name="BigGreenVial37" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(426, 51)
+
+[node name="BigGreenVial38" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(464, -2)
+
+[node name="BigGreenVial39" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(430, -71)
+
+[node name="BigGreenVial40" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(346, -107)
+
+[node name="BigGreenVial41" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(277, -127)
+
+[node name="BigGreenVial42" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(454, -83)
+
+[node name="BigGreenVial43" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(255, -16)
+
+[node name="BigGreenVial44" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(225, 22)
+
+[node name="BigGreenVial45" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(212, 100)
+
+[node name="BigGreenVial46" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(275, 164)
+
+[node name="BigGreenVial47" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(391, 177)
+
+[node name="BigGreenVial48" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(448, 126)
+
+[node name="BigGreenVial49" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(486, 73)
+
+[node name="BigGreenVial50" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(452, 4)
+
+[node name="BigGreenVial51" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(368, -32)
+
+[node name="BigGreenVial52" parent="." instance=ExtResource("1_ch7bb")]
+position = Vector2(299, -52)
+
+[node name="BigRedVial" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(86, -88)
+
+[node name="BigRedVial2" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(56, -97)
+
+[node name="BigRedVial3" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(27, -117)
+
+[node name="BigRedVial4" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(40, -143)
+
+[node name="BigRedVial5" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(68, -133)
+
+[node name="BigRedVial6" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(95, -127)
+
+[node name="BigRedVial7" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(108, -107)
+
+[node name="BigRedVial8" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(-20, -120)
+
+[node name="BigRedVial9" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(-50, -129)
+
+[node name="BigRedVial10" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(-79, -149)
+
+[node name="BigRedVial11" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(-66, -175)
+
+[node name="BigRedVial12" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(-38, -165)
+
+[node name="BigRedVial13" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(-11, -159)
+
+[node name="BigRedVial14" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(2, -139)
+
+[node name="BigRedVial15" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(-90, -81)
+
+[node name="BigRedVial16" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(-120, -90)
+
+[node name="BigRedVial17" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(-149, -110)
+
+[node name="BigRedVial18" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(-136, -136)
+
+[node name="BigRedVial19" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(-108, -126)
+
+[node name="BigRedVial20" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(-81, -120)
+
+[node name="BigRedVial21" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(-68, -100)
+
+[node name="BigRedVial22" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(-183, -45)
+
+[node name="BigRedVial23" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(-213, -54)
+
+[node name="BigRedVial24" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(-242, -74)
+
+[node name="BigRedVial25" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(-229, -100)
+
+[node name="BigRedVial26" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(-201, -90)
+
+[node name="BigRedVial27" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(-174, -84)
+
+[node name="BigRedVial28" parent="." instance=ExtResource("2_svym4")]
+position = Vector2(-161, -64)
