@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d08w5aq5ry4gt"]
 
 [ext_resource type="AudioStream" uid="uid://dtgh5pjp6ncej" path="res://assets/audio/atrain8bit.mp3" id="1_pbcgd"]
-[ext_resource type="Script" path="res://scenes/autoload/music_player.gd" id="2_85bcx"]
+[ext_resource type="Script" uid="uid://bgqfkmpfxbydc" path="res://scenes/autoload/music_player.gd" id="2_85bcx"]
 [ext_resource type="AudioStream" uid="uid://q1du6e6ajybx" path="res://assets/audio/charselectsong.mp3" id="3_2ytj2"]
 
 [node name="MusicPlayer" type="AudioStreamPlayer"]

@@ -69,7 +69,7 @@ func update_current_char(chosen_char: Character):
 	save()	
 	
 
-func on_experience_collected(number: float):
+func on_experience_collected(number: int):
 	#save_data["meta_upgrade_currency"] += number
 	pass
 	
@@ -79,10 +79,10 @@ func on_enemy_died():
 	char_save["enemies_killed"] += 1
 	#print("ENEMIES KILLED: " + str(char_save["enemies_killed"]) )
 	
-func save_final_xp(number: float):
+func save_final_xp(number: int):
 	save_data["meta_upgrade_currency"] += number
 	
-func save_loss_xp(number: float):
+func save_loss_xp(number: int):
 	save_data["meta_upgrade_currency"] += number
 
 func on_win(current_char: Character, current_level: String):

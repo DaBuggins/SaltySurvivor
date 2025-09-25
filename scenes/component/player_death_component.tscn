@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://lch2wr7bfjb3"]
 
-[ext_resource type="Script" path="res://scenes/component/death_component.gd" id="1_kocmq"]
+[ext_resource type="Script" uid="uid://dt2qhtjenumoa" path="res://scenes/component/death_component.gd" id="1_kocmq"]
 [ext_resource type="Texture2D" uid="uid://dt0lmbgrbttve" path="res://scenes/game_object/enemies/characters/ad.png" id="2_aiwuf"]
 
 [sub_resource type="Animation" id="Animation_lcf3g"]
@@ -49,8 +49,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i0r7h"]
 _data = {
-"RESET": SubResource("Animation_lcf3g"),
-"default": SubResource("Animation_gkkkt")
+&"RESET": SubResource("Animation_lcf3g"),
+&"default": SubResource("Animation_gkkkt")
 }
 
 [sub_resource type="Curve" id="Curve_kw1qi"]

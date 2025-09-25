@@ -1,16 +1,16 @@
-[gd_scene load_steps=31 format=3 uid="uid://cp3elhj8q8doy"]
+[gd_scene load_steps=32 format=3 uid="uid://cp3elhj8q8doy"]
 
-[ext_resource type="Script" path="res://scenes/component/end_boss_enemy.gd" id="1_dinql"]
+[ext_resource type="Script" uid="uid://c3lojxvvaenqj" path="res://scenes/component/end_boss_enemy.gd" id="1_dinql"]
 [ext_resource type="PackedScene" uid="uid://br47oe6cdcp4h" path="res://scenes/component/random_stream_player_2d_component.tscn" id="2_sshsj"]
 [ext_resource type="AudioStream" uid="uid://dv2j0eoxxdl5l" path="res://assets/audio/sfx/footstep_carpet_000.ogg" id="3_jpmj2"]
 [ext_resource type="AudioStream" uid="uid://b7jevwof7y23c" path="res://assets/audio/sfx/footstep_carpet_001.ogg" id="4_3q1yd"]
 [ext_resource type="AudioStream" uid="uid://c2tvbvycrcy8v" path="res://assets/audio/sfx/footstep_carpet_002.ogg" id="5_vfbp3"]
 [ext_resource type="AudioStream" uid="uid://cfa3vwlwibsog" path="res://assets/audio/sfx/footstep_carpet_003.ogg" id="6_i8128"]
 [ext_resource type="AudioStream" uid="uid://cf3t6u6466igk" path="res://assets/audio/sfx/footstep_carpet_004.ogg" id="7_0kar1"]
-[ext_resource type="Script" path="res://scenes/component/end_boss_velocity_component.gd" id="11_lxvty"]
+[ext_resource type="Script" uid="uid://bmtsk7m5uk3yp" path="res://scenes/component/end_boss_velocity_component.gd" id="11_lxvty"]
 [ext_resource type="PackedScene" uid="uid://cl21hasx1ekjd" path="res://scenes/component/health_component.tscn" id="14_5rf0t"]
 [ext_resource type="PackedScene" uid="uid://dwhwp00bq1je6" path="res://scenes/component/hitflash_component.tscn" id="15_8heoo"]
-[ext_resource type="Shader" path="res://scenes/component/hitflash_component.gdshader" id="16_85bh5"]
+[ext_resource type="Shader" uid="uid://c2iot2odwiyy5" path="res://scenes/component/hitflash_component.gdshader" id="16_85bh5"]
 [ext_resource type="PackedScene" uid="uid://cfqv7qt4x3y3i" path="res://scenes/component/death_component.tscn" id="18_3mj0h"]
 [ext_resource type="PackedScene" uid="uid://b3evnp66mpx0j" path="res://scenes/component/death_sfx_stream_player.tscn" id="19_7ru87"]
 [ext_resource type="PackedScene" uid="uid://b617b2jwarns0" path="res://scenes/effects/boss_aura/boss_aura_effect.tscn" id="19_uhjku"]
@@ -78,8 +78,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rqgq1"]
 _data = {
-"RESET": SubResource("Animation_ihajb"),
-"walk": SubResource("Animation_fjdpl")
+&"RESET": SubResource("Animation_ihajb"),
+&"walk": SubResource("Animation_fjdpl")
 }
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_11yjx"]
@@ -126,6 +126,14 @@ hue_variation_max = 0.08
 [sub_resource type="CircleShape2D" id="CircleShape2D_qs2tc"]
 radius = 42.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vxnlk"]
+bg_color = Color(0.262745, 0.882353, 0.701961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.247059, 0.14902, 0.192157, 1)
+
 [node name="ChickenFarmEndBossEnemy" type="CharacterBody2D" groups=["entities_layer"]]
 collision_layer = 8
 collision_mask = 9
@@ -134,7 +142,7 @@ script = ExtResource("1_dinql")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_rqgq1")
+&"": SubResource("AnimationLibrary_rqgq1")
 }
 autoplay = "walk"
 
@@ -198,3 +206,22 @@ frame_progress = 0.780508
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_qs2tc")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(160, 25)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -118.0
+offset_right = 20.0
+offset_bottom = -112.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(16, 3)
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_styles/fill = SubResource("StyleBoxFlat_vxnlk")
+max_value = 1.0
+value = 0.5
+show_percentage = false

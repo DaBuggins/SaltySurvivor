@@ -1,3 +1,10 @@
+TileMapLayer
+Sprite2D
+Parallax2D
+Polygon2D
+Panel
+GPUParticles2D
+AudioStreamPlayer
 HBoxContainer
 HFlowContainer
 VFlowContainer
@@ -5,11 +12,3 @@ PanelContainer
 BoxContainer
 Container
 Node2D
-AudioStreamPlayer
-Timer
-CharacterBody2D
-StaticBody2D
-RigidBody2D
-Sprite2D
-Polygon2D
-MeshInstance2D

@@ -1,6 +1,6 @@
 [gd_scene load_steps=26 format=3 uid="uid://bawwx6pi88hh2"]
 
-[ext_resource type="Script" path="res://scenes/game_object/enemies/basic_enemy/basic_enemy.gd" id="1_g8kh8"]
+[ext_resource type="Script" uid="uid://f1lhbn7kta0i" path="res://scenes/game_object/enemies/basic_enemy/basic_enemy.gd" id="1_g8kh8"]
 [ext_resource type="PackedScene" uid="uid://bqynfy3wngpy7" path="res://scenes/component/vial_drop_component.tscn" id="2_0hwbo"]
 [ext_resource type="PackedScene" uid="uid://br47oe6cdcp4h" path="res://scenes/component/random_stream_player_2d_component.tscn" id="2_b5wac"]
 [ext_resource type="Texture2D" uid="uid://dt0vmxie2co82" path="res://scenes/game_object/enemies/basic_enemy/basic_enemy.png" id="2_jq0sb"]
@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://sl3i0hvqi3av" path="res://scenes/component/hurtbox_component.tscn" id="4_rjfv7"]
 [ext_resource type="PackedScene" uid="uid://dwhwp00bq1je6" path="res://scenes/component/hitflash_component.tscn" id="5_d6erd"]
 [ext_resource type="AudioStream" uid="uid://c2tvbvycrcy8v" path="res://assets/audio/sfx/footstep_carpet_002.ogg" id="5_ovum1"]
-[ext_resource type="Shader" path="res://scenes/component/hitflash_component.gdshader" id="6_ekglt"]
+[ext_resource type="Shader" uid="uid://c2iot2odwiyy5" path="res://scenes/component/hitflash_component.gdshader" id="6_ekglt"]
 [ext_resource type="AudioStream" uid="uid://cfa3vwlwibsog" path="res://assets/audio/sfx/footstep_carpet_003.ogg" id="6_k7nd8"]
 [ext_resource type="AudioStream" uid="uid://cf3t6u6466igk" path="res://assets/audio/sfx/footstep_carpet_004.ogg" id="7_xwqic"]
 [ext_resource type="PackedScene" uid="uid://cn80dr6eyu445" path="res://scenes/component/death_sfx_player.tscn" id="13_reqgh"]
@@ -77,8 +77,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rqgq1"]
 _data = {
-"RESET": SubResource("Animation_ihajb"),
-"walk": SubResource("Animation_fjdpl")
+&"RESET": SubResource("Animation_ihajb"),
+&"walk": SubResource("Animation_fjdpl")
 }
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_11yjx"]

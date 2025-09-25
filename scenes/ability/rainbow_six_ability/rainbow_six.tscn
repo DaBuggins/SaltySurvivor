@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://mee4xpbnlxwd"]
+[gd_scene load_steps=15 format=3 uid="uid://mee4xpbnlxwd"]
 
-[ext_resource type="Script" path="res://scenes/ability/rainbow_six_ability/rainbow_six.gd" id="1_g8se3"]
+[ext_resource type="Script" uid="uid://bsut5viupagq1" path="res://scenes/ability/rainbow_six_ability/rainbow_six.gd" id="1_g8se3"]
 [ext_resource type="AudioStream" uid="uid://byqvu74i07y6j" path="res://scenes/ability/rainbow_six_ability/twinkle1.mp3" id="2_mu28p"]
 [ext_resource type="AudioStream" uid="uid://y6k1b7xd04fv" path="res://scenes/ability/rainbow_six_ability/twinkle2.mp3" id="3_mdnhi"]
 [ext_resource type="PackedScene" uid="uid://cx0rxtf8pmjf0" path="res://scenes/component/hitbox_component.tscn" id="3_v5s03"]
 [ext_resource type="Gradient" uid="uid://d3ytxr3qgdjyi" path="res://scenes/component/rainbow_gradient.tres" id="4_8b0qo"]
+[ext_resource type="FontFile" uid="uid://c86qpkwptml56" path="res://resources/theme/Rockboxcond12.ttf" id="4_vuo3b"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_tptq2"]
 playback_mode = 1
@@ -103,9 +104,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sdo4n"]
 _data = {
-"RESET": SubResource("Animation_0ari8"),
-"default": SubResource("Animation_ajvk5"),
-"rainbow_wave": SubResource("Animation_8ocry")
+&"RESET": SubResource("Animation_0ari8"),
+&"default": SubResource("Animation_ajvk5"),
+&"rainbow_wave": SubResource("Animation_8ocry")
 }
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_b0ncv"]
@@ -139,12 +140,13 @@ bus = &"weaponsfx"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
 libraries = {
-"": SubResource("AnimationLibrary_sdo4n")
+&"": SubResource("AnimationLibrary_sdo4n")
 }
 autoplay = "rainbow_wave"
 
 [node name="SixRainbow" type="Sprite2D" parent="."]
 position = Vector2(1, 4)
+scale = Vector2(1.2, 1.2)
 
 [node name="Label" type="Label" parent="SixRainbow"]
 anchors_preset = 8
@@ -161,17 +163,19 @@ grow_vertical = 2
 scale = Vector2(0.8, 0.8)
 theme_type_variation = &"rainbow"
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_vuo3b")
 theme_override_font_sizes/font_size = 32
 text = "6"
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="SixRainbow/Label"]
 position = Vector2(0.625, 5.625)
-process_material = SubResource("ParticleProcessMaterial_a64hm")
 randomness = 1.0
 trail_enabled = true
 trail_lifetime = 0.09
+process_material = SubResource("ParticleProcessMaterial_a64hm")
 
 [node name="HitboxComponent" parent="." instance=ExtResource("3_v5s03")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_jv40k")

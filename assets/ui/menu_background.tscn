@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://01b7cc5p6cmg"]
 
-[ext_resource type="Script" path="res://assets/ui/menu_background.gd" id="1_6lcxi"]
+[ext_resource type="Script" uid="uid://d3kmljt8rvoop" path="res://assets/ui/menu_background.gd" id="1_6lcxi"]
 [ext_resource type="Texture2D" uid="uid://nwnc3j3er7i5" path="res://scenes/level2/office.png" id="2_02jh2"]
 [ext_resource type="Texture2D" uid="uid://bcbxquneyvdop" path="res://scenes/level3/romford.png" id="4_12yar"]
 [ext_resource type="Texture2D" uid="uid://dxat00b7ul2to" path="res://scenes/main/farm.png" id="5_bx0sp"]
@@ -42,8 +42,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hrmig"]
 _data = {
-"RESET": SubResource("Animation_uk8yo"),
-"menu_ambi": SubResource("Animation_dwgro")
+&"RESET": SubResource("Animation_uk8yo"),
+&"menu_ambi": SubResource("Animation_dwgro")
 }
 
 [node name="MenuBackground" type="Node2D"]

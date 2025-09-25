@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://bej5idf1j51uf"]
+[gd_scene load_steps=14 format=3 uid="uid://bej5idf1j51uf"]
 
-[ext_resource type="Script" path="res://scenes/ability/knife_ability/knife_ability.gd" id="1_0r6a8"]
+[ext_resource type="Script" uid="uid://rtrtgu3c3ukm" path="res://scenes/ability/knife_ability/knife_ability.gd" id="1_0r6a8"]
 [ext_resource type="AudioStream" uid="uid://dy46nhyho2ums" path="res://scenes/ability/knife_ability/sword1.mp3" id="2_2xn8m"]
 [ext_resource type="Texture2D" uid="uid://cgcvr2s8nihju" path="res://scenes/ability/knife_ability/sword.png" id="2_jj4dj"]
 [ext_resource type="PackedScene" uid="uid://cx0rxtf8pmjf0" path="res://scenes/component/hitbox_component.tscn" id="3_eysc2"]
 [ext_resource type="AudioStream" uid="uid://diw8glggdswhc" path="res://scenes/ability/knife_ability/sword2.mp3" id="3_yet4v"]
+[ext_resource type="Texture2D" uid="uid://b1s7upcnp8ltl" path="res://assets/ui/saltparticle.png" id="6_ebx1a"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_u1atf"]
 random_pitch = 1.2
@@ -59,6 +60,18 @@ tracks/3/path = NodePath("AudioStreamPlayer2D:playing")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("OtherExplode:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -131,11 +144,23 @@ tracks/4/keys = {
 "update": 1,
 "values": [true, false]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("OtherExplode:emitting")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g3d6e"]
 _data = {
-"RESET": SubResource("Animation_r1i1v"),
-"swing": SubResource("Animation_rc1mj")
+&"RESET": SubResource("Animation_r1i1v"),
+&"swing": SubResource("Animation_rc1mj")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wsbx"]
@@ -155,6 +180,30 @@ radial_accel_max = 50.26
 scale_min = 4.0
 scale_max = 8.0
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2yero"]
+lifetime_randomness = 1.0
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 25.0
+angle_min = -212.6
+angle_max = 212.6
+velocity_pivot = Vector3(0, 10, 0)
+angular_velocity_min = -643.59
+angular_velocity_max = 326.2
+radial_velocity_min = 91.87
+radial_velocity_max = 252.52
+gravity = Vector3(1, 2, 10)
+linear_accel_min = 88.6
+linear_accel_max = 88.6
+radial_accel_min = -2.08
+radial_accel_max = 4.13
+tangential_accel_min = -100.0
+tangential_accel_max = -89.12
+damping_min = 70.467
+damping_max = 100.0
+scale_min = 0.1
+scale_max = 0.3
+
 [node name="KnifeAbility" type="Node2D"]
 script = ExtResource("1_0r6a8")
 
@@ -167,7 +216,7 @@ bus = &"weaponsfx"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_g3d6e")
+&"": SubResource("AnimationLibrary_g3d6e")
 }
 autoplay = "swing"
 
@@ -185,8 +234,22 @@ disabled = true
 [node name="ShotParticle" type="GPUParticles2D" parent="."]
 emitting = false
 amount = 2
-process_material = SubResource("ParticleProcessMaterial_aa5yi")
 lifetime = 0.3
 one_shot = true
 speed_scale = 0.8
 explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_aa5yi")
+
+[node name="OtherExplode" type="GPUParticles2D" parent="."]
+position = Vector2(8, 0)
+rotation = -1.93894
+scale = Vector2(0.402, 0.4)
+emitting = false
+amount = 12
+texture = ExtResource("6_ebx1a")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_2yero")

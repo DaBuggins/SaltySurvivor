@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://7q7yl7w17173"]
 
-[ext_resource type="Script" path="res://scenes/UI/vignette.gd" id="1_6we3i"]
-[ext_resource type="Shader" path="res://scenes/UI/vignette.gdshader" id="1_xdxnt"]
+[ext_resource type="Script" uid="uid://c0p5yc6gx1y4v" path="res://scenes/UI/vignette.gd" id="1_6we3i"]
+[ext_resource type="Shader" uid="uid://c7rtuwvbjhft6" path="res://scenes/UI/vignette.gdshader" id="1_xdxnt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ehwa7"]
 shader = ExtResource("1_xdxnt")
@@ -66,8 +66,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1bhre"]
 _data = {
-"RESET": SubResource("Animation_7nhl3"),
-"hit": SubResource("Animation_ccdte")
+&"RESET": SubResource("Animation_7nhl3"),
+&"hit": SubResource("Animation_ccdte")
 }
 
 [node name="Vignette" type="CanvasLayer"]

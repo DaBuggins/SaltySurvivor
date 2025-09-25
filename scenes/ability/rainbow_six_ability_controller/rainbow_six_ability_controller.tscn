@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bv7dmyw8y8po4"]
 
-[ext_resource type="Script" path="res://scenes/ability/rainbow_six_ability_controller/rainbow_six_ability_controller.gd" id="1_2htgs"]
+[ext_resource type="Script" uid="uid://d2lkc7mmoniae" path="res://scenes/ability/rainbow_six_ability_controller/rainbow_six_ability_controller.gd" id="1_2htgs"]
 [ext_resource type="PackedScene" uid="uid://mee4xpbnlxwd" path="res://scenes/ability/rainbow_six_ability/rainbow_six.tscn" id="2_uiela"]
 
 [node name="RainbowSixController" type="Node"]

@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://dj27htas0g31h"]
+[gd_scene load_steps=3 format=3 uid="uid://dj27htas0g31h"]
 
-[ext_resource type="Script" path="res://scenes/main/enemy_spawner.gd" id="1_7udwn"]
+[ext_resource type="Script" uid="uid://cgujcqunv4jml" path="res://scenes/main/enemy_spawner.gd" id="1_7udwn"]
+[ext_resource type="Texture2D" uid="uid://c0tr3oj0fydx7" path="res://scenes/ability/fane_ability/fane.png" id="2_ch5r4"]
 
 [node name="EnemySpawner" type="Node2D" groups=["spawner"]]
 script = ExtResource("1_7udwn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+visibility_layer = 0
+texture = ExtResource("2_ch5r4")
 
 [node name="SpawnTimer" type="Timer" parent="."]
 unique_name_in_owner = true
@@ -12,5 +18,5 @@ autostart = true
 
 [node name="MoveTimer" type="Timer" parent="."]
 unique_name_in_owner = true
-wait_time = 2.0
+wait_time = 0.5
 autostart = true

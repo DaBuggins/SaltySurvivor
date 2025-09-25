@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://edusx4mysm0"]
 
-[ext_resource type="Script" path="res://scenes/UI/flag_ui.gd" id="1_tjara"]
+[ext_resource type="Script" uid="uid://umb51fihj6h8" path="res://scenes/UI/flag_ui.gd" id="1_tjara"]
 [ext_resource type="Texture2D" uid="uid://ee6vs37x4c1j" path="res://scenes/game_object/boss_flag/flag0.png" id="2_7ra2k"]
 [ext_resource type="Texture2D" uid="uid://cmi3uobfrqeci" path="res://scenes/game_object/boss_flag/flag1.png" id="3_ft3hv"]
 [ext_resource type="Texture2D" uid="uid://byrakg88yoihm" path="res://scenes/game_object/boss_flag/flag2.png" id="4_dyofu"]
@@ -89,8 +89,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vdmal"]
 _data = {
-"RESET": SubResource("Animation_3yr6h"),
-"expand_and_fade": SubResource("Animation_1o07y")
+&"RESET": SubResource("Animation_3yr6h"),
+&"expand_and_fade": SubResource("Animation_1o07y")
 }
 
 [node name="FlagUI" type="CanvasLayer"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="AudioStream" uid="uid://b8a5pl5j8pwsl" path="res://assets/audio/character_sounds/bugwin.mp3" id="1_b51tx"]
 [ext_resource type="AudioStream" uid="uid://c1nhn2yt23aqx" path="res://assets/audio/character_sounds/buglose2.mp3" id="1_ev2m1"]
-[ext_resource type="Script" path="res://scenes/game_object/enemies/characters/character.gd" id="1_yh0w3"]
+[ext_resource type="Script" uid="uid://yfutvlnin25c" path="res://scenes/game_object/enemies/characters/character.gd" id="1_yh0w3"]
 [ext_resource type="Texture2D" uid="uid://sg3s2k1ydc8b" path="res://scenes/game_object/enemies/characters/bug.png" id="2_0uy2r"]
 [ext_resource type="Resource" uid="uid://hhnd4hd8hwtp" path="res://resources/upgrades/grenade.tres" id="3_sll4i"]
 

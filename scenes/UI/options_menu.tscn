@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://cnipp7b3678tp"]
 
-[ext_resource type="Script" path="res://scenes/UI/options_menu.gd" id="1_4l4sw"]
+[ext_resource type="Script" uid="uid://dso0eskyi1r2t" path="res://scenes/UI/options_menu.gd" id="1_4l4sw"]
 [ext_resource type="PackedScene" uid="uid://01b7cc5p6cmg" path="res://assets/ui/menu_background.tscn" id="2_r6ymw"]
 [ext_resource type="PackedScene" uid="uid://7q7yl7w17173" path="res://scenes/UI/vignette.tscn" id="2_y71kt"]
 [ext_resource type="PackedScene" uid="uid://cvnbs6tcv4ihn" path="res://scenes/UI/sound_button.tscn" id="3_7x4ue"]
 [ext_resource type="PackedScene" uid="uid://co0op7vsc8xar" path="res://scenes/component/options_shaker.tscn" id="3_73lyi"]
 [ext_resource type="Theme" uid="uid://ivx8wu3sxxyt" path="res://resources/theme/theme.tres" id="5_ceh4j"]
 [ext_resource type="PackedScene" uid="uid://dhp4qex3gvtyl" path="res://scenes/UI/back_button.tscn" id="6_05p0n"]
-[ext_resource type="Script" path="res://scenes/UI/sound_button.gd" id="6_v0yw5"]
+[ext_resource type="Script" uid="uid://cx3f581xnybmv" path="res://scenes/UI/sound_button.gd" id="6_v0yw5"]
 
 [node name="OptionsMenu" type="CanvasLayer"]
 layer = 2

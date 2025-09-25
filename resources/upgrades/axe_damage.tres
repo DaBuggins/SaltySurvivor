@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://cqmayk3red5rt"]
 
-[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_m3nni"]
+[ext_resource type="Script" uid="uid://btrjgap8sa6u3" path="res://resources/upgrades/ability_upgrade.gd" id="1_m3nni"]
 [ext_resource type="Texture2D" uid="uid://crhlrweoamd2g" path="res://scenes/ability/axe_ability/axe.png" id="2_jpphh"]
 
 [resource]

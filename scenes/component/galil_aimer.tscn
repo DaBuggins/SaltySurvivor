@@ -50,8 +50,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b338v"]
 _data = {
-"RESET": SubResource("Animation_d37yf"),
-"ready": SubResource("Animation_e4icx")
+&"RESET": SubResource("Animation_d37yf"),
+&"ready": SubResource("Animation_e4icx")
 }
 
 [node name="GalilAimer" type="Sprite2D"]

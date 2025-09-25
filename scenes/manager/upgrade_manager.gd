@@ -83,7 +83,6 @@ func apply_upgrade(upgrade: AbilityUpgrade):
 		}
 	else:
 		current_upgrades[upgrade.id]["quantity"] += 1
-
 	
 	
 	if upgrade.max_quantity > 0:

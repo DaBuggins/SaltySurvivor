@@ -13,11 +13,6 @@ func accelerate_to_player():
 	var player = get_tree().get_first_node_in_group("player") as Node2D
 	if player == null:
 		return
-	 
-	var distance_to_player = player.global_position.distance_to(owner_node2d.global_position)
-	if distance_to_player > 300:
-		decelerate()
-		return
 	
 	owner_node2d.add_to_group("enemy")
 	

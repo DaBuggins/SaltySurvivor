@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bflfmi7k5130d"]
 
-[ext_resource type="Script" path="res://scenes/game_object/enemies/office_enemies/snowman_enemy/horde_enemy.gd" id="1_opmyx"]
+[ext_resource type="Script" uid="uid://tt66lijq8ssy" path="res://scenes/game_object/enemies/office_enemies/snowman_enemy/horde_enemy.gd" id="1_opmyx"]
 [ext_resource type="PackedScene" uid="uid://mlbyvyu1rnix" path="res://scenes/game_object/enemies/office_enemies/ct_enemy/ct_enemy.tscn" id="2_3scqx"]
 
 [node name="HordeCTEnemy" type="Node2D"]

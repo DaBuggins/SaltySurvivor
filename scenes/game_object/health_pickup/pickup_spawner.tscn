@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c27vjee8r2q6p"]
 
-[ext_resource type="Script" path="res://scenes/main/pickup_spawner.gd" id="1_r6g2o"]
+[ext_resource type="Script" uid="uid://d1thhukl5hm76" path="res://scenes/main/pickup_spawner.gd" id="1_r6g2o"]
 [ext_resource type="PackedScene" uid="uid://yi87bsfeyy15" path="res://scenes/game_object/health_pickup/health2_pickup.tscn" id="2_ufeet"]
 
 [node name="PickupSpawner" type="Node"]

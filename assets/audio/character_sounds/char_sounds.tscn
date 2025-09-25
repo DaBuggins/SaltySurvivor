@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bccwlsxqvdtho"]
 
-[ext_resource type="Script" path="res://assets/audio/character_sounds/char_sounds.gd" id="1_th6ud"]
+[ext_resource type="Script" uid="uid://drimn0o4b4tjr" path="res://assets/audio/character_sounds/char_sounds.gd" id="1_th6ud"]
 [ext_resource type="AudioStream" uid="uid://c5q1g67lintb5" path="res://assets/audio/sfx/jingles_victory.ogg" id="2_jo06i"]
 [ext_resource type="AudioStream" uid="uid://cabi6o4yb0fya" path="res://assets/audio/sfx/jingles_defeat.ogg" id="3_amga7"]
 [ext_resource type="AudioStream" uid="uid://fqrs3v476nqs" path="res://assets/audio/popsfx.mp3" id="4_sf60t"]

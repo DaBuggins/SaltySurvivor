@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bidnphdn3vjmn"]
 
-[ext_resource type="Script" path="res://scenes/UI/pause_menu.gd" id="1_b4fke"]
+[ext_resource type="Script" uid="uid://cnbhvyn527b4w" path="res://scenes/UI/pause_menu.gd" id="1_b4fke"]
 [ext_resource type="PackedScene" uid="uid://chj6k4p6gxmkg" path="res://scenes/UI/play_button.tscn" id="2_dvx7n"]
 
 [sub_resource type="Animation" id="Animation_k44qo"]
@@ -37,8 +37,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1t35i"]
 _data = {
-"RESET": SubResource("Animation_k44qo"),
-"default": SubResource("Animation_fq4hm")
+&"RESET": SubResource("Animation_k44qo"),
+&"default": SubResource("Animation_fq4hm")
 }
 
 [node name="PauseMenu" type="CanvasLayer"]

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Character" load_steps=7 format=3 uid="uid://cf1vnyb3ihiew"]
 
-[ext_resource type="Script" path="res://scenes/game_object/enemies/characters/character.gd" id="1_1pglg"]
+[ext_resource type="Script" uid="uid://yfutvlnin25c" path="res://scenes/game_object/enemies/characters/character.gd" id="1_1pglg"]
 [ext_resource type="AudioStream" uid="uid://la7fegmkw57i" path="res://assets/audio/character_sounds/rozpick.mp3" id="1_4g3nq"]
 [ext_resource type="AudioStream" uid="uid://dpn3f20o22kir" path="res://assets/audio/character_sounds/rozlose.mp3" id="1_v5tqd"]
 [ext_resource type="Texture2D" uid="uid://0yoglsj5nqd6" path="res://scenes/game_object/enemies/characters/roz.png" id="2_2eb3p"]

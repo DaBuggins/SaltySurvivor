@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bbrgeqdki220f"]
 
-[ext_resource type="Script" path="res://scenes/game_object/enemies/office_enemies/snowman_enemy/horde_enemy.gd" id="1_8gfyg"]
+[ext_resource type="Script" uid="uid://tt66lijq8ssy" path="res://scenes/game_object/enemies/office_enemies/snowman_enemy/horde_enemy.gd" id="1_8gfyg"]
 [ext_resource type="PackedScene" uid="uid://bgoyb8wl2r34a" path="res://scenes/game_object/enemies/office_enemies/office_chicken_enemy/tough_office_chicken_enemy.tscn" id="2_l7oeu"]
 [ext_resource type="PackedScene" uid="uid://h0s8bsd8ukjf" path="res://scenes/game_object/enemies/office_enemies/snowman_enemy/snowman_enemy.tscn" id="3_4l6y0"]
 

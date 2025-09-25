@@ -1,14 +1,14 @@
 [gd_scene load_steps=27 format=3 uid="uid://hmjtvvkutmoo"]
 
 [ext_resource type="PackedScene" uid="uid://cl21hasx1ekjd" path="res://scenes/component/health_component.tscn" id="1_5s5h4"]
-[ext_resource type="Script" path="res://scenes/game_object/enemies/wizard_enemy/wizard_enemy.gd" id="1_134og"]
+[ext_resource type="Script" uid="uid://cswrw6a6flr50" path="res://scenes/game_object/enemies/wizard_enemy/wizard_enemy.gd" id="1_134og"]
 [ext_resource type="PackedScene" uid="uid://b15860rxkv1a1" path="res://scenes/component/velocity_component.tscn" id="2_3gyak"]
 [ext_resource type="PackedScene" uid="uid://cfqv7qt4x3y3i" path="res://scenes/component/death_component.tscn" id="2_wpsgp"]
 [ext_resource type="Texture2D" uid="uid://g6xod4eucw6d" path="res://scenes/game_object/enemies/wizard_enemy/wizard_enemy.png" id="3_jol5f"]
 [ext_resource type="PackedScene" uid="uid://bqynfy3wngpy7" path="res://scenes/component/vial_drop_component.tscn" id="4_ahsdc"]
 [ext_resource type="PackedScene" uid="uid://sl3i0hvqi3av" path="res://scenes/component/hurtbox_component.tscn" id="4_kl5ad"]
 [ext_resource type="PackedScene" uid="uid://dwhwp00bq1je6" path="res://scenes/component/hitflash_component.tscn" id="5_75hmb"]
-[ext_resource type="Shader" path="res://scenes/component/hitflash_component.gdshader" id="6_d40ea"]
+[ext_resource type="Shader" uid="uid://c2iot2odwiyy5" path="res://scenes/component/hitflash_component.gdshader" id="6_d40ea"]
 [ext_resource type="PackedScene" uid="uid://br47oe6cdcp4h" path="res://scenes/component/random_stream_player_2d_component.tscn" id="8_6udyq"]
 [ext_resource type="PackedScene" uid="uid://cn80dr6eyu445" path="res://scenes/component/death_sfx_player.tscn" id="8_ji6ml"]
 [ext_resource type="AudioStream" uid="uid://dv2j0eoxxdl5l" path="res://assets/audio/sfx/footstep_carpet_000.ogg" id="9_6y3mt"]
@@ -120,8 +120,8 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jstxj"]
 _data = {
-"RESET": SubResource("Animation_qt45j"),
-"walk": SubResource("Animation_lomd7")
+&"RESET": SubResource("Animation_qt45j"),
+&"walk": SubResource("Animation_lomd7")
 }
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3w5yv"]

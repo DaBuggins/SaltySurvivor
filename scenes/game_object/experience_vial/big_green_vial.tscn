@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c5hivrhrw868j"]
 
-[ext_resource type="Script" path="res://scenes/game_object/experience_vial/big_vial.gd" id="1_jtcir"]
+[ext_resource type="Script" uid="uid://xk4pjv5jg132" path="res://scenes/game_object/experience_vial/big_vial.gd" id="1_jtcir"]
 [ext_resource type="PackedScene" uid="uid://o1t1syg3v4sd" path="res://scenes/component/pickup_sfx.tscn" id="2_o15dh"]
 [ext_resource type="Texture2D" uid="uid://2hdchmgybqle" path="res://scenes/game_object/experience_vial/bigyellowviak.png" id="3_sdmxj"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b502pggkgfy3p"]
 
-[ext_resource type="Script" path="res://scenes/ability/knife_ability_controller/knife_ability_controller.gd" id="1_cg55w"]
+[ext_resource type="Script" uid="uid://vldi2ov2477t" path="res://scenes/ability/knife_ability_controller/knife_ability_controller.gd" id="1_cg55w"]
 [ext_resource type="PackedScene" uid="uid://bej5idf1j51uf" path="res://scenes/ability/knife_ability/knife_ability.tscn" id="2_2m83n"]
 
 [node name="KnifeAbilityController" type="Node"]

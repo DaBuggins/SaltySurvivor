@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://c5po3830x6nfb"]
 
-[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_8jfp5"]
+[ext_resource type="Script" uid="uid://btrjgap8sa6u3" path="res://resources/upgrades/ability_upgrade.gd" id="1_8jfp5"]
 [ext_resource type="Texture2D" uid="uid://dk1qtr2aat7lx" path="res://scenes/game_object/health_pickup/heart.png" id="2_550bn"]
 
 [resource]

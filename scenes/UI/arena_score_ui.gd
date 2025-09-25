@@ -12,8 +12,8 @@ var current_vials = 0
 
 
 func _ready() -> void:
-	total_vials_label.text = str(MetaProgression.save_data["meta_upgrade_currency"]) 
-	kills_label.text = str(current_kills)	
+	total_vials_label.text = str(MetaProgression.save_data["meta_upgrade_currency"])
+	kills_label.text = str(current_kills)
 	if GameEvents.current_char != null:
 		kill_sprite.texture = GameEvents.current_char.sprite
 	current_vials_label.text = str(current_vials)
@@ -31,7 +31,7 @@ func on_enemy_died():
 	animation_player.play("kill")
 	total_vials_label.text = str(MetaProgression.save_data["meta_upgrade_currency"])
 	
-func on_experience_vial_collected(number: float):
+func on_experience_vial_collected(number: int):
 	current_vials += number
 	current_vials_label.text = str(current_vials)
 	

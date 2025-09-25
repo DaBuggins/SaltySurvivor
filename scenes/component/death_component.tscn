@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://cfqv7qt4x3y3i"]
 
 [ext_resource type="Texture2D" uid="uid://dt0vmxie2co82" path="res://scenes/game_object/enemies/basic_enemy/basic_enemy.png" id="1_mwi4t"]
-[ext_resource type="Script" path="res://scenes/component/death_component.gd" id="1_r70ae"]
+[ext_resource type="Script" uid="uid://dt2qhtjenumoa" path="res://scenes/component/death_component.gd" id="1_r70ae"]
 [ext_resource type="PackedScene" uid="uid://br47oe6cdcp4h" path="res://scenes/component/random_stream_player_2d_component.tscn" id="3_nfp6g"]
 [ext_resource type="AudioStream" uid="uid://dv2j0eoxxdl5l" path="res://assets/audio/sfx/footstep_carpet_000.ogg" id="4_xnetl"]
 [ext_resource type="AudioStream" uid="uid://b7jevwof7y23c" path="res://assets/audio/sfx/footstep_carpet_001.ogg" id="5_xom1u"]
@@ -55,8 +55,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i0r7h"]
 _data = {
-"RESET": SubResource("Animation_lcf3g"),
-"default": SubResource("Animation_gkkkt")
+&"RESET": SubResource("Animation_lcf3g"),
+&"default": SubResource("Animation_gkkkt")
 }
 
 [sub_resource type="Curve" id="Curve_kw1qi"]

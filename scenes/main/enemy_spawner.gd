@@ -10,10 +10,13 @@ extends Node2D
 
 var spawn_level = 1
 var player_pos
+var direction = [Vector2(0,400), Vector2(0,-400), Vector2(400,0), Vector2(-400,0)]
 
 func _ready() -> void:
 	spawn_timer.timeout.connect(spawn_enemy)
 	move_timer.timeout.connect(move_to_player)
+	GameEvents.boss_reached.connect(on_boss_reached)
+	
 	
 	
 func spawn_enemy():
@@ -25,10 +28,12 @@ func spawn_enemy():
 		
 func move_to_player():
 	var player = get_tree().get_first_node_in_group("player") as Node2D
-	player_pos = player.global_position * -3
-	var tween = create_tween()
+	player_pos = player.global_position
+	global_position = player_pos + direction.pick_random()
 
-	tween.tween_property(self, "global_position", player_pos, 1.5)
+	#player_pos = player.global_position * -3
+	#var tween = create_tween()
+	#tween.tween_property(self, "global_position", player_pos, 1.5)
 		
 
 func spawn_boss():
@@ -56,3 +61,5 @@ func add_boss(boss):
 		get_tree().get_first_node_in_group("entities_layer").add_child(enemy)
 		enemy.global_position = global_position
 		
+func on_boss_reached():
+	queue_free()

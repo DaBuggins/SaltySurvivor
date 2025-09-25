@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://csaem083f8md4"]
 
-[ext_resource type="Script" path="res://scenes/ability/fane_ability_controller/fane_ability_controller.gd" id="1_8uk43"]
+[ext_resource type="Script" uid="uid://dg4mj7cnymhxu" path="res://scenes/ability/fane_ability_controller/fane_ability_controller.gd" id="1_8uk43"]
 [ext_resource type="PackedScene" uid="uid://b6axo7l5ye43l" path="res://scenes/ability/fane_ability/fane_ability.tscn" id="2_4xtbg"]
 [ext_resource type="AudioStream" uid="uid://8edvk63ut0ox" path="res://scenes/ability/fane_ability/motors1.mp3" id="3_yotx0"]
 

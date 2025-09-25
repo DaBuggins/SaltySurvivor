@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://udwsialhx7bj"]
 
-[ext_resource type="Script" path="res://scenes/game_object/boss_flag/boss_flag.gd" id="1_ctmaw"]
+[ext_resource type="Script" uid="uid://dril0en8beu6p" path="res://scenes/game_object/boss_flag/boss_flag.gd" id="1_ctmaw"]
 [ext_resource type="Texture2D" uid="uid://ee6vs37x4c1j" path="res://scenes/game_object/boss_flag/flag0.png" id="2_wjmip"]
 [ext_resource type="Texture2D" uid="uid://cmi3uobfrqeci" path="res://scenes/game_object/boss_flag/flag1.png" id="3_kj684"]
 [ext_resource type="Texture2D" uid="uid://byrakg88yoihm" path="res://scenes/game_object/boss_flag/flag2.png" id="4_f0rr4"]

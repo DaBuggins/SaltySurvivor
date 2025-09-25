@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Ability" load_steps=4 format=3 uid="uid://c2a77qwu68f23"]
 
 [ext_resource type="PackedScene" uid="uid://bksyk3ls1625y" path="res://scenes/ability/wall_ability_controller/wall_ability_controller.tscn" id="1_co0n5"]
-[ext_resource type="Script" path="res://resources/upgrades/ability.gd" id="2_y84x0"]
+[ext_resource type="Script" uid="uid://bd8ii0gbfxb4p" path="res://resources/upgrades/ability.gd" id="2_y84x0"]
 [ext_resource type="Texture2D" uid="uid://m6jnejvjew5s" path="res://scenes/ability/wall_ability/wall.png" id="3_dd3t0"]
 
 [resource]

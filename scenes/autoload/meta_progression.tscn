@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://p2lb52ytr0ls"]
 
-[ext_resource type="Script" path="res://scenes/autoload/meta_progression.gd" id="1_4k2ek"]
-[ext_resource type="Script" path="res://scenes/game_object/enemies/characters/character.gd" id="2_umtuk"]
+[ext_resource type="Script" uid="uid://28ty6lc3hgfv" path="res://scenes/autoload/meta_progression.gd" id="1_4k2ek"]
+[ext_resource type="Script" uid="uid://yfutvlnin25c" path="res://scenes/game_object/enemies/characters/character.gd" id="2_umtuk"]
 [ext_resource type="Resource" uid="uid://2mqgmdamxs0t" path="res://scenes/game_object/enemies/characters/charbug.tres" id="3_bgplv"]
 [ext_resource type="Resource" uid="uid://cbasmt1p57l53" path="res://scenes/game_object/enemies/characters/charad.tres" id="4_xdior"]
 [ext_resource type="Resource" uid="uid://ccahwx04u0e25" path="res://scenes/game_object/enemies/characters/charhaz.tres" id="5_jmtu0"]

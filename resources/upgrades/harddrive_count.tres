@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://c0sb55omxqlgj"]
 
-[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_lcsb0"]
+[ext_resource type="Script" uid="uid://btrjgap8sa6u3" path="res://resources/upgrades/ability_upgrade.gd" id="1_lcsb0"]
 [ext_resource type="Texture2D" uid="uid://c4u3cwk0mj6f6" path="res://scenes/ability/harddrive_ability/harddrive.png" id="2_mirn2"]
 
 [resource]

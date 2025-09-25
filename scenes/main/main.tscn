@@ -1,8 +1,8 @@
-[gd_scene load_steps=46 format=3 uid="uid://beac7rptw1mag"]
+[gd_scene load_steps=51 format=3 uid="uid://beac7rptw1mag"]
 
 [ext_resource type="PackedScene" uid="uid://o756ycsqo4yb" path="res://scenes/UI/arena_time_ui.tscn" id="1_0qi27"]
 [ext_resource type="PackedScene" uid="uid://ced4cy1k670nm" path="res://scenes/game_object/game_camera/gamecamera.tscn" id="1_ev7jn"]
-[ext_resource type="Script" path="res://scenes/main/main.gd" id="1_jg067"]
+[ext_resource type="Script" uid="uid://cm3irn0s3aygu" path="res://scenes/main/main.gd" id="1_jg067"]
 [ext_resource type="PackedScene" uid="uid://we0sjok1nfui" path="res://scenes/game_object/player/player.tscn" id="1_khl32"]
 [ext_resource type="PackedScene" uid="uid://wjxi47rkeh3u" path="res://scenes/UI/end_screen.tscn" id="2_d0ak8"]
 [ext_resource type="PackedScene" uid="uid://b1mmvhbe7s77c" path="res://scenes/manager/arena_time_manager.tscn" id="2_kkvbg"]
@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://edusx4mysm0" path="res://scenes/UI/flag_ui.tscn" id="6_4b864"]
 [ext_resource type="PackedScene" uid="uid://bsqu7l0vceuu2" path="res://scenes/UI/upgrade_ui.tscn" id="6_4dbe8"]
 [ext_resource type="PackedScene" uid="uid://qc3exgeakcv8" path="res://scenes/manager/upgrade_manager.tscn" id="6_ptrif"]
-[ext_resource type="Script" path="res://scenes/main/main_enemy_manager.gd" id="7_u7m4w"]
+[ext_resource type="Script" uid="uid://bl7mj0r72ehpc" path="res://scenes/main/main_enemy_manager.gd" id="7_u7m4w"]
 [ext_resource type="PackedScene" uid="uid://qq06r8q7hyc4" path="res://scenes/game_object/enemies/farm_enemies/chicken_farm_enemy/chicken_farm_enemy.tscn" id="8_jp4w7"]
 [ext_resource type="PackedScene" uid="uid://brlgeq2cpe8r6" path="res://scenes/game_object/enemies/farm_enemies/tomato_enemy/tomato_enemy.tscn" id="9_smw7g"]
 [ext_resource type="PackedScene" uid="uid://fd5ljy6u7ycg" path="res://scenes/game_object/enemies/farm_enemies/potato_enemy/potato_enemy.tscn" id="10_e6kky"]
@@ -42,8 +42,13 @@
 [ext_resource type="PackedScene" uid="uid://56p5dyk50lu3" path="res://scenes/game_object/health_pickup/health_pickup.tscn" id="37_8f1ay"]
 [ext_resource type="PackedScene" uid="uid://cifyld41n12vp" path="res://scenes/game_object/four_pickup/four_pickup.tscn" id="37_83tt5"]
 [ext_resource type="Texture2D" uid="uid://ciojbbyfdhqlj" path="res://assets/environment/tree.png" id="37_bl2r4"]
+[ext_resource type="PackedScene" uid="uid://jw6wk8ys18yt" path="res://scenes/component/many_vials.tscn" id="43_gohbf"]
+[ext_resource type="PackedScene" uid="uid://b5wda30s80jwu" path="res://scenes/game_object/boss_flag/boss_flag0.tscn" id="45_wcrab"]
+[ext_resource type="PackedScene" uid="uid://bncp1y1cro2pb" path="res://scenes/game_object/boss_flag/boss_flag1.tscn" id="46_gohbf"]
 [ext_resource type="PackedScene" uid="uid://c68jsxfcd0clo" path="res://scenes/game_object/enemies/spike_wall/trap_wall_up.tscn" id="46_gs0jj"]
+[ext_resource type="PackedScene" uid="uid://cy5uh63ky435j" path="res://scenes/game_object/boss_flag/boss_flag2.tscn" id="47_jucdw"]
 [ext_resource type="PackedScene" uid="uid://br4el3m0tk083" path="res://scenes/component/trap_spawner.tscn" id="47_o3bl1"]
+[ext_resource type="PackedScene" uid="uid://udwsialhx7bj" path="res://scenes/game_object/boss_flag/boss_flag3.tscn" id="48_6miv3"]
 
 [sub_resource type="GDScript" id="GDScript_hbb2m"]
 script/source = "extends Node
@@ -198,9 +203,23 @@ position = Vector2(825, 810)
 [node name="FourPickup2" parent="Entities/SpawnPickups" instance=ExtResource("37_83tt5")]
 position = Vector2(-1162, -977)
 
+[node name="ManyVials" parent="Entities/SpawnPickups" instance=ExtResource("43_gohbf")]
+
 [node name="TrapSpawnerUp" parent="Entities" instance=ExtResource("47_o3bl1")]
 position = Vector2(12, 1668)
 trap_wall_scene = ExtResource("46_gs0jj")
 spawn_time = 30
+
+[node name="BossFlag0" parent="Entities" instance=ExtResource("45_wcrab")]
+position = Vector2(98, -4)
+
+[node name="BossFlag1" parent="Entities" instance=ExtResource("46_gohbf")]
+position = Vector2(-50, -54)
+
+[node name="BossFlag2" parent="Entities" instance=ExtResource("47_jucdw")]
+position = Vector2(0, -61)
+
+[node name="BossFlag3" parent="Entities" instance=ExtResource("48_6miv3")]
+position = Vector2(64, -62)
 
 [node name="Foreground" type="Node2D" parent="." groups=["foreground_layer"]]

@@ -1,9 +1,11 @@
-[gd_resource type="TileSet" load_steps=9 format=3 uid="uid://cbyq0sx44ux1w"]
+[gd_resource type="TileSet" load_steps=13 format=3 uid="uid://cbyq0sx44ux1w"]
 
 [ext_resource type="Texture2D" uid="uid://3l26o001fbw5" path="res://assets/environment/tilemap_packed.png" id="1_81ay5"]
 [ext_resource type="Texture2D" uid="uid://buju10ta8rvnv" path="res://scenes/level2/tilemap-backgrounds_packed.png" id="2_w5jnm"]
+[ext_resource type="Texture2D" uid="uid://b5rjrgj3q5cdl" path="res://icegrasses.png" id="3_6dy5u"]
 [ext_resource type="Texture2D" uid="uid://cbcim1o1yc3x2" path="res://scenes/level2/tilemap_battle.png" id="3_q3nws"]
 [ext_resource type="Texture2D" uid="uid://b02nxuxw18li4" path="res://assets/environment/tilemap_platf.png" id="4_bi2rx"]
+[ext_resource type="Texture2D" uid="uid://c1cq2d4sf16np" path="res://grasses.png" id="5_luhvj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rjyh7"]
 texture = ExtResource("1_81ay5")
@@ -49,6 +51,7 @@ texture = ExtResource("1_81ay5")
 1:0/0/terrains_peering_bit/right_side = 0
 1:0/0/terrains_peering_bit/bottom_right_corner = 0
 1:0/0/terrains_peering_bit/bottom_side = 0
+1:1/next_alternative_id = 2
 1:1/0 = 0
 1:1/0/terrain_set = 0
 1:1/0/terrain = 0
@@ -58,6 +61,7 @@ texture = ExtResource("1_81ay5")
 1:1/0/terrains_peering_bit/bottom_side = 0
 1:1/0/terrains_peering_bit/top_side = 0
 1:1/0/terrains_peering_bit/top_right_corner = 0
+1:1/1 = 1
 1:2/0 = 0
 1:2/0/terrain_set = 0
 1:2/0/terrain = 0
@@ -108,15 +112,17 @@ texture = ExtResource("1_81ay5")
 2:0/0/terrains_peering_bit/left_side = 0
 2:1/0 = 0
 2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:4/next_alternative_id = 2
+2:4/next_alternative_id = 3
 2:4/0 = 0
 2:4/0/terrain_set = 0
 2:4/1 = 1
+2:4/2 = 2
 3:4/0 = 0
-0:0/next_alternative_id = 3
+0:0/next_alternative_id = 4
 0:0/0 = 0
 0:0/1 = 1
 0:0/1/modulate = Color(0.545098, 0.607843, 0.705882, 1)
+0:0/3 = 3
 0:1/0 = 0
 0:1/0/terrain_set = 0
 0:2/0 = 0
@@ -136,11 +142,13 @@ texture = ExtResource("1_81ay5")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3qv2b"]
 texture = ExtResource("2_w5jnm")
-0:0/next_alternative_id = 2
+0:0/next_alternative_id = 3
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/1 = 1
 0:0/1/modulate = Color(0.545098, 0.607843, 0.705882, 1)
+0:0/2 = 2
+0:0/2/modulate = Color(0.628985, 0.624732, 0.624732, 1)
 1:0/0 = 0
 1:0/0/terrain_set = 0
 2:0/0 = 0
@@ -228,6 +236,14 @@ texture = ExtResource("2_w5jnm")
 10:3/0/terrain_set = 0
 11:3/0 = 0
 11:3/0/terrain_set = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_did67"]
+texture = ExtResource("3_6dy5u")
+0:1/0 = 0
+1:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qwqjq"]
 texture = ExtResource("3_q3nws")
@@ -698,6 +714,17 @@ separation = Vector2i(2, 2)
 18:8/0 = 0
 19:8/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6dy5u"]
+resource_name = "grass1"
+texture = ExtResource("5_luhvj")
+0:0/0 = 0
+0:1/0 = 0
+1:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:0/0 = 0
+3:1/0 = 0
+
 [resource]
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 0
@@ -708,3 +735,6 @@ sources/0 = SubResource("TileSetAtlasSource_rjyh7")
 sources/1 = SubResource("TileSetAtlasSource_3qv2b")
 sources/2 = SubResource("TileSetAtlasSource_qwqjq")
 sources/3 = SubResource("TileSetAtlasSource_d3i2y")
+sources/6 = SubResource("TileSetAtlasSource_6dy5u")
+sources/11 = SubResource("TileSetAtlasSource_did67")
+tile_proxies/coords_level = [[4, Vector2i(0, 0)], [6, Vector2i(0, 0)], [4, Vector2i(0, 1)], [6, Vector2i(0, 1)], [4, Vector2i(1, 0)], [6, Vector2i(1, 0)], [4, Vector2i(1, 1)], [6, Vector2i(1, 1)], [5, Vector2i(0, 1)], [6, Vector2i(2, 1)], [5, Vector2i(1, 0)], [6, Vector2i(3, 0)], [5, Vector2i(1, 1)], [6, Vector2i(3, 1)], [7, Vector2i(0, 1)], [11, Vector2i(0, 1)], [7, Vector2i(1, 0)], [11, Vector2i(1, 0)], [7, Vector2i(1, 1)], [11, Vector2i(1, 1)], [10, Vector2i(0, 1)], [11, Vector2i(2, 1)], [10, Vector2i(1, 1)], [11, Vector2i(3, 1)]]

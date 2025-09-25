@@ -1,6 +1,6 @@
-[gd_scene load_steps=32 format=3 uid="uid://dgjllrvb8k5yg"]
+[gd_scene load_steps=33 format=3 uid="uid://dgjllrvb8k5yg"]
 
-[ext_resource type="Script" path="res://scenes/component/boss_enemy.gd" id="1_vg3h2"]
+[ext_resource type="Script" uid="uid://c36g484dkaj4q" path="res://scenes/component/boss_enemy.gd" id="1_vg3h2"]
 [ext_resource type="PackedScene" uid="uid://br47oe6cdcp4h" path="res://scenes/component/random_stream_player_2d_component.tscn" id="2_53bkd"]
 [ext_resource type="AudioStream" uid="uid://dv2j0eoxxdl5l" path="res://assets/audio/sfx/footstep_carpet_000.ogg" id="3_8t86a"]
 [ext_resource type="AudioStream" uid="uid://b7jevwof7y23c" path="res://assets/audio/sfx/footstep_carpet_001.ogg" id="4_ysx2p"]
@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://byrakg88yoihm" path="res://scenes/game_object/boss_flag/flag2.png" id="14_03pwg"]
 [ext_resource type="PackedScene" uid="uid://dwhwp00bq1je6" path="res://scenes/component/hitflash_component.tscn" id="14_qcpo1"]
 [ext_resource type="PackedScene" uid="uid://cy5uh63ky435j" path="res://scenes/game_object/boss_flag/boss_flag2.tscn" id="15_ct0mb"]
-[ext_resource type="Shader" path="res://scenes/component/hitflash_component.gdshader" id="15_kaf3c"]
+[ext_resource type="Shader" uid="uid://c2iot2odwiyy5" path="res://scenes/component/hitflash_component.gdshader" id="15_kaf3c"]
 [ext_resource type="PackedScene" uid="uid://cfqv7qt4x3y3i" path="res://scenes/component/death_component.tscn" id="16_4paqk"]
 [ext_resource type="PackedScene" uid="uid://cn80dr6eyu445" path="res://scenes/component/death_sfx_player.tscn" id="17_b3v2l"]
 [ext_resource type="AudioStream" uid="uid://ds1n54sh50yl2" path="res://scenes/game_object/enemies/farm_enemies/truck_enemy/carcrash.mp3" id="18_q7fnv"]
@@ -82,8 +82,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rqgq1"]
 _data = {
-"RESET": SubResource("Animation_ihajb"),
-"walk": SubResource("Animation_fjdpl")
+&"RESET": SubResource("Animation_ihajb"),
+&"walk": SubResource("Animation_fjdpl")
 }
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_11yjx"]
@@ -107,6 +107,14 @@ radius = 13.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_6yu18"]
 radius = 40.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_51r5p"]
+bg_color = Color(0.262745, 0.882353, 0.701961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.247059, 0.14902, 0.192157, 1)
+
 [node name="BossGhostEnemy" type="CharacterBody2D" groups=["boss", "entities_layer"]]
 collision_layer = 8
 collision_mask = 9
@@ -115,7 +123,7 @@ script = ExtResource("1_vg3h2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_rqgq1")
+&"": SubResource("AnimationLibrary_rqgq1")
 }
 autoplay = "walk"
 
@@ -183,3 +191,23 @@ texture = ExtResource("20_cy7r7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_6yu18")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(160, 25)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -66.0
+offset_top = -88.0
+offset_right = 94.0
+offset_bottom = -63.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(16, 3)
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_styles/fill = SubResource("StyleBoxFlat_51r5p")
+max_value = 1.0
+value = 0.5
+show_percentage = false

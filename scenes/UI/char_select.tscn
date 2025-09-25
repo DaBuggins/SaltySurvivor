@@ -1,8 +1,8 @@
 [gd_scene load_steps=35 format=3 uid="uid://cyanysgtf2p28"]
 
-[ext_resource type="Script" path="res://scenes/UI/char_select.gd" id="1_dmcrt"]
+[ext_resource type="Script" uid="uid://cjjy5uqfd86wm" path="res://scenes/UI/char_select.gd" id="1_dmcrt"]
 [ext_resource type="PackedScene" uid="uid://cul0bt22djwrj" path="res://scenes/UI/char_select_card.tscn" id="2_4avjx"]
-[ext_resource type="Script" path="res://scenes/game_object/enemies/characters/character.gd" id="3_s2xgl"]
+[ext_resource type="Script" uid="uid://yfutvlnin25c" path="res://scenes/game_object/enemies/characters/character.gd" id="3_s2xgl"]
 [ext_resource type="Resource" uid="uid://cbasmt1p57l53" path="res://scenes/game_object/enemies/characters/charad.tres" id="4_80xs7"]
 [ext_resource type="Resource" uid="uid://bnbfpbevn6eux" path="res://scenes/game_object/enemies/characters/charaid.tres" id="5_wor68"]
 [ext_resource type="Resource" uid="uid://2mqgmdamxs0t" path="res://scenes/game_object/enemies/characters/charbug.tres" id="6_ig0bt"]
@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bccwlsxqvdtho" path="res://assets/audio/character_sounds/char_sounds.tscn" id="12_y6gj7"]
 [ext_resource type="PackedScene" uid="uid://bgw0xaw1ndtc1" path="res://scenes/component/char_select_shaker.tscn" id="13_ch5kg"]
 [ext_resource type="PackedScene" uid="uid://dhp4qex3gvtyl" path="res://scenes/UI/back_button.tscn" id="14_gh5wf"]
-[ext_resource type="Script" path="res://scenes/component/char_select_shaker.gd" id="14_u3nfo"]
+[ext_resource type="Script" uid="uid://dkk77w1s3ssoq" path="res://scenes/component/char_select_shaker.gd" id="14_u3nfo"]
 [ext_resource type="Theme" uid="uid://ivx8wu3sxxyt" path="res://resources/theme/theme.tres" id="14_w4kxi"]
 [ext_resource type="Texture2D" uid="uid://dt0lmbgrbttve" path="res://scenes/game_object/enemies/characters/ad.png" id="15_msjfq"]
 [ext_resource type="Texture2D" uid="uid://cloa1bs57u8og" path="res://scenes/game_object/enemies/characters/aid.png" id="16_562tm"]
@@ -77,9 +77,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_37p1v"]
 _data = {
-"RESET": SubResource("Animation_vffjv"),
-"in": SubResource("Animation_xxc11"),
-"out": SubResource("Animation_4vfk2")
+&"RESET": SubResource("Animation_vffjv"),
+&"in": SubResource("Animation_xxc11"),
+&"out": SubResource("Animation_4vfk2")
 }
 
 [sub_resource type="Animation" id="Animation_wvji1"]
@@ -131,9 +131,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k5bup"]
 _data = {
-"RESET": SubResource("Animation_wvji1"),
-"shake": SubResource("Animation_rc7wv"),
-"shake_2": SubResource("Animation_o3k6c")
+&"RESET": SubResource("Animation_wvji1"),
+&"shake": SubResource("Animation_rc7wv"),
+&"shake_2": SubResource("Animation_o3k6c")
 }
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_l707t"]

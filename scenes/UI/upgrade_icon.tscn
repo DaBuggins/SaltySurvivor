@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://d227bm3ycdn2e"]
 
 [ext_resource type="Texture2D" uid="uid://c0tr3oj0fydx7" path="res://scenes/ability/fane_ability/fane.png" id="1_0vfre"]
-[ext_resource type="Script" path="res://scenes/UI/upgrade_icon.gd" id="2_ywtpr"]
+[ext_resource type="Script" uid="uid://copgad1mqs3uk" path="res://scenes/UI/upgrade_icon.gd" id="2_ywtpr"]
 [ext_resource type="PackedScene" uid="uid://b01yph3i5r5v3" path="res://scenes/UI/bonus_icon.tscn" id="3_duqkd"]
 [ext_resource type="Gradient" uid="uid://d3ytxr3qgdjyi" path="res://scenes/component/rainbow_gradient.tres" id="4_wl1cq"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://b6axo7l5ye43l"]
 
-[ext_resource type="Script" path="res://scenes/ability/fane_ability/fane_ability.gd" id="1_gtbob"]
+[ext_resource type="Script" uid="uid://c247dx8wfqej5" path="res://scenes/ability/fane_ability/fane_ability.gd" id="1_gtbob"]
 [ext_resource type="PackedScene" uid="uid://cbxsov3qwklml" path="res://scenes/ability/fane_ability/electric_shield.tscn" id="2_8kn1x"]
 [ext_resource type="Texture2D" uid="uid://c0tr3oj0fydx7" path="res://scenes/ability/fane_ability/fane.png" id="2_51efd"]
 [ext_resource type="PackedScene" uid="uid://cx0rxtf8pmjf0" path="res://scenes/component/hitbox_component.tscn" id="3_gws4g"]
@@ -136,8 +136,8 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g3d6e"]
 _data = {
-"RESET": SubResource("Animation_r1i1v"),
-"move": SubResource("Animation_rc1mj")
+&"RESET": SubResource("Animation_r1i1v"),
+&"move": SubResource("Animation_rc1mj")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wsbx"]

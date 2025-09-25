@@ -1,6 +1,6 @@
 [gd_scene load_steps=30 format=3 uid="uid://di6wb10q555r8"]
 
-[ext_resource type="Script" path="res://scenes/UI/level_select_card.gd" id="1_lqqrh"]
+[ext_resource type="Script" uid="uid://baodwuqwhx3kd" path="res://scenes/UI/level_select_card.gd" id="1_lqqrh"]
 [ext_resource type="AudioStream" uid="uid://ch3i4ef4byuyn" path="res://assets/audio/saltselectsfx.wav" id="2_ug6rv"]
 [ext_resource type="PackedScene" uid="uid://dv54y4v25i82x" path="res://scenes/component/random_stream_player_component.tscn" id="2_w130t"]
 [ext_resource type="AudioStream" uid="uid://cqmtle8yjoapg" path="res://assets/audio/sfx/switch1.ogg" id="3_k2vml"]
@@ -15,7 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://dk60ddh103bwg" path="res://assets/audio/sfx/switch10.ogg" id="12_y6qdc"]
 [ext_resource type="Theme" uid="uid://ivx8wu3sxxyt" path="res://resources/theme/theme.tres" id="13_gkfet"]
 [ext_resource type="PackedScene" uid="uid://cdnhsly5xea23" path="res://scenes/component/salt_select_effect.tscn" id="14_dqi2l"]
-[ext_resource type="Script" path="res://scenes/UI/focus_button.gd" id="16_aaf3g"]
+[ext_resource type="Script" uid="uid://4jj5k666qvto" path="res://scenes/UI/focus_button.gd" id="16_aaf3g"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_7k7l3"]
 random_pitch = 1.4
@@ -170,11 +170,11 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_macc1"]
 _data = {
-"RESET": SubResource("Animation_wsajo"),
-"char_look": SubResource("Animation_kqy3a"),
-"discard": SubResource("Animation_e8s16"),
-"in": SubResource("Animation_hu6jh"),
-"selected": SubResource("Animation_cxtt2")
+&"RESET": SubResource("Animation_wsajo"),
+&"char_look": SubResource("Animation_kqy3a"),
+&"discard": SubResource("Animation_e8s16"),
+&"in": SubResource("Animation_hu6jh"),
+&"selected": SubResource("Animation_cxtt2")
 }
 
 [sub_resource type="Animation" id="Animation_c3pub"]
@@ -255,10 +255,10 @@ length = 0.4
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xwlku"]
 _data = {
-"RESET": SubResource("Animation_c3pub"),
-"discard": SubResource("Animation_uqdi6"),
-"hover": SubResource("Animation_l3fqj"),
-"selected": SubResource("Animation_rtxib")
+&"RESET": SubResource("Animation_c3pub"),
+&"discard": SubResource("Animation_uqdi6"),
+&"hover": SubResource("Animation_l3fqj"),
+&"selected": SubResource("Animation_rtxib")
 }
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b8pkh"]

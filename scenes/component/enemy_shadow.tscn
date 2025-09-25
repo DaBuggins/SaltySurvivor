@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ds1jpmcwff24x"]
 
-[ext_resource type="Script" path="res://scenes/component/enemy_shadow.gd" id="2_7xgig"]
+[ext_resource type="Script" uid="uid://0gl43lrl16pj" path="res://scenes/component/enemy_shadow.gd" id="2_7xgig"]
 
 [node name="EnemyShadow" type="Sprite2D"]
 self_modulate = Color(0, 0, 0, 0.490196)

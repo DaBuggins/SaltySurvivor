@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://bdteaodfrk14i"]
 
-[ext_resource type="Script" path="res://scenes/ability/glock_ability/glock_ability.gd" id="1_2maji"]
+[ext_resource type="Script" uid="uid://dsp8cx22v75i6" path="res://scenes/ability/glock_ability/glock_ability.gd" id="1_2maji"]
 [ext_resource type="AudioStream" uid="uid://d1bgol7lwdn0l" path="res://scenes/ability/glock_ability/glock1.mp3" id="2_carbo"]
 [ext_resource type="Texture2D" uid="uid://b5wltxudlbkrm" path="res://scenes/ability/glock_ability/bullet.png" id="2_rhkno"]
 [ext_resource type="PackedScene" uid="uid://cx0rxtf8pmjf0" path="res://scenes/component/hitbox_component.tscn" id="3_ulma5"]
@@ -494,10 +494,10 @@ tracks/12/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sdo4n"]
 _data = {
-"RESET": SubResource("Animation_0ari8"),
-"default": SubResource("Animation_ajvk5"),
-"shoot": SubResource("Animation_8u6sk"),
-"shoot_glock": SubResource("Animation_ep0vx")
+&"RESET": SubResource("Animation_0ari8"),
+&"default": SubResource("Animation_ajvk5"),
+&"shoot": SubResource("Animation_8u6sk"),
+&"shoot_glock": SubResource("Animation_ep0vx")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jv40k"]

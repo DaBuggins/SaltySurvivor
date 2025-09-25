@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dhcrc0ff7cqlq"]
 
-[ext_resource type="Script" path="res://scenes/game_object/boss_flag/boss_flag.gd" id="1_mynq5"]
+[ext_resource type="Script" uid="uid://dril0en8beu6p" path="res://scenes/game_object/boss_flag/boss_flag.gd" id="1_mynq5"]
 [ext_resource type="Texture2D" uid="uid://ee6vs37x4c1j" path="res://scenes/game_object/boss_flag/flag0.png" id="2_1b5l8"]
 [ext_resource type="AudioStream" uid="uid://c7y3grhiycxpt" path="res://scenes/game_object/health_pickup/pickup1.mp3" id="2_666h3"]
 [ext_resource type="Texture2D" uid="uid://mrkjavvs2ipa" path="res://scenes/game_object/boss_flag/flag_grey.png" id="3_ccabr"]

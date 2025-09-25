@@ -52,6 +52,8 @@ func select_card():
 
 		
 func on_button_pressed():
+	if disabled:
+		return
 	select_card()
 
 func on_focus_entered():

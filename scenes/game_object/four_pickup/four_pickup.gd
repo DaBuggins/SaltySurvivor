@@ -23,6 +23,7 @@ func tween_collect(percent: float, start_position: Vector2):
 	
 
 func collect():	
+	four_pickup_ability.play_ability()
 	queue_free()
 	
 	

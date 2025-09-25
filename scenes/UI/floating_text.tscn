@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cwv4fh1viyo25"]
 
-[ext_resource type="Script" path="res://scenes/UI/floating_text.gd" id="1_cy5ex"]
+[ext_resource type="Script" uid="uid://r4sxojf8il5n" path="res://scenes/UI/floating_text.gd" id="1_cy5ex"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5sg6j"]
 outline_size = 6

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://bwlxuwc8syw27"]
 
-[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_o0bc2"]
+[ext_resource type="Script" uid="uid://btrjgap8sa6u3" path="res://resources/upgrades/ability_upgrade.gd" id="1_o0bc2"]
 [ext_resource type="Texture2D" uid="uid://b22w571mf65ja" path="res://scenes/ability/grenade_ability/grenade.png" id="2_omdm7"]
 
 [resource]

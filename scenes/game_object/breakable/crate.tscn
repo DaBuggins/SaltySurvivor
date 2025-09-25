@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dm7le7nfhwys0"]
 
-[ext_resource type="Script" path="res://scenes/game_object/breakable/crate.gd" id="1_nhlau"]
-[ext_resource type="Script" path="res://scenes/game_object/breakable/crate_health_component.gd" id="2_1mx0x"]
+[ext_resource type="Script" uid="uid://ctmou6h65usm" path="res://scenes/game_object/breakable/crate.gd" id="1_nhlau"]
+[ext_resource type="Script" uid="uid://bbvlv7b343h3e" path="res://scenes/game_object/breakable/crate_health_component.gd" id="2_1mx0x"]
 [ext_resource type="PackedScene" uid="uid://b2h1cay7c6mgl" path="res://scenes/component/crate_drop_component.tscn" id="2_g7qie"]
 [ext_resource type="PackedScene" uid="uid://c160tghm814hx" path="res://scenes/game_object/breakable/crate_break_component.tscn" id="4_n0mod"]
 [ext_resource type="Texture2D" uid="uid://bllltbby1iwq5" path="res://scenes/game_object/breakable/crate.png" id="6_wifqy"]

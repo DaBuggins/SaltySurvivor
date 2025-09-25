@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://hd8oc04h4y4y"]
+[gd_scene load_steps=4 format=3 uid="uid://hd8oc04h4y4y"]
 
-[ext_resource type="Script" path="res://scenes/autoload/level_music_player.gd" id="2_kx4u0"]
+[ext_resource type="Script" uid="uid://1kxiir0y7p2r" path="res://scenes/autoload/level_music_player.gd" id="2_kx4u0"]
 [ext_resource type="AudioStream" uid="uid://dtgh5pjp6ncej" path="res://assets/audio/atrain8bit.mp3" id="3_mi674"]
+[ext_resource type="AudioStream" uid="uid://dy0k4x7cconwf" path="res://assets/audio/bossbattle.mp3" id="3_qa18j"]
 
 [node name="LevelMusicPlayer" type="AudioStreamPlayer"]
 process_mode = 3
@@ -10,7 +11,13 @@ bus = &"music"
 script = ExtResource("2_kx4u0")
 level_song = ExtResource("3_mi674")
 
+[node name="BossMusicPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("3_qa18j")
+volume_db = -15.0
+bus = &"music"
+parameters/looping = true
+
 [node name="Timer" type="Timer" parent="."]
-wait_time = 15.0
 one_shot = true
 autostart = true

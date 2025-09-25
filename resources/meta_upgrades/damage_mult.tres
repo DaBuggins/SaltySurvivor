@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="MetaUpgrade" load_steps=4 format=3 uid="uid://bjyfyjpnfggrh"]
 
-[ext_resource type="Script" path="res://resources/meta_upgrades/meta_upgrade.gd" id="1_lue3p"]
+[ext_resource type="Script" uid="uid://cuvcw81c01f6" path="res://resources/meta_upgrades/meta_upgrade.gd" id="1_lue3p"]
 [ext_resource type="Texture2D" uid="uid://di1sxq4vqgbqv" path="res://scenes/game_object/experience_vial/big_red_vial.png" id="2_4rpyc"]
 [ext_resource type="AudioStream" uid="uid://dy46nhyho2ums" path="res://scenes/ability/knife_ability/sword1.mp3" id="3_mkndp"]
 
@@ -10,7 +10,7 @@ id = "damage_mult"
 max_quantity = 3
 experience_cost = 500
 unlock = false
-title = "Damage Increase"
+title = "Damage++"
 description = "Adds bonus damage to all attacks"
 upgrade_icon = ExtResource("2_4rpyc")
 upgrade_sfx = ExtResource("3_mkndp")

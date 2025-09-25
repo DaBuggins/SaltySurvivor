@@ -1,6 +1,6 @@
 [gd_scene load_steps=35 format=3 uid="uid://cw2x1by45ngb"]
 
-[ext_resource type="Script" path="res://scenes/UI/char_select_button.gd" id="1_mn7km"]
+[ext_resource type="Script" uid="uid://dnvombp2paaa6" path="res://scenes/UI/char_select_button.gd" id="1_mn7km"]
 [ext_resource type="AudioStream" uid="uid://ch3i4ef4byuyn" path="res://assets/audio/saltselectsfx.wav" id="2_3f8x6"]
 [ext_resource type="PackedScene" uid="uid://dv54y4v25i82x" path="res://scenes/component/random_stream_player_component.tscn" id="3_qh6bf"]
 [ext_resource type="AudioStream" uid="uid://cqmtle8yjoapg" path="res://assets/audio/sfx/switch1.ogg" id="4_om6v8"]
@@ -173,11 +173,11 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_macc1"]
 _data = {
-"RESET": SubResource("Animation_wsajo"),
-"char_look": SubResource("Animation_kqy3a"),
-"discard": SubResource("Animation_e8s16"),
-"in": SubResource("Animation_hu6jh"),
-"selected": SubResource("Animation_cxtt2")
+&"RESET": SubResource("Animation_wsajo"),
+&"char_look": SubResource("Animation_kqy3a"),
+&"discard": SubResource("Animation_e8s16"),
+&"in": SubResource("Animation_hu6jh"),
+&"selected": SubResource("Animation_cxtt2")
 }
 
 [sub_resource type="Animation" id="Animation_c3pub"]
@@ -246,10 +246,10 @@ length = 0.4
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xwlku"]
 _data = {
-"RESET": SubResource("Animation_c3pub"),
-"discard": SubResource("Animation_uqdi6"),
-"hover": SubResource("Animation_l3fqj"),
-"selected": SubResource("Animation_rtxib")
+&"RESET": SubResource("Animation_c3pub"),
+&"discard": SubResource("Animation_uqdi6"),
+&"hover": SubResource("Animation_l3fqj"),
+&"selected": SubResource("Animation_rtxib")
 }
 
 [sub_resource type="Animation" id="Animation_5v0ua"]
@@ -286,8 +286,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o3xua"]
 _data = {
-"RESET": SubResource("Animation_5v0ua"),
-"new_look": SubResource("Animation_4s1y3")
+&"RESET": SubResource("Animation_5v0ua"),
+&"new_look": SubResource("Animation_4s1y3")
 }
 
 [node name="CharSelectButton" type="Button" groups=["char_card"]]

@@ -5,8 +5,8 @@ extends CanvasLayer
 @export var speed_icon: Texture2D
 @export var pickup_icon: Texture2D
 @onready var icon_container: GridContainer = $MarginContainer/IconContainer
-@onready var speed_bonus_container: HBoxContainer = $MarginContainer/VFlowContainer/SpeedBonusContainer
-@onready var pickup_bonus_container: HBoxContainer = $MarginContainer/VFlowContainer/PickupBonusContainer
+@onready var speed_bonus_container: HBoxContainer = $VFlowContainer/SpeedBonusContainer
+@onready var pickup_bonus_container: HBoxContainer = $VFlowContainer/PickupBonusContainer
 
 @onready var full_upgrade_sprite: Sprite2D = $NotifLabel/FullUpgradeSprite
 @onready var animation_player: AnimationPlayer = $AnimationPlayer

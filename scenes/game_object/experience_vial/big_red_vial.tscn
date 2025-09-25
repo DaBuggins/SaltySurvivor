@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bwti2l1ir5u6k"]
 
-[ext_resource type="Script" path="res://scenes/game_object/experience_vial/big_vial.gd" id="1_sv2lj"]
+[ext_resource type="Script" uid="uid://xk4pjv5jg132" path="res://scenes/game_object/experience_vial/big_vial.gd" id="1_sv2lj"]
 [ext_resource type="PackedScene" uid="uid://o1t1syg3v4sd" path="res://scenes/component/pickup_sfx.tscn" id="2_ap78p"]
 [ext_resource type="Texture2D" uid="uid://di1sxq4vqgbqv" path="res://scenes/game_object/experience_vial/big_red_vial.png" id="3_jm5cx"]
 
@@ -15,7 +15,7 @@ scale_max = 2.5
 
 [node name="BigRedVial" type="Node2D"]
 script = ExtResource("1_sv2lj")
-experience_quantity_per_vial = 25.0
+experience_quantity_per_vial = 20.0
 
 [node name="PickupSFX" parent="." instance=ExtResource("2_ap78p")]
 unique_name_in_owner = true

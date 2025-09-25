@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://qc3exgeakcv8"]
 
-[ext_resource type="Script" path="res://scenes/manager/upgrade_manager.gd" id="1_8cjc5"]
+[ext_resource type="Script" uid="uid://bhrr7cbvw52pa" path="res://scenes/manager/upgrade_manager.gd" id="1_8cjc5"]
 [ext_resource type="PackedScene" uid="uid://dfi23mx33saaj" path="res://scenes/UI/upgrade_screen.tscn" id="4_jn3d7"]
 
 [node name="UpgradeManager" type="Node"]

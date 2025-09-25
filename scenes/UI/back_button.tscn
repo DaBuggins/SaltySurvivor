@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dhp4qex3gvtyl"]
 
 [ext_resource type="Theme" uid="uid://ivx8wu3sxxyt" path="res://resources/theme/theme.tres" id="1_aa1tm"]
-[ext_resource type="Script" path="res://scenes/UI/back_button.gd" id="2_u6tio"]
+[ext_resource type="Script" uid="uid://c0cuagisu21qj" path="res://scenes/UI/back_button.gd" id="2_u6tio"]
 
 [sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_rujry"]
 button_index = 1

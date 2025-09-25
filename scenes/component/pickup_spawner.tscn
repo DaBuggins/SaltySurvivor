@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://i1fwsc22w26w"]
 
-[ext_resource type="Script" path="res://scenes/component/pickup_spawner.gd" id="1_s00b5"]
+[ext_resource type="Script" uid="uid://m3ywooviui36" path="res://scenes/component/pickup_spawner.gd" id="1_s00b5"]
 [ext_resource type="Texture2D" uid="uid://c0tr3oj0fydx7" path="res://scenes/ability/fane_ability/fane.png" id="6_6x0ms"]
 
 [node name="PickupSpawner" type="Node2D"]

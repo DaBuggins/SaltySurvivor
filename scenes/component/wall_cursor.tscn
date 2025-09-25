@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://rknf4fv3lacr"]
 
-[ext_resource type="Script" path="res://scenes/component/wall_cursor.gd" id="1_xvky6"]
+[ext_resource type="Script" uid="uid://bu316fnf4845p" path="res://scenes/component/wall_cursor.gd" id="1_xvky6"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jlayu"]
 load_path = "res://.godot/imported/wall.png-a72f2abb024130139975e229bdf360c1.ctex"

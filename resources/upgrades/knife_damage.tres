@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://c8y37iihfa21t"]
 
-[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_pppkt"]
+[ext_resource type="Script" uid="uid://btrjgap8sa6u3" path="res://resources/upgrades/ability_upgrade.gd" id="1_pppkt"]
 [ext_resource type="Texture2D" uid="uid://cgcvr2s8nihju" path="res://scenes/ability/knife_ability/sword.png" id="2_v3fbf"]
 
 [resource]

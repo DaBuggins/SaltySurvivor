@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://bi1c837ucmwkl"]
 
-[ext_resource type="Script" path="res://scenes/UI/meta_upgrade_card.gd" id="1_fkdm7"]
+[ext_resource type="Script" uid="uid://fpxhq4bmouea" path="res://scenes/UI/meta_upgrade_card.gd" id="1_fkdm7"]
 [ext_resource type="PackedScene" uid="uid://dv54y4v25i82x" path="res://scenes/component/random_stream_player_component.tscn" id="2_4onty"]
 [ext_resource type="AudioStream" uid="uid://cqmtle8yjoapg" path="res://assets/audio/sfx/switch1.ogg" id="3_mq03j"]
 [ext_resource type="AudioStream" uid="uid://b0ot7rrp0rh3o" path="res://assets/audio/sfx/switch2.ogg" id="4_q444k"]
@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dt0lmbgrbttve" path="res://scenes/game_object/enemies/characters/ad.png" id="13_c33aw"]
 [ext_resource type="Texture2D" uid="uid://hpwrie41r4k4" path="res://scenes/game_object/experience_vial/experience_vial.png" id="13_etlll"]
 [ext_resource type="Theme" uid="uid://ivx8wu3sxxyt" path="res://resources/theme/theme.tres" id="14_r3exr"]
-[ext_resource type="Script" path="res://scenes/UI/meta_upgrade_button.gd" id="16_kafdr"]
+[ext_resource type="Script" uid="uid://x2syxwvh7phd" path="res://scenes/UI/meta_upgrade_button.gd" id="16_kafdr"]
 
 [sub_resource type="Animation" id="Animation_wsajo"]
 length = 0.001
@@ -89,8 +89,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_macc1"]
 _data = {
-"RESET": SubResource("Animation_wsajo"),
-"selected": SubResource("Animation_cxtt2")
+&"RESET": SubResource("Animation_wsajo"),
+&"selected": SubResource("Animation_cxtt2")
 }
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jr4km"]
@@ -104,9 +104,18 @@ border_width_bottom = 2
 border_color = Color(0.8, 0.8, 0.8, 0)
 
 [node name="MetaUpgradeCard" type="PanelContainer" groups=["meta_upgrade_card", "upgrade_card"]]
-custom_minimum_size = Vector2(150, 150)
-offset_right = 178.0
-offset_bottom = 215.0
+custom_minimum_size = Vector2(175, 210)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -97.5
+offset_top = -115.0
+offset_right = 56.5
+offset_bottom = 79.0
+grow_horizontal = 2
+grow_vertical = 2
 pivot_offset = Vector2(75, 75)
 mouse_filter = 2
 theme = ExtResource("14_r3exr")
@@ -121,35 +130,34 @@ bus = &"charsfx"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_macc1")
+&"": SubResource("AnimationLibrary_macc1")
 }
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-custom_minimum_size = Vector2(170, 0)
 layout_mode = 2
 mouse_filter = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
+theme_override_constants/margin_top = 6
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-size_flags_vertical = 4
+size_flags_horizontal = 4
+size_flags_vertical = 0
 mouse_filter = 2
 theme_override_constants/separation = 10
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
 self_modulate = Color(0.859834, 0.914108, 0.914108, 1)
-custom_minimum_size = Vector2(175, 70)
+custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 mouse_filter = 2
 theme = ExtResource("14_r3exr")
 theme_type_variation = &"AlternatePanelContainer"
 
 [node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(10, 35)
+custom_minimum_size = Vector2(150, 35)
 layout_mode = 2
 theme_type_variation = &"BlueOutlineLabel"
 theme_override_font_sizes/font_size = 32
@@ -239,11 +247,11 @@ texture = ExtResource("13_etlll")
 [node name="MetaUpgradeButton" type="Button" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_vertical = 8
+size_flags_vertical = 4
 theme = ExtResource("14_r3exr")
-theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 6
 text = "Purchase"
 script = ExtResource("16_kafdr")

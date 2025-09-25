@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var experience_quantity_per_vial: float = 1
+@export var experience_quantity_per_vial: int = 1
 @onready var collision_shape_2d: CollisionShape2D = $Area2D/CollisionShape2D
 @onready var sprite: Sprite2D = $Sprite2D
 

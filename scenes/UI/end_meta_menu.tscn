@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://orxc4usbbbp7"]
 
-[ext_resource type="Script" path="res://scenes/UI/end_meta_menu.gd" id="1_y5nfr"]
-[ext_resource type="Script" path="res://resources/meta_upgrades/meta_upgrade.gd" id="2_5mh0f"]
+[ext_resource type="Script" uid="uid://dfo0md0y2la4v" path="res://scenes/UI/end_meta_menu.gd" id="1_y5nfr"]
+[ext_resource type="Script" uid="uid://cuvcw81c01f6" path="res://resources/meta_upgrades/meta_upgrade.gd" id="2_5mh0f"]
 [ext_resource type="Resource" uid="uid://dawrmctx225as" path="res://resources/meta_upgrades/experience_gain.tres" id="3_t6aww"]
 [ext_resource type="Resource" uid="uid://dv57n2vr7mii3" path="res://resources/meta_upgrades/health_regen.tres" id="4_4nkim"]
 [ext_resource type="Resource" uid="uid://dgga0f4inmdqf" path="res://resources/meta_upgrades/perm_pickup_radius.tres" id="4_cbag5"]
@@ -12,7 +12,7 @@
 [ext_resource type="Resource" uid="uid://d37whrp5ieoek" path="res://resources/meta_upgrades/unlock_mike.tres" id="8_ngrcl"]
 [ext_resource type="PackedScene" uid="uid://01b7cc5p6cmg" path="res://assets/ui/menu_background.tscn" id="9_f6tfp"]
 [ext_resource type="PackedScene" uid="uid://co0op7vsc8xar" path="res://scenes/component/options_shaker.tscn" id="11_avqn0"]
-[ext_resource type="Script" path="res://scenes/UI/scroll_container.gd" id="11_qnkh2"]
+[ext_resource type="Script" uid="uid://ddypjom7172hb" path="res://scenes/UI/scroll_container.gd" id="11_qnkh2"]
 [ext_resource type="PackedScene" uid="uid://dhp4qex3gvtyl" path="res://scenes/UI/back_button.tscn" id="12_157b6"]
 [ext_resource type="Texture2D" uid="uid://di1sxq4vqgbqv" path="res://scenes/game_object/experience_vial/big_red_vial.png" id="12_b3h2n"]
 [ext_resource type="Texture2D" uid="uid://cjcb65nqkgk4a" path="res://scenes/game_object/experience_vial/big_vial.png" id="13_ttwqh"]

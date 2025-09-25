@@ -1,4 +1,5 @@
-res://scenes/game_object/four_pickup/four_pickup_ability.tscn
+res://default_bus_layout.tres
+res://scenes/main/main.tscn
 res://scenes/component/cream_container.tres
 res://resources/theme/theme.tres
 res://scenes/autoload/screen_transition.gdshader
@@ -9,10 +10,7 @@ res://scenes/component/hitflash_component.gdshader
 res://resources/upgrades/glock.tres
 res://resources/tileset.tres
 res://blur.gdshader
-res://scenes/main/main.tscn
-res://scenes/component/trap_spawner.tscn
-res://scenes/game_object/enemies/spike_wall/trap_wall_up.tscn
-res://scenes/level2/level2.tscn
+res://scenes/main/basic_stage.tscn
+res://scenes/level2/stage2.tscn
+res://scenes/level3/stage3.tscn
 res://scenes/level3/level3.tscn
-res://scenes/UI/upgrade_ui.tscn
-res://scenes/UI/upgrade_ui.gd

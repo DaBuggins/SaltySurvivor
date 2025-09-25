@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://caeiijuibgo26"]
 
 [ext_resource type="Texture2D" uid="uid://b5wltxudlbkrm" path="res://scenes/ability/glock_ability/bullet.png" id="1_kadd6"]
-[ext_resource type="Script" path="res://scenes/component/reticule.gd" id="2_k0ggp"]
+[ext_resource type="Script" uid="uid://cu0jvkjk2tjo8" path="res://scenes/component/reticule.gd" id="2_k0ggp"]
 
 [node name="Reticule" type="Sprite2D"]
 texture = ExtResource("1_kadd6")

@@ -94,6 +94,7 @@ func update_health_display():
 
 func on_body_entered(other_body: Node2D):
 	number_colliding_bodies += 1
+	print("COLLIDED WITH:" + str(other_body))
 	check_deal_damage()
 	
 func on_body_exited(other_body: Node2D):
@@ -120,7 +121,7 @@ func on_ability_upgrade_added(ability_upgrade: AbilityUpgrade, current_upgrades:
 		var ability = ability_upgrade as Ability
 		abilities.add_child(ability.ability_controller_scene.instantiate())
 	elif ability_upgrade.id == "player_speed":
-		velocity_component.max_speed = base_speed + (base_speed * current_upgrades["player_speed"]["quantity"] * .1) 
+		velocity_component.max_speed = base_speed + (base_speed * current_upgrades["player_speed"]["quantity"] * .15) 
 	elif ability_upgrade.id == "pickup_radius":
 		%PickupAreaShape.shape.radius = pickup_area * (current_upgrades["pickup_radius"]["quantity"] * 2)
 		#+ (current_upgrades["pickup_radius"]["quantity"] * 40)

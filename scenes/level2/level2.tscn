@@ -1,6 +1,6 @@
 [gd_scene load_steps=49 format=3 uid="uid://b7y4kyxrh6xqm"]
 
-[ext_resource type="Script" path="res://scenes/level2/level_2.gd" id="1_r1ahk"]
+[ext_resource type="Script" uid="uid://3crb8ixhtwuj" path="res://scenes/level2/level_2.gd" id="1_r1ahk"]
 [ext_resource type="PackedScene" uid="uid://b1mmvhbe7s77c" path="res://scenes/manager/arena_time_manager.tscn" id="2_l3u4b"]
 [ext_resource type="PackedScene" uid="uid://wjxi47rkeh3u" path="res://scenes/UI/end_screen.tscn" id="2_q1b85"]
 [ext_resource type="PackedScene" uid="uid://o756ycsqo4yb" path="res://scenes/UI/arena_time_ui.tscn" id="3_p5bj7"]
@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://6jwkytm3uc0i" path="res://scenes/UI/arena_score_ui.tscn" id="4_k48up"]
 [ext_resource type="AudioStream" uid="uid://138bx24rbxe8" path="res://assets/audio/sfx/Driving Concern.mp3" id="4_nut6e"]
 [ext_resource type="PackedScene" uid="uid://ccqk1luj112uq" path="res://scenes/UI/experience_bar.tscn" id="5_rn3wt"]
-[ext_resource type="Script" path="res://scenes/level2/level_2_enemy_manager.gd" id="7_1rpi5"]
+[ext_resource type="Script" uid="uid://bvbmdrs58ehl4" path="res://scenes/level2/level_2_enemy_manager.gd" id="7_1rpi5"]
 [ext_resource type="PackedScene" uid="uid://w5vvghq6n0su" path="res://scenes/manager/experience_manager.tscn" id="7_rjo6y"]
 [ext_resource type="PackedScene" uid="uid://edusx4mysm0" path="res://scenes/UI/flag_ui.tscn" id="8_2tdaa"]
 [ext_resource type="PackedScene" uid="uid://bxxhmuo20bnjb" path="res://scenes/game_object/enemies/office_enemies/office_chicken_enemy/office_chicken_enemy.tscn" id="8_pgitu"]

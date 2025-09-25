@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://lo6jyt4bpoqm"]
 
-[ext_resource type="Script" path="res://scenes/ability/chicken_ability_controller/chicken_ability_controller.gd" id="1_iqgmx"]
+[ext_resource type="Script" uid="uid://trfxct63r443" path="res://scenes/ability/chicken_ability_controller/chicken_ability_controller.gd" id="1_iqgmx"]
 [ext_resource type="PackedScene" uid="uid://c3hf3dmeqvydo" path="res://scenes/ability/chicken_ability/chicken_ability.tscn" id="2_q4mky"]
 
 [node name="ChickenAbilityController" type="Node"]

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="MetaUpgrade" load_steps=4 format=3 uid="uid://dawrmctx225as"]
 
-[ext_resource type="Script" path="res://resources/meta_upgrades/meta_upgrade.gd" id="1_ugssq"]
+[ext_resource type="Script" uid="uid://cuvcw81c01f6" path="res://resources/meta_upgrades/meta_upgrade.gd" id="1_ugssq"]
 [ext_resource type="Texture2D" uid="uid://cjcb65nqkgk4a" path="res://scenes/game_object/experience_vial/big_vial.png" id="2_yot34"]
 [ext_resource type="AudioStream" uid="uid://byqvu74i07y6j" path="res://scenes/ability/rainbow_six_ability/twinkle1.mp3" id="3_7h6i4"]
 
@@ -10,7 +10,7 @@ id = "experience_gain"
 max_quantity = 3
 experience_cost = 1000
 unlock = false
-title = "Increase Exp"
+title = "Exp Gain++"
 description = "Increases experience drop chance 10%"
 upgrade_icon = ExtResource("2_yot34")
 upgrade_sfx = ExtResource("3_7h6i4")

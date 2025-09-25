@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Character" load_steps=5 format=3 uid="uid://dhxm7o2fw8wb0"]
 
-[ext_resource type="Script" path="res://scenes/game_object/enemies/characters/character.gd" id="1_ibhsm"]
+[ext_resource type="Script" uid="uid://yfutvlnin25c" path="res://scenes/game_object/enemies/characters/character.gd" id="1_ibhsm"]
 [ext_resource type="AudioStream" uid="uid://d4kp2o30tl3ta" path="res://assets/audio/character_sounds/chonpick.mp3" id="1_y6urm"]
 [ext_resource type="Texture2D" uid="uid://yqwj4yl2vmc6" path="res://scenes/game_object/enemies/characters/chon.png" id="2_tq480"]
 [ext_resource type="Resource" uid="uid://cwyw0ks6j5wtx" path="res://resources/upgrades/galil.tres" id="3_tiqr1"]
@@ -14,6 +14,7 @@ description = "Chon is here"
 speed = 105.0
 accel = 2.0
 health = 10.0
+pickup_area = 24.0
 wins = 0
 unlocked = false
 starter_weapon = ExtResource("3_tiqr1")

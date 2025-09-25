@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://cynqgrk47j00o"]
 
-[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_x3ywd"]
+[ext_resource type="Script" uid="uid://btrjgap8sa6u3" path="res://resources/upgrades/ability_upgrade.gd" id="1_x3ywd"]
 [ext_resource type="Texture2D" uid="uid://ds83xb3vm81fp" path="res://scenes/ability/glock_ability/glock.png" id="2_iknll"]
 
 [resource]

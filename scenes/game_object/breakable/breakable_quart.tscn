@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://7gk6c1ek653l"]
 
-[ext_resource type="Script" path="res://scenes/game_object/breakable/breakable_quart.gd" id="1_6t2j0"]
+[ext_resource type="Script" uid="uid://b42kw1ujs7dfu" path="res://scenes/game_object/breakable/breakable_quart.gd" id="1_6t2j0"]
 [ext_resource type="Texture2D" uid="uid://bllltbby1iwq5" path="res://scenes/game_object/breakable/crate.png" id="2_ouytd"]
 [ext_resource type="PackedScene" uid="uid://dm7le7nfhwys0" path="res://scenes/game_object/breakable/crate.tscn" id="3_httmx"]
 

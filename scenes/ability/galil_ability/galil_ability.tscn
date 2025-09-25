@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://c00kyw25sr7a3"]
 
-[ext_resource type="Script" path="res://scenes/ability/galil_ability/galil_ability.gd" id="1_c831y"]
+[ext_resource type="Script" uid="uid://druif8rib078c" path="res://scenes/ability/galil_ability/galil_ability.gd" id="1_c831y"]
 [ext_resource type="Texture2D" uid="uid://b5wltxudlbkrm" path="res://scenes/ability/glock_ability/bullet.png" id="2_6jve1"]
 [ext_resource type="AudioStream" uid="uid://2q0b21pe5dk1" path="res://scenes/ability/galil_ability/galil1.mp3" id="2_8qxar"]
 [ext_resource type="PackedScene" uid="uid://cx0rxtf8pmjf0" path="res://scenes/component/hitbox_component.tscn" id="3_va7wx"]
@@ -495,10 +495,10 @@ tracks/11/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sdo4n"]
 _data = {
-"RESET": SubResource("Animation_0ari8"),
-"default": SubResource("Animation_ajvk5"),
-"galil_shoot": SubResource("Animation_v4gc0"),
-"shoot": SubResource("Animation_8u6sk")
+&"RESET": SubResource("Animation_0ari8"),
+&"default": SubResource("Animation_ajvk5"),
+&"galil_shoot": SubResource("Animation_v4gc0"),
+&"shoot": SubResource("Animation_8u6sk")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2ubd7"]

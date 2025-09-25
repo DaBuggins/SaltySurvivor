@@ -1,6 +1,7 @@
 extends Node
 
 signal arena_difficulty_increased(arena_difficulty: int)
+signal round_timer_ended
 
 const DIFFICULTY_INTERVAL = 5
 
@@ -37,7 +38,13 @@ func get_current_difficulty():
 	return arena_difficulty
 
 func on_timer_timeout():
+	round_timer_ended.emit()
+	var enemies = get_tree().get_nodes_in_group("enemy")
+	for e in enemies:
+		e.queue_free()
+	
 	if flags_got >= 4:
+		GameEvents.emit_boss_reached()
 		var end_boss = end_boss_scene.instantiate() as Node2D
 		end_boss.add_to_group("enemy")
 		%Bosses.add_child(end_boss)
@@ -45,6 +52,7 @@ func on_timer_timeout():
 		
 		print("BOSS REACHED END")
 		#SPAWN BOSS
+		flags_got = 0
 		return
 	end_match(end_screen_scene)
 

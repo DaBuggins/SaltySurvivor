@@ -1,6 +1,6 @@
 [gd_scene load_steps=28 format=3 uid="uid://brlgeq2cpe8r6"]
 
-[ext_resource type="Script" path="res://scenes/game_object/enemies/farm_enemies/tomato_enemy/tomato_enemy.gd" id="1_4n3v8"]
+[ext_resource type="Script" uid="uid://w2b7m0g45vus" path="res://scenes/game_object/enemies/farm_enemies/tomato_enemy/tomato_enemy.gd" id="1_4n3v8"]
 [ext_resource type="PackedScene" uid="uid://br47oe6cdcp4h" path="res://scenes/component/random_stream_player_2d_component.tscn" id="2_2kxph"]
 [ext_resource type="AudioStream" uid="uid://dv2j0eoxxdl5l" path="res://assets/audio/sfx/footstep_carpet_000.ogg" id="3_3s1gx"]
 [ext_resource type="AudioStream" uid="uid://b7jevwof7y23c" path="res://assets/audio/sfx/footstep_carpet_001.ogg" id="4_8vd1k"]
@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://budumifdbcmbv" path="res://scenes/game_object/experience_vial/green_vial.tscn" id="9_vcmxe"]
 [ext_resource type="PackedScene" uid="uid://b15860rxkv1a1" path="res://scenes/component/velocity_component.tscn" id="10_t8n11"]
 [ext_resource type="PackedScene" uid="uid://dwhwp00bq1je6" path="res://scenes/component/hitflash_component.tscn" id="11_1gqss"]
-[ext_resource type="Shader" path="res://scenes/component/hitflash_component.gdshader" id="12_lcldn"]
+[ext_resource type="Shader" uid="uid://c2iot2odwiyy5" path="res://scenes/component/hitflash_component.gdshader" id="12_lcldn"]
 [ext_resource type="PackedScene" uid="uid://cfqv7qt4x3y3i" path="res://scenes/component/death_component.tscn" id="13_feksd"]
 [ext_resource type="PackedScene" uid="uid://b3evnp66mpx0j" path="res://scenes/component/death_sfx_stream_player.tscn" id="14_dpxds"]
 [ext_resource type="PackedScene" uid="uid://sl3i0hvqi3av" path="res://scenes/component/hurtbox_component.tscn" id="15_k7db7"]
@@ -119,9 +119,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rqgq1"]
 _data = {
-"RESET": SubResource("Animation_ihajb"),
-"tomato_walk": SubResource("Animation_apdu7"),
-"walk": SubResource("Animation_fjdpl")
+&"RESET": SubResource("Animation_ihajb"),
+&"tomato_walk": SubResource("Animation_apdu7"),
+&"walk": SubResource("Animation_fjdpl")
 }
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_11yjx"]
@@ -143,13 +143,13 @@ radius = 6.0
 
 [node name="TomatoEnemy" type="CharacterBody2D" groups=["enemy", "entities_layer"]]
 collision_layer = 8
-collision_mask = 9
+collision_mask = 8
 motion_mode = 1
 script = ExtResource("1_4n3v8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_rqgq1")
+&"": SubResource("AnimationLibrary_rqgq1")
 }
 autoplay = "tomato_walk"
 

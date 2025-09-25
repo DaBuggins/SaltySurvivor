@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=7 format=3 uid="uid://bnbfpbevn6eux"]
 
 [ext_resource type="AudioStream" uid="uid://clahl4ww6e48q" path="res://assets/audio/character_sounds/aidjuicy.mp3" id="1_0drw3"]
-[ext_resource type="Script" path="res://scenes/game_object/enemies/characters/character.gd" id="1_7u8lw"]
+[ext_resource type="Script" uid="uid://yfutvlnin25c" path="res://scenes/game_object/enemies/characters/character.gd" id="1_7u8lw"]
 [ext_resource type="AudioStream" uid="uid://d36dd1frjghyt" path="res://assets/audio/character_sounds/aidlose.mp3" id="1_j8lub"]
 [ext_resource type="Texture2D" uid="uid://cloa1bs57u8og" path="res://scenes/game_object/enemies/characters/aid.png" id="2_2aebm"]
 [ext_resource type="Resource" uid="uid://cyu6cneygf4fc" path="res://resources/upgrades/fane.tres" id="3_odu3n"]

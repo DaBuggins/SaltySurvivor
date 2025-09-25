@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://br47oe6cdcp4h"]
 
-[ext_resource type="Script" path="res://scenes/component/random_stream_player_2d_component.gd" id="1_wdhfm"]
+[ext_resource type="Script" uid="uid://3pwjqxlw67xk" path="res://scenes/component/random_stream_player_2d_component.gd" id="1_wdhfm"]
 
 [node name="RandomStreamPlayer2DComponent" type="AudioStreamPlayer2D"]
 bus = &"sfx"

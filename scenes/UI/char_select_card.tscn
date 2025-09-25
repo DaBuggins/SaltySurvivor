@@ -1,6 +1,6 @@
-[gd_scene load_steps=40 format=3 uid="uid://cul0bt22djwrj"]
+[gd_scene load_steps=41 format=3 uid="uid://cul0bt22djwrj"]
 
-[ext_resource type="Script" path="res://scenes/UI/char_select_card.gd" id="1_g3hhb"]
+[ext_resource type="Script" uid="uid://cm7e0y7l1am5l" path="res://scenes/UI/char_select_card.gd" id="1_g3hhb"]
 [ext_resource type="AudioStream" uid="uid://ch3i4ef4byuyn" path="res://assets/audio/saltselectsfx.wav" id="2_38f6g"]
 [ext_resource type="PackedScene" uid="uid://dv54y4v25i82x" path="res://scenes/component/random_stream_player_component.tscn" id="2_hwca4"]
 [ext_resource type="AudioStream" uid="uid://cqmtle8yjoapg" path="res://assets/audio/sfx/switch1.ogg" id="3_tmfuq"]
@@ -15,9 +15,10 @@
 [ext_resource type="AudioStream" uid="uid://dk60ddh103bwg" path="res://assets/audio/sfx/switch10.ogg" id="12_u1cl3"]
 [ext_resource type="Texture2D" uid="uid://dt0lmbgrbttve" path="res://scenes/game_object/enemies/characters/ad.png" id="13_8xdko"]
 [ext_resource type="Theme" uid="uid://ivx8wu3sxxyt" path="res://resources/theme/theme.tres" id="14_swncm"]
-[ext_resource type="Script" path="res://scenes/UI/focus_button.gd" id="15_amo41"]
+[ext_resource type="Script" uid="uid://4jj5k666qvto" path="res://scenes/UI/focus_button.gd" id="15_amo41"]
 [ext_resource type="PackedScene" uid="uid://8speg66ih1ny" path="res://scenes/component/disabled_overlay.tscn" id="15_wd5xf"]
 [ext_resource type="PackedScene" uid="uid://cdnhsly5xea23" path="res://scenes/component/salt_select_effect.tscn" id="16_sxr6i"]
+[ext_resource type="FontFile" uid="uid://c86qpkwptml56" path="res://resources/theme/Rockboxcond12.ttf" id="17_2jnkw"]
 [ext_resource type="Texture2D" uid="uid://dk1qtr2aat7lx" path="res://scenes/game_object/health_pickup/heart.png" id="17_42fpc"]
 [ext_resource type="Texture2D" uid="uid://bwoexospukhaq" path="res://resources/UI_Flat_ButtonArrow01a.png" id="18_bx1ro"]
 [ext_resource type="Texture2D" uid="uid://d3ehtxoafldcq" path="res://assets/speedup.png" id="19_tr6rs"]
@@ -175,11 +176,11 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_macc1"]
 _data = {
-"RESET": SubResource("Animation_wsajo"),
-"char_look": SubResource("Animation_kqy3a"),
-"discard": SubResource("Animation_e8s16"),
-"in": SubResource("Animation_hu6jh"),
-"selected": SubResource("Animation_cxtt2")
+&"RESET": SubResource("Animation_wsajo"),
+&"char_look": SubResource("Animation_kqy3a"),
+&"discard": SubResource("Animation_e8s16"),
+&"in": SubResource("Animation_hu6jh"),
+&"selected": SubResource("Animation_cxtt2")
 }
 
 [sub_resource type="Animation" id="Animation_c3pub"]
@@ -248,10 +249,10 @@ length = 0.4
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xwlku"]
 _data = {
-"RESET": SubResource("Animation_c3pub"),
-"discard": SubResource("Animation_uqdi6"),
-"hover": SubResource("Animation_l3fqj"),
-"selected": SubResource("Animation_rtxib")
+&"RESET": SubResource("Animation_c3pub"),
+&"discard": SubResource("Animation_uqdi6"),
+&"hover": SubResource("Animation_l3fqj"),
+&"selected": SubResource("Animation_rtxib")
 }
 
 [sub_resource type="Animation" id="Animation_5v0ua"]
@@ -288,8 +289,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o3xua"]
 _data = {
-"RESET": SubResource("Animation_5v0ua"),
-"new_look": SubResource("Animation_4s1y3")
+&"RESET": SubResource("Animation_5v0ua"),
+&"new_look": SubResource("Animation_4s1y3")
 }
 
 [sub_resource type="Gradient" id="Gradient_02ngf"]
@@ -329,12 +330,12 @@ streams = Array[AudioStream]([ExtResource("3_tmfuq"), ExtResource("4_kggmt"), Ex
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_macc1")
+&"": SubResource("AnimationLibrary_macc1")
 }
 
 [node name="HoverAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_xwlku")
+&"": SubResource("AnimationLibrary_xwlku")
 }
 
 [node name="FocusButton" type="Button" parent="."]
@@ -375,12 +376,13 @@ size_flags_horizontal = 0
 theme_type_variation = &"BlueOutlineLabel"
 theme_override_constants/shadow_offset_x = 10
 theme_override_constants/shadow_offset_y = 4
+theme_override_fonts/font = ExtResource("17_2jnkw")
 theme_override_font_sizes/font_size = 32
 text = "Char"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MarginContainer/VBoxContainer/PanelContainer"]
 libraries = {
-"": SubResource("AnimationLibrary_o3xua")
+&"": SubResource("AnimationLibrary_o3xua")
 }
 autoplay = "new_look"
 
@@ -397,9 +399,9 @@ show_behind_parent = true
 position = Vector2(-5.66667, 0)
 emitting = false
 amount = 24
-process_material = SubResource("ParticleProcessMaterial_h54ms")
 lifetime = 1.5
 randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_h54ms")
 
 [node name="Level2Particles" type="GPUParticles2D" parent="MarginContainer/VBoxContainer/PanelContainer/Sprite2D"]
 unique_name_in_owner = true
@@ -408,9 +410,9 @@ show_behind_parent = true
 position = Vector2(5.66667, 1.66667)
 emitting = false
 amount = 24
-process_material = SubResource("ParticleProcessMaterial_h54ms")
 lifetime = 1.5
 randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_h54ms")
 
 [node name="Level3Particles" type="GPUParticles2D" parent="MarginContainer/VBoxContainer/PanelContainer/Sprite2D"]
 unique_name_in_owner = true
@@ -418,9 +420,9 @@ modulate = Color(1, 0, 0, 1)
 show_behind_parent = true
 emitting = false
 amount = 24
-process_material = SubResource("ParticleProcessMaterial_h54ms")
 lifetime = 1.5
 randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_h54ms")
 
 [node name="XBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 75)
@@ -484,6 +486,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 0
 theme_type_variation = &"BlueOutlineLabel"
+theme_override_fonts/font = ExtResource("17_2jnkw")
 text = "0"
 horizontal_alignment = 1
 clip_text = true
@@ -493,7 +496,8 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 theme_type_variation = &"BlueOutlineLabel"
-text = "0"
+theme_override_fonts/font = ExtResource("17_2jnkw")
+text = "0	"
 horizontal_alignment = 1
 
 [node name="AccelIconLabel" type="Label" parent="MarginContainer/VBoxContainer/XBoxContainer/Panel2/MarginContainer"]
@@ -502,6 +506,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 theme_type_variation = &"BlueOutlineLabel"
+theme_override_fonts/font = ExtResource("17_2jnkw")
 text = "0"
 horizontal_alignment = 1
 
@@ -532,6 +537,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_type_variation = &"BlueOutlineLabel"
+theme_override_fonts/font = ExtResource("17_2jnkw")
 text = "Starter"
 
 [node name="DisabledOverlay" parent="." instance=ExtResource("15_wd5xf")]

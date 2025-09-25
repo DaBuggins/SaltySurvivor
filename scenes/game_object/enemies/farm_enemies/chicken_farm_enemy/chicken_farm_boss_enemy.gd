@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var visuals = $Visuals
 @onready var velocity_component: Node2D = $MidbossVelocityComponent
+@onready var health_bar: ProgressBar = $HealthBar
 
 @onready var timer = $Timer
 @onready var health_component: HealthComponent = $HealthComponent
@@ -11,12 +12,12 @@ func _ready() -> void:
 	timer.timeout.connect(on_timer_timeout)
 
 func _process(delta: float) -> void:
+	update_health_display()
 	velocity_component.accelerate_to_player()
 	velocity_component.move(self)	
 	var move_sign = sign(velocity.x)
 	if move_sign != 0:
-		visuals.scale = Vector2(move_sign, 1)
-	
+		visuals.scale = Vector2(move_sign, 1)	
 
 
 func on_hit():
@@ -24,3 +25,6 @@ func on_hit():
 	
 func on_timer_timeout():
 	queue_free()
+
+func update_health_display():
+	health_bar.value = health_component.get_health_percent()

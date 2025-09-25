@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://b1vp0kak576xc"]
 
-[ext_resource type="Script" path="res://scenes/UI/main_menu.gd" id="1_1oroj"]
+[ext_resource type="Script" uid="uid://c2gy34q30h8fo" path="res://scenes/UI/main_menu.gd" id="1_1oroj"]
 [ext_resource type="PackedScene" uid="uid://01b7cc5p6cmg" path="res://assets/ui/menu_background.tscn" id="2_bqtkd"]
 [ext_resource type="PackedScene" uid="uid://7q7yl7w17173" path="res://scenes/UI/vignette.tscn" id="2_jbd17"]
 [ext_resource type="PackedScene" uid="uid://drs10r4um6533" path="res://scenes/component/salt_shaker.tscn" id="3_xc1tj"]
 [ext_resource type="PackedScene" uid="uid://chj6k4p6gxmkg" path="res://scenes/UI/play_button.tscn" id="4_eo1mb"]
 [ext_resource type="FontFile" uid="uid://imspwofy4xh6" path="res://resources/theme/Bitmgothic.ttf" id="4_jjtog"]
 [ext_resource type="Theme" uid="uid://ivx8wu3sxxyt" path="res://resources/theme/theme.tres" id="5_2a3ht"]
-[ext_resource type="Script" path="res://scenes/UI/play_button.gd" id="5_yb1vq"]
+[ext_resource type="Script" uid="uid://boqpd6ng3govn" path="res://scenes/UI/play_button.gd" id="5_yb1vq"]
 
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_1oroj")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://56p5dyk50lu3"]
 
-[ext_resource type="Script" path="res://scenes/game_object/health_pickup/health_pickup.gd" id="1_gcb86"]
+[ext_resource type="Script" uid="uid://cdyy8wwig6ms5" path="res://scenes/game_object/health_pickup/health_pickup.gd" id="1_gcb86"]
 [ext_resource type="AudioStream" uid="uid://c7y3grhiycxpt" path="res://scenes/game_object/health_pickup/pickup1.mp3" id="2_guca8"]
 [ext_resource type="Texture2D" uid="uid://dk1qtr2aat7lx" path="res://scenes/game_object/health_pickup/heart.png" id="8_o4n61"]
 

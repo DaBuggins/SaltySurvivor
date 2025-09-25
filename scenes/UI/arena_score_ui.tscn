@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://6jwkytm3uc0i"]
+[gd_scene load_steps=9 format=3 uid="uid://6jwkytm3uc0i"]
 
-[ext_resource type="Script" path="res://scenes/UI/arena_score_ui.gd" id="1_3rjiy"]
+[ext_resource type="Script" uid="uid://dy23ova1uf404" path="res://scenes/UI/arena_score_ui.gd" id="1_3rjiy"]
 [ext_resource type="Texture2D" uid="uid://cjcb65nqkgk4a" path="res://scenes/game_object/experience_vial/big_vial.png" id="2_83lq3"]
 [ext_resource type="Texture2D" uid="uid://hpwrie41r4k4" path="res://scenes/game_object/experience_vial/experience_vial.png" id="2_shans"]
 [ext_resource type="Texture2D" uid="uid://dt0lmbgrbttve" path="res://scenes/game_object/enemies/characters/ad.png" id="3_iqx0u"]
+[ext_resource type="FontFile" uid="uid://c86qpkwptml56" path="res://resources/theme/Rockboxcond12.ttf" id="3_xtqy6"]
 
 [sub_resource type="Animation" id="Animation_8nc0o"]
 length = 0.001
@@ -38,8 +39,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sp7am"]
 _data = {
-"RESET": SubResource("Animation_8nc0o"),
-"kill": SubResource("Animation_trbha")
+&"RESET": SubResource("Animation_8nc0o"),
+&"kill": SubResource("Animation_trbha")
 }
 
 [node name="ArenaScoreUI" type="CanvasLayer"]
@@ -69,6 +70,7 @@ theme_override_colors/font_outline_color = Color(0.247059, 0.14902, 0.192157, 1)
 theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_offset_y = 0
 theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_xtqy6")
 theme_override_font_sizes/font_size = 32
 text = "9999"
 
@@ -87,6 +89,7 @@ theme_override_colors/font_outline_color = Color(0.247059, 0.14902, 0.192157, 1)
 theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_offset_y = 0
 theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_xtqy6")
 theme_override_font_sizes/font_size = 32
 text = "9999"
 
@@ -104,6 +107,7 @@ theme_override_colors/font_outline_color = Color(0.247059, 0.14902, 0.192157, 1)
 theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_offset_y = 0
 theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_xtqy6")
 theme_override_font_sizes/font_size = 32
 text = "KILLS"
 
@@ -115,5 +119,5 @@ offset = Vector2(0, -5)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MarginContainer/KillsLabel/KillSprite"]
 libraries = {
-"": SubResource("AnimationLibrary_sp7am")
+&"": SubResource("AnimationLibrary_sp7am")
 }

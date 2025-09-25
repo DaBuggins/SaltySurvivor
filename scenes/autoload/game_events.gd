@@ -1,6 +1,6 @@
 extends Node
 
-signal experience_vial_collected(number: float)
+signal experience_vial_collected(number: int)
 signal ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades: Dictionary)
 signal player_damaged
 signal play_pressed
@@ -12,22 +12,21 @@ signal player_healed(heal_amount: float)
 signal char_selected
 signal stop_music
 signal start_music
-signal final_xp(number: float)
-signal loss_xp(number: float)
+signal final_xp(number: int)
+signal loss_xp(number: int)
 signal disable_back
 signal flag_collected
 signal end_boss_killed
 signal full_upgrade(upgrade: AbilityUpgrade)
+signal boss_reached
 
 
 var current_char: Character
-var current_vials: float = 0
+var current_vials: int = 0
 var current_level_id: String 
 var collected_flags: Array
 
-
-
-func emit_experience_vial_collected(number: float):
+func emit_experience_vial_collected(number: int):
 	current_vials += number
 	experience_vial_collected.emit(number)
 
@@ -71,12 +70,12 @@ func emit_stop_music():
 func emit_start_music():
 	start_music.emit()
 
-func emit_final_xp(final_vials: float):
-	final_xp.emit(current_vials)
+func emit_final_xp(final_vials: int):
+	final_xp.emit(final_vials)
 	current_vials = 0
 
-func emit_loss_xp(final_vials: float):
-	loss_xp.emit(floor(current_vials / 2))
+func emit_loss_xp(final_vials: int):
+	loss_xp.emit(round(final_vials / 2))
 	current_vials = 0
 
 func emit_disable_back():
@@ -92,3 +91,6 @@ func emit_end_boss_killed():
 	
 func emit_full_upgrade(upgrade: AbilityUpgrade):
 	full_upgrade.emit()
+
+func emit_boss_reached():
+	boss_reached.emit()

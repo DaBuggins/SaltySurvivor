@@ -42,10 +42,15 @@ func play_discard():
 	$AnimationPlayer.play("discard")
 
 func set_char(char_set: Character):
+	var char_health = int(char_set.health)
+	var char_speed= int(char_set.speed)
+	var char_accel = int(char_set.accel)
+	
 	name_label.text = char_set.name
-	health_icon_label.text = str(char_set.health)
-	speed_icon_label.text = str(char_set.speed)
-	accel_icon_label.text = str(char_set.accel)
+	
+	health_icon_label.text = str(char_health)
+	speed_icon_label.text = str(char_speed)
+	accel_icon_label.text = str(char_accel)
 	starter_icon.texture = char_set.starter_weapon.sprite
 	sprite_2d.texture = char_set.sprite
 	

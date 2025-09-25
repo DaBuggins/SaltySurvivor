@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://buxfncpt7oqmc"]
 
 [ext_resource type="PackedScene" uid="uid://dm7le7nfhwys0" path="res://scenes/game_object/breakable/crate.tscn" id="1_pyr2y"]
-[ext_resource type="Script" path="res://scenes/game_object/breakable/breakable_blob.gd" id="1_ul4xl"]
+[ext_resource type="Script" uid="uid://ef1r6gmp85nh" path="res://scenes/game_object/breakable/breakable_blob.gd" id="1_ul4xl"]
 [ext_resource type="Texture2D" uid="uid://caselblae8u0i" path="res://assets/particle.png" id="2_0muh7"]
 
 [node name="CrateBlob" type="Node2D"]
